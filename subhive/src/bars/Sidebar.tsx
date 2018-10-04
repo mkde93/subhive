@@ -7,7 +7,7 @@ class Sidebar extends React.Component {
         return (
             <div
                 className={style({
-                    width: 200,
+                    width: 100,
                     display: "flex",
                     backgroundColor: "lightskyblue",
                     flexDirection: "column",
