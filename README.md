@@ -1,2 +1,3 @@
 # subhive
-This is our subhive website
+
+We make website for Subhive in react and use cool tools like TypeScript and more
