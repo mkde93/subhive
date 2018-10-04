@@ -7,37 +7,21 @@ import { Route, Router } from "react-router";
 import createBrowserHistory from "history/createBrowserHistory";
 import "./index.css";
 import "typeface-roboto";
-import { style } from "typestyle";
-import Sidebar from "./bars/Sidebar";
-import TopBar from "./bars/TopBar";
+import Menu from "./bars/Menu";
 
 const history = createBrowserHistory();
 
 ReactDOM.render(
-	<Provider>
-		<Router history={history}>
-			<div>
-				<div
-					className={style({
-						display: "flex",
-						flexDirection: "row",
-					})}
-				>
-				<Sidebar/>
-					<div
-						className={style({
-							display: "flex",
-							flexDirection: "column",
-							flexGrow: 1,
-						})}
-					>
-						<TopBar/>
-						<Route exact={true} path="/" component={App} />
-						<Route exact={true} path="/foo" component={Foo} />
-					</div>
-				</div>
-			</div>
-		</Router>
-	</Provider>,
-	document.getElementById("root") as HTMLElement,
+  <Provider>
+    <Router history={history}>
+      <div>
+        <div id="wrapper">
+          <Menu />
+          <Route exact={true} path="/" component={App} />
+          <Route exact={true} path="/foo" component={Foo} />
+        </div>
+      </div>
+    </Router>
+  </Provider>,
+  document.getElementById("root") as HTMLElement
 );
