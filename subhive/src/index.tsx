@@ -6,7 +6,7 @@ import { Route, Router } from "react-router";
 import createBrowserHistory from "history/createBrowserHistory";
 import "./pages/css/css-reset.css";
 import "./index.css";
-import Menu from "./bars/Menu";
+import Menu from "./components/Menu";
 import Music from "./pages/Music";
 import Events from "./pages/Events";
 import Playlist from "./pages/Playlist";
