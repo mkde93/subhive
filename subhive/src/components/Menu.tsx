@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../index.css";
-import Button from "../components/Button";
+import Button from "./Button";
 import { Link } from "react-router-dom";
 
 class Menu extends React.Component {
@@ -10,7 +10,7 @@ class Menu extends React.Component {
         <div className="container-16">
           <div className="logo">
             <Link to="/">
-              <img src={"../img/SUBHIVE LOGO 2.png"} alt="Subhive Logo" /> {/* Åbenlyst problem med indsæt af billede/link af billede */}
+              <img src={require("../img/SUBHIVE_LOGO_2.png")} alt="Subhive Logo" /> {/* Åbenlyst problem med indsæt af billede/link af billede */}
             </Link>
           </div>
           <nav>
