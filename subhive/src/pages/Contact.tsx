@@ -1,5 +1,7 @@
 import * as React from "react";
-import "./css/Contact.css";
+import "./css/grid.css";
+import "../index.css";
+
 
 export interface Props {
   name: string;

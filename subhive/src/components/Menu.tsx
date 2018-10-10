@@ -9,8 +9,9 @@ class Menu extends React.Component {
       <header>
         <div className="container-16">
           <div className="logo">
-            <Link to="/">
-              <img src={require("../img/SUBHIVE_LOGO_2.png")} alt="Subhive Logo" /> {/* Åbenlyst problem med indsæt af billede/link af billede */}
+            <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}> {/* Removed decoration from link; Centered Text */}
+              <img src={require("../img/SUBHIVE_LOGO_2.png")} alt="Subhive Logo" />
+              <span>Subhive</span>
             </Link>
           </div>
           <nav>

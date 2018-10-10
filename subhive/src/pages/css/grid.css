@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+/*._.-._.-._.-._.-.
+
+  GRID DE SOUZA
+  -----------------
+  Version 0.1
+
+  Francisco Souza
+  (Franciscosouza.dk)
+  ._.-._.-._.-._.-.*/
+
+/*================================================================
+    GRID - 1600px
+================================================================*/
+.container-16                     {margin:0 auto; width:1600px;}
+
+/* Attribute selector */
+[class^='grid-']                  {margin-right:10px; margin-left:10px; display:inline;}
+
+
+.first                            {margin-left:0px;}
+.last                             {margin-right:0px;}
+.both                             {margin-left:0px; margin-right:0px;}
+.container-12 .grid-1             {width:80px;}
+.container-12 .grid-2             {width:180px;}
+.container-12 .grid-3             {width:280px;}
+.container-12 .grid-4             {width:380px;}
+.container-12 .grid-5             {width:480px;}
+.container-12 .grid-6             {width:580px;}
+.container-12 .grid-7             {width:680px;}
+.container-12 .grid-8             {width:780px;}
+.container-12 .grid-9             {width:880px;}
+.container-12 .grid-10            {width:980px;}
+.container-12 .grid-11            {width:1080px;}
+.container-12 .grid-12            {width:1180px;}
+
+/*================================================================
+    GRID - 1200px
+================================================================*/
+@media only screen and (min-width:1200px) and (max-width:1599px) {
+
+  .container-16                     {width:1200px;}
+  
+  .container-12 .grid-1             {width:60px;}
+  .container-12 .grid-2             {width:140px;}
+  .container-12 .grid-3             {width:220px;}
+  .container-12 .grid-4             {width:300px;}
+  .container-12 .grid-5             {width:380px;}
+  .container-12 .grid-6             {width:460px;}
+  .container-12 .grid-7             {width:540px;}
+  .container-12 .grid-8             {width:620px;}
+  .container-12 .grid-9             {width:700px;}
+  .container-12 .grid-10            {width:780px;}
+  .container-12 .grid-11            {width:860px;}
+  .container-12 .grid-12            {width:940px;}
+  
+  }
+
+/*================================================================
+    GRID - 960px
+================================================================*/
+@media only screen and (min-width:960px) and (max-width:1199px) {
+
+.container-16                     {width:960px;}
+
+.container-12 .grid-1             {width:60px;}
+.container-12 .grid-2             {width:140px;}
+.container-12 .grid-3             {width:220px;}
+.container-12 .grid-4             {width:300px;}
+.container-12 .grid-5             {width:380px;}
+.container-12 .grid-6             {width:460px;}
+.container-12 .grid-7             {width:540px;}
+.container-12 .grid-8             {width:620px;}
+.container-12 .grid-9             {width:700px;}
+.container-12 .grid-10            {width:780px;}
+.container-12 .grid-11            {width:860px;}
+.container-12 .grid-12            {width:940px;}
+
+}
+
+/*================================================================
+    GRID - 720px
+================================================================*/
+@media only screen and (min-width:720px) and (max-width:959px) {
+
+.container-16                     {width:720px;}
+
+.container-12 .grid-1             {width:40px;}
+.container-12 .grid-2             {width:100px;}
+.container-12 .grid-3             {width:160px;}
+.container-12 .grid-4             {width:220px;}
+.container-12 .grid-5             {width:280px;}
+.container-12 .grid-6             {width:340px;}
+.container-12 .grid-7             {width:400px;}
+.container-12 .grid-8             {width:460px;}
+.container-12 .grid-9             {width:520px;}
+.container-12 .grid-10            {width:580px;}
+.container-12 .grid-11            {width:640px;}
+.container-12 .grid-12            {width:700px;}
+
+}
+
+/* ============================================================
+   GRID - lt 720px / Mobile (Media Queries)
+   ============================================================ */ 
+   @media only screen and (max-width: 719px) {
+
+.container-16                     {width:90%;}
+
+[class^='grid-']                  {width:100%; margin-right:0px; margin-left:0px;}
+
+.container-12 .grid-1, .container-12 .grid-2, .container-12 .grid-3, .container-12 .grid-4, .container-12 .grid-5,
+.container-12 .grid-6, .container-12 .grid-7, .container-12 .grid-8, .container-12 .grid-9, .container-12 .grid-10,
+.container-12 .grid-11, .container-12 .grid-12 
+                                  {width:100%;}
+
+}

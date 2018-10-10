@@ -17,27 +17,49 @@ body {
 /* MENU */
 header {
   background-color: #1d1d1d;
-  padding: 20px;
 }
 header .container-16 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 20px 0;
 }
-header .logo {
-
+header .logo span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+  padding-left: 10px;
+  letter-spacing: 0.1rem;
 }
 nav ul li a {
   text-decoration: none;
   color: #FFFFFF;
   text-transform: uppercase;
+  display: inline-block;
+}
+nav ul li::after {
+  content: '';
+  position: absolute;
+  opacity: 0; /* Visible */
+  background-color: #fff;
+  height: 3px;
+  width: 100%;
+  bottom: -8px;
+  transition: height 0.2s, opacity 0.2s;
+}
+nav ul li:hover::after {
+  opacity: 1;
 }
 nav ul li {
+  position: relative;
   display: inline-block;
+  margin-left: 1.8rem;
 }
 nav .button {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   letter-spacing: 0.1rem;
   font-size: 1.4rem;
-  margin-left: 2rem;
 }
