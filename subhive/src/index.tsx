@@ -18,8 +18,8 @@ ReactDOM.render(
   <Provider>
     <Router history={history}>
       <div>
+        <Menu />
         <div id="wrapper">
-          <Menu />
           <Route exact={true} path="/" component={App} />
           <Route exact={true} path="/music" component={Music} />
           <Route exact={true} path="/events" component={Events} />

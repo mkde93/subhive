@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html {
-  font-size: 16px;
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-size: 16px; /* Decides font-size across the website with the use of rem */
 }
 
 #wrapper {
@@ -16,7 +11,9 @@ body {
 
 /* MENU */
 header {
-  background-color: #1d1d1d;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
 }
 header .container-16 {
   display: flex;
@@ -62,4 +59,12 @@ nav .button {
   font-weight: 600;
   letter-spacing: 0.1rem;
   font-size: 1.4rem;
+}
+/* Album */
+#subhiveOrigin {
+position: relative;
+padding: 150px 0 50px 0 ;
+background-repeat: no-repeat, repeat;
+background-size: cover;
+background-position: center;
 }
