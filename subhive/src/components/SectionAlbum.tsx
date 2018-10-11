@@ -1,16 +1,32 @@
 import * as React from "react";
 import "../index.css";
+import AlbumHighlight from "./AlbumHighlight";
 
 export interface Props {
-  img: string;
+  backgroundImage: string;
+  albumTitle: string;
+  albumType: string;
+  albumArtists: string;
+  albumTracks: string;
+  albumCover: string;
+  spotifyUrl: string;
+  soundcloudUrl: string;
 }
 
-class SectionAlbum extends React.Component {
+class SectionAlbum extends React.Component<Props> {
   render() {
     return (
-      <section style={{ backgroundImage: 'url(/static/media/Subhive_Origin.58f85a18.png)' }} id="subhiveOrigin"> {/* Kan ikke linke billede i prop */}
+      <section style={{backgroundImage: `url(${require("../img/" + this.props.backgroundImage)})` }} id="subhiveOrigin">
         <div className="container-16">
-          <p>Hey does this work my good sir?</p>
+          <AlbumHighlight
+            albumTitle={this.props.albumTitle}
+            albumType={this.props.albumType}
+            albumArtists={this.props.albumArtists}
+            albumTracks={this.props.albumTracks}
+            albumCover={this.props.albumCover}
+            spotifyUrl={this.props.spotifyUrl}
+            soundcloudUrl={this.props.soundcloudUrl}
+          />
         </div>
       </section>
     );
