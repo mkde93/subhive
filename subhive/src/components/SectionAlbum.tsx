@@ -16,7 +16,7 @@ export interface Props {
 class SectionAlbum extends React.Component<Props> {
   render() {
     return (
-      <section style={{backgroundImage: `url(${require("../img/" + this.props.backgroundImage)})` }} id="subhiveOrigin">
+      <section style={{ backgroundImage: `url(${require("../img/" + this.props.backgroundImage)})` }} className="albumSection">
         <div className="container-16">
           <AlbumHighlight
             albumTitle={this.props.albumTitle}

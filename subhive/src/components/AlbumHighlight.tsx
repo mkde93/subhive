@@ -28,24 +28,24 @@ class AlbumHighlight extends React.Component<Props, State> {
 
   render() {
     return (
-      <div>
-        <div id="cover">
+      <div className="album">
+        <div className="cover">
           <img src={require("../img/albumcovers/" + this.props.albumCover)} alt={this.props.albumTitle + " Cover"} />
         </div>
-        <div id="info">
+        <div className="info">
           <span>{this.props.albumType}</span>
           <h1>{this.props.albumTitle}</h1>
           <h3>By {this.props.albumArtists}</h3>
-          <div id="buttons">
-            <p>Play</p>
-            <p>Stream</p>
+          <div className="buttons">
+            <div className="play"><img src={require("../img/icons/play.svg")} />Play</div>
+            <div className="spotify"><img src={require("../img/icons/Spotify_Icon_White.png")} />Stream</div>
           </div>
-          <div id="tracks">
+          <div className="tracks">
             <ul>
-            {this.state.tracks !== null ?
-              this.state.tracks.map((x, i) => (
-                <li>{x}</li>
-              )) : null}
+              {this.state.tracks !== null ?
+                this.state.tracks.map((x, i) => (
+                  <li>{x}</li>
+                )) : null}
             </ul>
           </div>
         </div>

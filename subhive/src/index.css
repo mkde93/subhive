@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 16px; /* Decides font-size across the website with the use of rem */
 }
@@ -41,9 +45,9 @@ nav ul li::after {
   position: absolute;
   opacity: 0; /* Visible */
   background-color: #fff;
-  height: 3px;
+  height: 2px;
   width: 100%;
-  bottom: -8px;
+  bottom: -5px;
   transition: height 0.2s, opacity 0.2s;
 }
 nav ul li:hover::after {
@@ -61,10 +65,103 @@ nav .button {
   font-size: 1.4rem;
 }
 /* Album */
-#subhiveOrigin {
+.albumSection {
 position: relative;
-padding: 150px 0 50px 0 ;
+height: 85vh;
 background-repeat: no-repeat, repeat;
 background-size: cover;
 background-position: center;
+}
+.album {
+  font-family: 'Roboto', sans-serif;
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.album .cover img {
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+  border-image-source: linear-gradient(60deg, #41d6f4, #4262f4);
+  border-image-slice: 1;
+}
+.album .info {
+  margin-left: 40px;
+}
+.album .info span {
+  padding: 1px 6px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #fdfdfd;
+  background-color: #111111;
+  text-transform: uppercase;
+}
+.album .info h1 {
+  margin-top: 10px;
+  font-size: 3.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fdfdfd;
+  letter-spacing: .2rem;
+}
+.album .info h3 {
+  margin-top: 5px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #878787;
+                            /* FIX COLORS */
+}
+.album .buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+.album .buttons > div {
+  width: 144px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.album .buttons > div img {
+  padding-right: 10px;
+  transition: padding-right 0.2s;
+}
+.album .buttons .play img {
+  height: 18px; /* Aligning icon heights with Spotify icon */
+}
+.album .buttons .spotify img {
+  height: 24px;
+}
+.album .buttons .play {
+  background-color: white;
+  font-weight: 600;
+  transition: box-shadow 0.2s;
+}
+.album .buttons .spotify {
+  margin-left: 20px;
+  background-color: #1DB954;
+  color: white;
+  transition: box-shadow 0.2s;
+}
+.album .tracks {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  color: #878787;
+  font-weight: 400;
+}
+.album .tracks li {
+  padding: 5px 0;
+}
+.album .buttons > div:hover {
+  box-shadow: 0 0 15px black;
+  cursor: pointer;
+}
+.album .buttons > div:hover img {
+  padding-right: 15px;
 }
