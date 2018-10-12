@@ -164,6 +164,7 @@ background-position: center;
 .album .buttons > div:hover img {
   padding-right: 15px;
 }
+
 /* Mobile friendly albumSection */
 
 @media only screen and (max-width: 799px) { 
