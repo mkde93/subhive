@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 16px; /* Decides font-size across the website with the use of rem */
+  font-size: 16px !important; /* Overwriting css clear - need better fix */
 }
 
 #wrapper {
@@ -111,7 +111,6 @@ background-position: center;
   font-size: 1.8rem;
   font-weight: 400;
   color: #878787;
-                            /* FIX COLORS */
 }
 .album .buttons {
   display: flex;
@@ -164,4 +163,34 @@ background-position: center;
 }
 .album .buttons > div:hover img {
   padding-right: 15px;
+}
+/* Mobile friendly albumSection */
+
+@media only screen and (max-width: 799px) { 
+  html {
+    font-size: 12px !important; /* Overwriting css clear - need better fix */
+  }
+  .albumSection {
+    height: auto;
+  }
+  .album {
+    flex-direction: column;
+    padding: 120px 0 40px;
+    height: auto;
+  }
+  .album .cover img {
+    align-self: center;
+    width: 100%;
+    height: auto;
+  }
+  .album .info {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .album .buttons {
+    margin: 15px 0;
+  }
+  .album .info .tracks {
+    font-size: 1.6rem;
+  }
 }
