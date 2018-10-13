@@ -11,7 +11,7 @@ export interface Props {
   eventDescription: string;
 }
 
-class AlbumHighlight extends React.Component<Props> {
+class EventHighlight extends React.Component<Props> {
   render() {
     return (
       <div className="event">
@@ -34,4 +34,4 @@ class AlbumHighlight extends React.Component<Props> {
     );
   }
 }
-export default AlbumHighlight;
+export default EventHighlight;
