@@ -38,10 +38,10 @@ class AlbumHighlight extends React.Component<Props, State> {
           <h3>By {this.props.albumArtists}</h3>
           <div className="buttons">
             <a href={this.props.soundcloudUrl} target={"_blank"}>
-              <div className="play"><img src={require("../img/icons/play.svg")} />Play</div>
+              <div className="soundcloud"><img src={require("../img/icons/play_white.svg")} />Soundcloud</div>
             </a>
             <a href={this.props.spotifyUrl} target={"_blank"}>
-              <div className="spotify"><img src={require("../img/icons/Spotify_Icon_White.png")} />Stream</div>
+              <div className="spotify"><img src={require("../img/icons/Spotify_Icon_White.png")} />Spotify</div>
             </a>
           </div>
           <div className="tracks">

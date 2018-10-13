@@ -21,7 +21,7 @@ class App extends React.Component {
           isHighlight={true}
         />
         <SectionEvent
-          backgroundImage="Subhive_Origin_Dark.png"
+          backgroundImage="Subhive_5_bg.png"
           eventTitle={ContentStrings.events.titles.subhive_1}
           eventDate={ContentStrings.events.dates.subhive_1}
           eventLocation={ContentStrings.events.locations.subhive_1}

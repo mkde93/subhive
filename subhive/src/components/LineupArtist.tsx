@@ -13,7 +13,17 @@ class LineupArtist extends React.Component<Props> {
     return (
       <div>
         <div style={{ backgroundImage: `url(${require("../img/lineupartists/" + this.props.artistimg)})` }} className="artist" >
-          <span>{this.props.artist}</span>
+          <div className="overlay">
+            <span className="name">{this.props.artist}</span>
+            <div>
+              <span className="settime">Set time:</span>
+              <span className="timeslot">{this.props.settime}</span>
+            </div>
+            <a href={this.props.social} target={"_blank"}>
+              <div className="social">Listen</div>
+            </a>
+          </div>
+          <div className="gradient" />
         </div>
       </div>
     );

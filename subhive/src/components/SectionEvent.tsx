@@ -22,7 +22,7 @@ class SectionEvent extends React.Component<Props> {
     return (
       <div>
         {this.props.isHighlight ?
-          <section style={{}} className="eventSection">
+          <section style={{ backgroundImage: `url(${require("../img/eventposters/" + this.props.backgroundImage)})` }} className="eventSection">
             <div className="container-16">
               <EventHighlight
                 eventTitle={this.props.eventTitle}
