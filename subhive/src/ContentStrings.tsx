@@ -10,8 +10,8 @@ export default {
             origin: "https://soundcloud.com/subhive/sets/subhive-origin"
         },
         tracks: {
-            origin: "MELURAN - In Your Eyes, Redemptive - Aeroscape, Kasger - Blue Marble, " +
-                "Vidya Vidya - Wushu, LazyKid - Bad Bitch, Cuuts - Breakout"
+            origin: "MELURAN - In Your Eyes,Redemptive - Aeroscape,Kasger - Blue Marble," +
+                "Vidya Vidya - Wushu,LazyKid - Bad Bitch,Cuuts - Breakout"
         },
         artists: {
             variousartists: "Various Artists",
@@ -42,10 +42,10 @@ export default {
     },
     events: {
         titles: {
-            subhive_1: "Subhive - 31 August"
+            subhive_1: "Subhive - Halloween Edition"
         },
         dates: {
-            subhive_1: "August 31"
+            subhive_1: "26.10.2018"
         },
         locations: {
             subhive_1: "Platform 4, Aalborg"
@@ -61,6 +61,25 @@ export default {
                 "melting visuals and flickering lights. Focusing on future bass, " +
                 "trap and drum & bass, SUBHIVE is set to shake up the underground " +
                 "music scene of Aalborg."
+        },
+        lineup: {
+            artists: {
+                subhive_1: "O.V.,SHIO,BOBASTIC B2B DJ 0 APE,CAPTIVE,MELURAN"
+            },
+            settime: {
+                subhive_1: "22.00-23.00,23.00-00.00,00.00-01.00,01.00-02.00,02.00-03.00"
+            },
+            link: {
+                subhive_1: "https://soundcloud.com/ov_music," +
+                "https://soundcloud.com/shio_shio," + 
+                "https://soundcloud.com/yngve-stensaker," + 
+                "https://soundcloud.com/subup," + 
+                "https://soundcloud.com/meluran"
+            },
+        },
+        common: {
+            upcoming: "Upcoming Event",
+            past: "Past Event"
         }
     }
 }

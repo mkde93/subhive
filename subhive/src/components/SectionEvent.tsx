@@ -11,24 +11,50 @@ export interface Props {
   eventLink: string;
   eventMovie: string;
   eventDescription: string;
+  isHighlight: boolean;
+  lineupArtists: string;
+  lineupSettimes: string;
+  lineupSocials: string;
 }
 
 class SectionEvent extends React.Component<Props> {
   render() {
     return (
-      <section style={{ backgroundImage: `url(${require("../img/" + this.props.backgroundImage)})` }} className="eventSection">
-        <div className="container-16">
-          <EventHighlight
-            eventTitle={this.props.eventTitle}
-            eventDate={this.props.eventDate}
-            eventLocation={this.props.eventLocation}
-            eventPoster={this.props.eventPoster}
-            eventLink={this.props.eventLink}
-            eventMovie={this.props.eventMovie}
-            eventDescription={this.props.eventDescription}
-          />
-        </div>
-      </section>
+      <div>
+        {this.props.isHighlight ?
+          <section style={{}} className="eventSection">
+            <div className="container-16">
+              <EventHighlight
+                eventTitle={this.props.eventTitle}
+                eventDate={this.props.eventDate}
+                eventLocation={this.props.eventLocation}
+                eventPoster={this.props.eventPoster}
+                eventLink={this.props.eventLink}
+                eventMovie={this.props.eventMovie}
+                eventDescription={this.props.eventDescription}
+                lineupArtists={this.props.lineupArtists}
+                lineupSettimes={this.props.lineupSettimes}
+                lineupSocials={this.props.lineupSocials}
+              />
+            </div>
+          </section> :
+          <section style={{}} className="eventSection">
+            <div className="container-16">
+              <EventHighlight
+                eventTitle={this.props.eventTitle}
+                eventDate={this.props.eventDate}
+                eventLocation={this.props.eventLocation}
+                eventPoster={this.props.eventPoster}
+                eventLink={this.props.eventLink}
+                eventMovie={this.props.eventMovie}
+                eventDescription={this.props.eventDescription}
+                lineupArtists={this.props.lineupArtists}
+                lineupSettimes={this.props.lineupSettimes}
+                lineupSocials={this.props.lineupSocials}
+              />
+            </div>
+          </section>}
+      </div>
     );
   }
 }

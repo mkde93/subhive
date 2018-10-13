@@ -120,29 +120,33 @@ background-position: center;
   font-weight: 400;
   letter-spacing: .1rem;
 }
-.album .buttons > div {
+.album .buttons a {
+  text-decoration: none;
+}
+.album .buttons a > div {
   width: 144px;
   height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.album .buttons > div img {
+.album .buttons a > div img {
   padding-right: 10px;
   transition: padding-right 0.2s;
 }
-.album .buttons .play img {
+.album .buttons a .play img {
   height: 18px; /* Aligning icon heights with Spotify icon */
 }
-.album .buttons .spotify img {
+.album .buttons a .spotify img {
   height: 24px;
 }
-.album .buttons .play {
+.album .buttons a .play {
   background-color: white;
   font-weight: 600;
+  color: black;
   transition: box-shadow 0.2s;
 }
-.album .buttons .spotify {
+.album .buttons a .spotify {
   margin-left: 20px;
   background-color: #1DB954;
   color: white;
@@ -157,13 +161,115 @@ background-position: center;
 .album .tracks li {
   padding: 5px 0;
 }
-.album .buttons > div:hover {
+.album .buttons a > div:hover {
   box-shadow: 0 0 15px black;
   cursor: pointer;
 }
-.album .buttons > div:hover img {
+.album .buttons a > div:hover img {
   padding-right: 15px;
 }
+
+/* event */
+.eventSection {
+  position: relative;
+  height: 85vh;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #41d6f4;
+  }
+  .event {
+    font-family: 'Roboto', sans-serif;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+  }
+  .event .cover img {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    border-image-source: linear-gradient(60deg, #41d6f4, #4262f4);
+    border-image-slice: 1;
+  }
+  .event .info {
+    margin-left: 40px;
+  }
+  .event .info span {
+    padding: 1px 6px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #fdfdfd;
+    background-color: #111111;
+    text-transform: uppercase;
+  }
+  .event .info h1 {
+    margin-top: 10px;
+    font-size: 3.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fdfdfd;
+    letter-spacing: .2rem;
+  }
+  .event .info h3 {
+    margin-top: 5px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #878787;
+  }
+  .event .buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .1rem;
+  }
+  .event .buttons > div {
+    width: 144px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .event .buttons > div img {
+    padding-right: 10px;
+    transition: padding-right 0.2s;
+  }
+  .event .buttons .video img {
+    height: 18px; /* Aligning icon heights with Spotify icon */
+  }
+  .event .buttons .eventlink img {
+    height: 24px;
+  }
+  .event .buttons .video {
+    background-color: white;
+    font-weight: 600;
+    transition: box-shadow 0.2s;
+  }
+  .event .buttons .eventlink {
+    margin-left: 20px;
+    background-color: #1DB954;
+    color: white;
+    transition: box-shadow 0.2s;
+  }
+  .event .tracks {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: #878787;
+    font-weight: 400;
+  }
+  .event .tracks li {
+    padding: 5px 0;
+  }
+  .event .buttons > div:hover {
+    box-shadow: 0 0 15px black;
+    cursor: pointer;
+  }
+  .event .buttons > div:hover img {
+    padding-right: 15px;
+  }
 
 /* Mobile friendly albumSection */
 

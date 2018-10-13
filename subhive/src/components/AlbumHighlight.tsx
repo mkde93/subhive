@@ -37,8 +37,12 @@ class AlbumHighlight extends React.Component<Props, State> {
           <h1>{this.props.albumTitle}</h1>
           <h3>By {this.props.albumArtists}</h3>
           <div className="buttons">
-            <div className="play"><img src={require("../img/icons/play.svg")} />Play</div>
-            <div className="spotify"><img src={require("../img/icons/Spotify_Icon_White.png")} />Stream</div>
+            <a href={this.props.soundcloudUrl} target={"_blank"}>
+              <div className="play"><img src={require("../img/icons/play.svg")} />Play</div>
+            </a>
+            <a href={this.props.spotifyUrl} target={"_blank"}>
+              <div className="spotify"><img src={require("../img/icons/Spotify_Icon_White.png")} />Stream</div>
+            </a>
           </div>
           <div className="tracks">
             <ul>

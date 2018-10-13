@@ -18,6 +18,7 @@ class App extends React.Component {
           albumCover={"Subhive_001_Cover.jpg"}
           spotifyUrl={ContentStrings.albums.spotifyurls.origin}
           soundcloudUrl={ContentStrings.albums.soundcloudurls.origin}
+          isHighlight={true}
         />
         <SectionEvent
           backgroundImage="Subhive_Origin_Dark.png"
@@ -28,6 +29,10 @@ class App extends React.Component {
           eventLink={ContentStrings.events.eventLinks.subhive_1}
           eventMovie={ContentStrings.events.afterMovies.subhive_1}
           eventDescription={ContentStrings.events.description.subhive_1}
+          isHighlight={true}
+          lineupArtists={ContentStrings.events.lineup.artists.subhive_1}
+          lineupSettimes={ContentStrings.events.lineup.settime.subhive_1}
+          lineupSocials={ContentStrings.events.lineup.link.subhive_1}
         />
       </div>
     );
