@@ -24,7 +24,7 @@ class App extends React.Component {
           eventTitle={ContentStrings.events.titles.subhive_1}
           eventDate={ContentStrings.events.dates.subhive_1}
           eventLocation={ContentStrings.events.locations.subhive_1}
-          eventPoster={"Subhive_5.png"}
+          eventPoster={"Subhive_5_Poster.png"}
           eventLink={ContentStrings.events.eventLinks.subhive_1}
           eventMovie={ContentStrings.events.afterMovies.subhive_1}
           eventDescription={ContentStrings.events.description.subhive_1}

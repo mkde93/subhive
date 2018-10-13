@@ -13,7 +13,7 @@ export interface Props {
   eventDescription: string;
 }
 
-class SectionAlbum extends React.Component<Props> {
+class SectionEvent extends React.Component<Props> {
   render() {
     return (
       <section style={{ backgroundImage: `url(${require("../img/" + this.props.backgroundImage)})` }} className="eventSection">
@@ -32,4 +32,4 @@ class SectionAlbum extends React.Component<Props> {
     );
   }
 }
-export default SectionAlbum;
+export default SectionEvent;
