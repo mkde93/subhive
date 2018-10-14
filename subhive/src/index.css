@@ -184,6 +184,7 @@ background-position: center;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: row;
+    padding-bottom: 40px;
   }
   .event .poster img {
     width: 400px;
@@ -277,8 +278,8 @@ background-position: center;
   }
   .event .lineup .wrapper {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   .event .lineup h3 {
     font-weight: 600;
@@ -302,32 +303,38 @@ background-position: center;
     font-weight: 400;
     font-size: 1.3rem;
     text-shadow: 0 0 20px black;
+    margin-bottom: 10px;
   }
   .event .lineup .overlay {
     width: 100%;
     height: 100%;
     z-index: 3;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: column;
     text-align: center;
     padding: 20px 10px 10px 10px;
   }
+
   .event .overlay .settime {
-    display: block;
+    display: none;
     color: white;
     font-size: 1rem;
+    transition: opacity 0.2s;
   }
   .event .overlay .timeslot {
     margin-top: 5px;
-    display: block;
+    display: none;
     color: white;
     font-size: 1.4rem;
+    transition: opacity 0.2s;
   }
   .event .overlay a {
+    display: none;
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
+    transition: opacity 0.2s;
   }
   .event .overlay .social {
     padding: 10px 15px;
@@ -338,17 +345,36 @@ background-position: center;
     position: absolute;
     height: 100%;
     width: 100%;
-    opacity: 0;
-    background-color: black;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    opacity: 0.8;
     transition: opacity .3s;
   }
   .event .lineup .artist:hover .gradient {
     opacity: .8;
   }
+  .event .lineup .overlay:hover {
+    justify-content: space-between;
 
+  }
+  .event .overlay:hover a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+  .event .overlay:hover .settime {
+    display: block;
+    color: white;
+    font-size: 1rem;
+  }
+  .event .overlay:hover .timeslot {
+    margin-top: 5px;
+    display: block;
+    color: white;
+    font-size: 1.4rem;
+  }
 /* Mobile friendly albumSection */
-
-@media only screen and (max-width: 799px) { 
+@media only screen and (max-width: 899px) { 
   html {
     font-size: 12px !important; /* Overwriting css clear - need better fix */
   }
@@ -363,14 +389,20 @@ background-position: center;
   .album .cover img {
     align-self: center;
     width: 100%;
+    max-width: 400px;
     height: auto;
   }
   .album .info {
     margin-top: 20px;
     margin-left: 0;
+    width: 100%;
   }
   .album .buttons {
     margin: 15px 0;
+  }
+  .album .buttons a > div {
+    width: auto;
+    padding: 0 20px;
   }
   .album .info .tracks {
     font-size: 1.6rem;
@@ -391,7 +423,13 @@ background-position: center;
   .event .info {
     margin-top: 0;
     margin-left: 0;
-    order: 1;
+    width: 100%;
+  }
+  .event .buttons a > div {
+    width: auto;
+  }
+  .event .buttons .eventlink {
+    margin-left: 0;
   }
   .event .info h1 {
     margin-top: 30px;
@@ -401,5 +439,17 @@ background-position: center;
   }
   .event .info .tag {
     margin-top: 20px;
+  }
+  .event .lineup .overlay {
+    justify-content: space-between;
+  }
+  .event .overlay a {
+    display: block;
+  }
+  .event .overlay .settime {
+    display: block;
+  }
+  .event .overlay .timeslot {
+    display: block;
   }
 }
