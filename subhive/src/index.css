@@ -399,6 +399,33 @@ background-position: center;
     width: 100%;
     max-width: 1000px;
   }
+  
+  .spotifySection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+  }
+  .spotifySection h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 50px;
+    font-size: 3.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: .2rem;
+  }
+  .spotifySection h3 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #B7B7B7;
+  }
 /* Mobile friendly albumSection */
 @media only screen and (max-width: 899px) { 
   html {

@@ -3,7 +3,8 @@ import "./App.css";
 import ContentStrings from "./ContentStrings";
 import SectionAlbum from "./components/SectionAlbum";
 import SectionEvent from "./components/SectionEvent";
-import LatestAftermovie from "./components/LatestAftermovie";
+import SectionAftermovie from "./components/SectionAftermovie";
+import SectionSpotify from "./components/SectionSpotify";
 
 
 class App extends React.Component {
@@ -35,11 +36,15 @@ class App extends React.Component {
           lineupSettimes={ContentStrings.events.lineup.settime.subhive_1}
           lineupSocials={ContentStrings.events.lineup.link.subhive_1}
         />
-        <LatestAftermovie
+        <SectionAftermovie
           backgroundImage="subhive_001_bg.png"
           movieTitle="SUBHIVE: Safari Expedition - April 28"
           movieUrl="subhive_001.mp4"
           posterUrl="subhive_001.png"
+        />
+        <SectionSpotify
+          backgroundImage="Subhive_Origin_Dark.png"
+          spotifyUrl="asdf"
         />
       </div>
     );

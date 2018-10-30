@@ -13,7 +13,6 @@ import Playlist from "./pages/Playlist";
 import Contact from "./pages/Contact";
 
 const history = createBrowserHistory();
-
 ReactDOM.render(
   <Provider>
     <Router history={history}>
