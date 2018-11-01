@@ -11,11 +11,11 @@ class SectionSpotify extends React.Component<Props> {
   render() {
     return (
       <section style={{ backgroundImage: `url(${require("../img/" + this.props.backgroundImage)})` }} className="spotifySection">
-        <div>
+        <div className="width-90">
           <h1>Subhive Selects</h1>
           <h3>Spotify Playlist by SUBHIVE</h3>
           <div className="spotifyPlaylist">
-            <SpotifyPlaylist 
+            <SpotifyPlaylist
               spotifyUrl={this.props.spotifyUrl}
             />
           </div>

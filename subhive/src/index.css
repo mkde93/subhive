@@ -395,8 +395,8 @@ background-position: center;
     color: #B7B7B7;
   }
   .movieSection .video {
-    margin-top: 40px;
-    width: 100%;
+    margin: 40px auto 0;
+    width: 90%;
     max-width: 1000px;
   }
   
@@ -404,7 +404,7 @@ background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
     background-repeat: no-repeat, repeat;
     background-size: cover;
     background-position: center;
@@ -425,6 +425,24 @@ background-position: center;
     font-size: 1.8rem;
     font-weight: 600;
     color: #B7B7B7;
+  }
+  .spotifySection .width-90 {
+    width: 90%;
+    max-width: 1000px;
+  }
+  .spotifyplaylist {
+    margin-top: 40px;
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+  }
+  .spotifyplaylist iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 /* Mobile friendly albumSection */
 @media only screen and (max-width: 899px) { 
@@ -504,5 +522,11 @@ background-position: center;
   }
   .event .overlay .timeslot {
     display: block;
+  }
+  .event .lineup .artist {
+    margin: 10px 5px;
+  }
+  .spotifySection h1, .movieSection h1 {
+    margin-top: 0px;
   }
 }
