@@ -5,6 +5,7 @@ import SectionAlbum from "./components/SectionAlbum";
 import SectionEvent from "./components/SectionEvent";
 import SectionAftermovie from "./components/SectionAftermovie";
 import SectionSpotify from "./components/SectionSpotify";
+import Footer from "./components/Footer";
 
 
 class App extends React.Component {
@@ -46,6 +47,7 @@ class App extends React.Component {
           backgroundImage="Subhive_Origin_Dark.png"
           spotifyUrl="asdf"
         />
+        <Footer />
       </div>
     );
   }

@@ -17,6 +17,7 @@ header {
   position: fixed;
   z-index: 100;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 header .container-16 {
   display: flex;
@@ -129,9 +130,11 @@ background-position: center;
   align-items: center;
   justify-content: center;
 }
+.album .buttons a > div:hover {
+  padding-left: 8px;
+}
 .album .buttons a > div img {
   padding-right: 10px;
-  transition: padding-right 0.2s;
 }
 .album .buttons a .soundcloud img {
   height: 18px; /* Aligning icon heights with Spotify icon */
@@ -143,12 +146,14 @@ background-position: center;
   background-color: #ff8800;
   color: white;
   transition: box-shadow 0.2s;
+  transition: padding-left 0.2s;
 }
 .album .buttons a .spotify {
   margin-left: 20px;
   background-color: #1DB954;
   color: white;
   transition: box-shadow 0.2s;
+  transition: padding-left 0.2s;
 }
 .album .tracks {
   font-size: 1.4rem;
@@ -159,14 +164,14 @@ background-position: center;
 .album .tracks li {
   padding: 5px 0;
 }
-.album .buttons a > div:hover {
-  box-shadow: 0 0 15px black;
+.album .buttons a .spotify:hover {
+  box-shadow: 0 0 8px #1DB954;
   cursor: pointer;
 }
-.album .buttons a > div:hover img {
-  padding-right: 15px;
+.album .buttons a .soundcloud:hover {
+  box-shadow: 0 0 8px #ff8800;
+  cursor: pointer;
 }
-
 /* event */
 .eventSection {
   position: relative;
@@ -185,6 +190,7 @@ background-position: center;
     width: 400px;
     height: auto;
     margin-top: -60px; /*Overlap hero */
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
   }
   .event .info {
     margin-left: 40px;
@@ -235,7 +241,6 @@ background-position: center;
   .event .buttons a > div {
     width: 220px;
     height: 44px;
-    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -254,23 +259,30 @@ background-position: center;
   }
   .event .buttons .video {
     background-color: #3AC7D2;
-    font-weight: 600;
     color: white;
     transition: box-shadow 0.2s;
+    transition: padding-left 0.2s;
   }
   .event .buttons .eventlink {
     margin-left: 20px;
     background-color: #1DB954;
     color: white;
     transition: box-shadow 0.2s;
+    transition: padding-left 0.2s;
   }
-  .event .buttons a > div:hover {
-    box-shadow: 0 0 10px black;
+  .event .buttons .video:hover {
+    box-shadow: 0 0 8px #3AC7D2;
     cursor: pointer;
+    padding-left: 8px;
   }
-  .event .buttons a > div:hover img {
+  .event .buttons .eventlink:hover {
+    box-shadow: 0 0 8px #1DB954;
+    cursor: pointer;
+    padding-left: 8px;
+  }
+  /*.event .buttons a > div:hover img {
     padding-right: 15px;
-  }
+  }*/
   .event .lineup .wrapper {
     display: flex;
     flex-direction: row;
@@ -368,6 +380,7 @@ background-position: center;
     color: white;
     font-size: 1.4rem;
   }
+  /* Movie */
   .movieSection {
     display: flex;
     flex-direction: column;
@@ -443,6 +456,75 @@ background-position: center;
     position: absolute;
     top: 0;
     width: 100%;
+  }
+  .footer {
+    background-color: #1A1A1A; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+  }
+  .footer .socials {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer span {
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: white;
+
+  }
+  .footer .hexagon {
+    text-decoration: none;
+    position: relative;
+    margin: 0 5px;
+  }
+  .footer .hexagon::before {
+    content: '\2B22';
+    font-size: 7rem;
+    color: white;
+  }
+  .footer .facebook {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 3rem;
+    width: auto;
+  }
+  .footer .soundcloud {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    height: auto;
+    width: 3.8rem;
+  }
+  .footer .instagram {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: 3rem;
+  }
+  .footer .youtube {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: 3.4rem;
+  }
+  .footer .spotify {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: 3rem;
   }
 /* Mobile friendly albumSection */
 @media only screen and (max-width: 899px) { 

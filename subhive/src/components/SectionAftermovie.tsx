@@ -16,7 +16,7 @@ class SectionAftermovie extends React.Component<Props> {
           <h1>Latest aftermovie</h1>
           <h3>{this.props.movieTitle}</h3>
           <div className="video">
-            <video width="100%" poster={require("../img/movieposters/" + this.props.posterUrl)} controls={true} autoPlay={true} muted={true}>
+            <video width="100%" poster={require("../img/movieposters/" + this.props.posterUrl)} controls={true} autoPlay={true} muted={true} loop={true}>
               <source src={require("../video/" + this.props.movieUrl)} type="video/mp4" />
             </video>
           </div>
