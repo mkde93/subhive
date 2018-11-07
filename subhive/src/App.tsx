@@ -45,7 +45,7 @@ class App extends React.Component {
         />
         <SectionSpotify
           backgroundImage="Subhive_Origin_Dark.png"
-          spotifyUrl="asdf"
+          spotifyUrl={ContentStrings.spotifyPlaylist.playlistUrl}
         />
         <Footer />
       </div>

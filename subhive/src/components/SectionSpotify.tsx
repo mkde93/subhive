@@ -12,8 +12,15 @@ class SectionSpotify extends React.Component<Props> {
     return (
       <section style={{ backgroundImage: `url(${require("../img/" + this.props.backgroundImage)})` }} className="spotifySection">
         <div className="width-90">
-          <h1>Subhive Selects</h1>
-          <h3>Spotify Playlist by SUBHIVE</h3>
+          <div className="desc">
+            <div>
+              <h1>Subhive Selects</h1>
+              <h3>Spotify Playlist by SUBHIVE</h3>
+            </div>
+            <a href={this.props.spotifyUrl} target={"_blank"}>
+              <div className="spotify"><img src={require("../img/icons/Spotify_Icon_White.png")} />Follow</div>
+            </a>
+          </div>
           <div className="spotifyPlaylist">
             <SpotifyPlaylist
               spotifyUrl={this.props.spotifyUrl}

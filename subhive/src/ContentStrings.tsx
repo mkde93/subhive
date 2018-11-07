@@ -71,15 +71,18 @@ export default {
             },
             link: {
                 subhive_1: "https://soundcloud.com/ov_music," +
-                "https://soundcloud.com/shio_shio," + 
-                "https://soundcloud.com/yngve-stensaker," + 
-                "https://soundcloud.com/subup," + 
-                "https://soundcloud.com/meluran"
+                    "https://soundcloud.com/shio_shio," +
+                    "https://soundcloud.com/yngve-stensaker," +
+                    "https://soundcloud.com/subup," +
+                    "https://soundcloud.com/meluran"
             },
         },
         common: {
             upcoming: "Upcoming Event",
             past: "Past Event"
         }
+    },
+    spotifyPlaylist: {
+        playlistUrl: "https://open.spotify.com/user/m4b4uyyjsqiayu25y7ud0zbqy/playlist/3ZODyGLF5RCS5S6WLlQoqr?si=Wi6HSG0uTf-04QfYFPeI2Q"
     }
 }

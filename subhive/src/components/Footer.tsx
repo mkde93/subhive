@@ -9,19 +9,21 @@ class Footer extends React.Component {
       <section className="footer">
         <div className="socials">
           <div className="hexagon">
-            <a href=""><img className="facebook" src={require("../img/icons/facebook.svg")} /></a>
+            <a target="_blank" href="https://www.facebook.com/SUBHIVE/"><img className="facebook" src={require("../img/icons/facebook.svg")} /></a>
           </div>
           <div className="hexagon">
-            <a href=""><img className="soundcloud" src={require("../img/icons/soundcloud.svg")} /></a>
+            <a target="_blank" href="https://soundcloud.com/subhive"><img className="soundcloud" src={require("../img/icons/soundcloud.svg")} /></a>
           </div>
           <div className="hexagon">
-            <a href=""><img className="instagram" src={require("../img/icons/instagram.svg")} /></a>
+            <a target="_blank" href="https://www.instagram.com/subhive_dk/"><img className="instagram" src={require("../img/icons/instagram.svg")} /></a>
           </div>
           <div className="hexagon">
-            <a href=""><img className="youtube" src={require("../img/icons/youtube.svg")} /></a>
+            <a target="_blank" href=""><img className="youtube" src={require("../img/icons/youtube.svg")} /></a>
           </div>
           <div className="hexagon">
-            <a href=""><img className="spotify" src={require("../img/icons/spotify.svg")} /></a>
+            <a target="_blank" href="https://open.spotify.com/user/m4b4uyyjsqiayu25y7ud0zbqy/playlist/3ZODyGLF5RCS5S6WLlQoqr?si=xOHy7f2rR3usC5ne_gRhTg">
+              <img className="spotify" src={require("../img/icons/spotify.svg")} />
+            </a>
           </div>
         </div>
         <span>2018 (c) SUBHIVE</span>
