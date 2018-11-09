@@ -20,6 +20,7 @@ class Menu extends React.Component {
               <li><Button label="events" link="/events" /></li>
               <li><Button label="playlist" link="/playlist" /></li>
               <li><Button label="contact" link="/contact" /></li>
+
             </ul>
           </nav>
         </div>

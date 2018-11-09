@@ -179,384 +179,393 @@ background-position: center;
   background-size: cover;
   background-position: center;
   background-color: #41d6f4;
-  }
-  .event {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 40px;
-  }
-  .event .poster img {
-    width: 400px;
-    height: auto;
-    margin-top: -60px; /*Overlap hero */
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
-  }
-  .event .info {
-    margin-left: 40px;
-    margin-top: -45px; /*Overlap hero */
-  }
-  .event .info .tag {
-    padding: 1px 6px;
-    font-weight: 600;
-    font-size: 1.6rem;
-    color: #fdfdfd;
-    background-color: #FF6161;
-    text-transform: uppercase;
-  }
-  .event .info h1 {
-    margin-top: 50px;
-    font-size: 3.6rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #22384A;
-    letter-spacing: .2rem;
-  }
-  .event .info h3 {
-    margin-top: 20px;
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: #878787;
-  }
-  .event .info .description {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
-    max-width: 700px;
-    margin-top: 50px;
-    line-height: 1.8rem;
-    color: #878787;
-  }
-  .event .buttons {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    margin: 20px 0;
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: .1rem;
-  }
-  .event .buttons a {
-    text-decoration: none;
-  }
-  .event .buttons a > div {
-    width: 220px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .event .buttons a > div img {
-    padding-right: 10px;
-    transition: padding-right 0.2s;
-  }
-  .event .buttons .video img {
-    height: 18px; /* Aligning icon heights with Spotify icon */
-    color: white;
-    fill: currentColor;
-  }
-  .event .buttons .eventlink img {
-    height: 24px;
-  }
-  .event .buttons .video {
-    background-color: #3AC7D2;
-    color: white;
-    transition: box-shadow 0.2s;
-    transition: padding-left 0.2s;
-  }
-  .event .buttons .eventlink {
-    margin-left: 20px;
-    background-color: #1DB954;
-    color: white;
-    transition: box-shadow 0.2s;
-    transition: padding-left 0.2s;
-  }
-  .event .buttons .video:hover {
-    box-shadow: 0 0 8px #3AC7D2;
-    cursor: pointer;
-    padding-left: 8px;
-  }
-  .event .buttons .eventlink:hover {
-    box-shadow: 0 0 8px #1DB954;
-    cursor: pointer;
-    padding-left: 8px;
-  }
-  /*.event .buttons a > div:hover img {
-    padding-right: 15px;
-  }*/
-  .event .lineup .wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .event .lineup h3 {
-    font-weight: 600;
-    color: #22384A;
-  }
-  .event .lineup .artist {
-    z-index: 1;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    margin: 20px 10px;
-    width: 150px;
-    height: 215px;
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .event .lineup .artist .name {
-    text-transform: uppercase;
-    color: white;
-    font-weight: 400;
-    font-size: 1.3rem;
-    text-shadow: 0 0 20px black;
-    margin-bottom: 10px;
-  }
-  .event .lineup .overlay {
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 10px 10px 10px;
-  }
+}
+.event {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+}
+.event .poster img {
+  width: 400px;
+  height: auto;
+  margin-top: -60px; /*Overlap hero */
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+.event .info {
+  margin-left: 40px;
+  margin-top: -45px; /*Overlap hero */
+}
+.event .info .tag {
+  padding: 1px 6px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #fdfdfd;
+  background-color: #FF6161;
+  text-transform: uppercase;
+}
+.event .info h1 {
+  margin-top: 50px;
+  font-size: 3.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #22384A;
+  letter-spacing: .2rem;
+}
+.event .info h3 {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #878787;
+}
+.event .info .description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin-top: 50px;
+  line-height: 1.8rem;
+  color: #878787;
+}
+.event .buttons {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+.event .buttons a {
+  text-decoration: none;
+}
+.event .buttons a > div {
+  width: 220px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.event .buttons a > div img {
+  padding-right: 10px;
+  transition: padding-right 0.2s;
+}
+.event .buttons .video img {
+  height: 18px; /* Aligning icon heights with Spotify icon */
+  color: white;
+  fill: currentColor;
+}
+.event .buttons .eventlink img {
+  height: 24px;
+}
+.event .buttons .video {
+  background-color: #3AC7D2;
+  color: white;
+  transition: box-shadow 0.2s;
+  transition: padding-left 0.2s;
+}
+.event .buttons .eventlink {
+  margin-left: 20px;
+  background-color: #1DB954;
+  color: white;
+  transition: box-shadow 0.2s;
+  transition: padding-left 0.2s;
+}
+.event .buttons .video:hover {
+  box-shadow: 0 0 8px #3AC7D2;
+  cursor: pointer;
+  padding-left: 8px;
+}
+.event .buttons .eventlink:hover {
+  box-shadow: 0 0 8px #1DB954;
+  cursor: pointer;
+  padding-left: 8px;
+}
+.event .lineup .wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.event .lineup h3 {
+  font-weight: 600;
+  color: #22384A;
+}
+.event .lineup .artist {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 20px 10px;
+  width: 150px;
+  height: 215px;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+}
+.event .lineup .overlay .name {
+  position: absolute;
+  top: 165px;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-shadow: 0 0 20px black;
+  margin-bottom: 10px;
+  transition: top 0.2s;
+}
+.event .lineup .overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 10px 10px 10px;
+}
+.event .lineup .time {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: 130px;
+  transition: top 0.3s;
+  transition: opacity 0.4s;
+}
+.event .overlay .settime {
+  display: block;
+  color: white;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+.event .overlay .timeslot {
+  color: white;
+  font-size: 1.4rem;
+  transition: opacity 0.2s;
+}
+.event .overlay a {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  opacity: 0;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: opacity 0.2s;
+}
+.event .overlay .social {
+  padding: 10px 15px;
+  background-color: orange;
+}
+.event .lineup .gradient {
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.event .lineup .overlay:hover .gradient {
+  opacity: 1;
+  background: black;
+}
+.event .overlay:hover a {
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+.event .overlay:hover .name {
+  top: 20px;
+}
+.event .overlay:hover .time {
+  top: 90px;
+  opacity: 1;
+}
+.event .overlay:hover .timeslot {
+  margin-top: 5px;
+  color: white;
+  font-size: 1.4rem;
+}
+/* Movie */
+.movieSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+}
+.movieSection h1 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 50px;
+  font-size: 3.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: .2rem;
+}
+.movieSection h3 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #B7B7B7;
+}
+.movieSection .video {
+  margin: 40px auto 0;
+  width: 90%;
+  max-width: 1000px;
+}
 
-  .event .overlay .settime {
-    display: none;
-    color: white;
-    font-size: 1rem;
-    transition: opacity 0.2s;
-  }
-  .event .overlay .timeslot {
-    margin-top: 5px;
-    display: none;
-    color: white;
-    font-size: 1.4rem;
-    transition: opacity 0.2s;
-  }
-  .event .overlay a {
-    display: none;
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    transition: opacity 0.2s;
-  }
-  .event .overlay .social {
-    padding: 10px 15px;
-    background-color: orange;
-  }
-  .event .lineup .gradient {
-    z-index: 2;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    opacity: 0.8;
-    transition: opacity .3s;
-  }
-  .event .lineup .artist:hover .gradient {
-    opacity: .8;
-  }
-  .event .lineup .overlay:hover {
-    justify-content: space-between;
+.spotifySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+}
+.spotifySection h1 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 50px;
+  font-size: 3.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: .2rem;
+}
+.spotifySection h3 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #B7B7B7;
+}
+.spotifySection .desc {
+  justify-content: space-between;
+  text-align: left;
+}
+.spotifySection a {
+  display: inline-block;
+  text-decoration: none;
+}
+.spotifySection .spotify {
+  width: 180px;
+  height: 44px;
+  display: flex;
+  margin-top: 20px;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  justify-content: center;
+  background-color: #1DB954;
+  color: white;
+  transition: box-shadow 0.2s;
+  transition: padding-left 0.2s;
+}
+.spotifySection .spotify img {
+  height: 24px;
+  margin-right: 10px;
+}
+.spotifySection .spotify:hover {
+  padding-left: 8px;
+  box-shadow: 0 0 8px #1DB954;
+}
+.spotifySection .width-90 {
+  width: 90%;
+  max-width: 1000px;
+}
+.spotifyplaylist {
+  margin-top: 40px;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+.spotifyplaylist iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.footer {
+  background-color: #1A1A1A; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+.footer .socials {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer span {
+  margin-top: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white;
 
-  }
-  .event .overlay:hover a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-  }
-  .event .overlay:hover .settime {
-    display: block;
-    color: white;
-    font-size: 1rem;
-  }
-  .event .overlay:hover .timeslot {
-    margin-top: 5px;
-    display: block;
-    color: white;
-    font-size: 1.4rem;
-  }
-  /* Movie */
-  .movieSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 40px 0;
-  }
-  .movieSection h1 {
-    font-family: 'Roboto', sans-serif;
-    margin-top: 50px;
-    font-size: 3.6rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: .2rem;
-  }
-  .movieSection h3 {
-    font-family: 'Roboto', sans-serif;
-    margin-top: 15px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #B7B7B7;
-  }
-  .movieSection .video {
-    margin: 40px auto 0;
-    width: 90%;
-    max-width: 1000px;
-  }
-  
-  .spotifySection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 40px 0;
-  }
-  .spotifySection h1 {
-    font-family: 'Roboto', sans-serif;
-    margin-top: 50px;
-    font-size: 3.6rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: .2rem;
-  }
-  .spotifySection h3 {
-    font-family: 'Roboto', sans-serif;
-    margin-top: 15px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #B7B7B7;
-  }
-  .spotifySection .desc {
-    justify-content: space-between;
-    text-align: left;
-  }
-  .spotifySection a {
-    display: inline-block;
-    text-decoration: none;
-  }
-  .spotifySection .spotify {
-    width: 180px;
-    height: 44px;
-    display: flex;
-    margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
-    align-items: center;
-    justify-content: center;
-    background-color: #1DB954;
-    color: white;
-    transition: box-shadow 0.2s;
-    transition: padding-left 0.2s;
-  }
-  .spotifySection .spotify img {
-    height: 24px;
-    margin-right: 10px;
-  }
-  .spotifySection .spotify:hover {
-    padding-left: 8px;
-    box-shadow: 0 0 8px #1DB954;
-  }
-  .spotifySection .width-90 {
-    width: 90%;
-    max-width: 1000px;
-  }
-  .spotifyplaylist {
-    margin-top: 40px;
-    overflow: hidden;
-    padding-top: 56.25%;
-    position: relative;
-  }
-  .spotifyplaylist iframe {
-    border: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  .footer {
-    background-color: #1A1A1A; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-  }
-  .footer .socials {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .footer span {
-    margin-top: 15px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: white;
-
-  }
-  .footer .hexagon {
-    text-decoration: none;
-    position: relative;
-    margin: 0 5px;
-  }
-  .footer .hexagon::before {
-    content: '\2B22';
-    font-size: 6rem;
-    color: white;
-  }
-  .footer .facebook {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: 2rem;
-    width: auto;
-  }
-  .footer .soundcloud {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-60%);
-    height: auto;
-    width: 3rem;
-  }
-  .footer .instagram {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: auto;
-    width: 2.5rem;
-  }
-  .footer .youtube {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: auto;
-    width: 2.5rem;
-  }
-  .footer .spotify {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: auto;
-    width: 2rem;
-  }
+}
+.footer .hexagon {
+  text-decoration: none;
+  position: relative;
+  margin: 0 5px;
+}
+.footer .hexagon::before {
+  content: '\2B22';
+  font-size: 6rem;
+  color: white;
+}
+.footer .facebook {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 2rem;
+  width: auto;
+}
+.footer .soundcloud {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-60%);
+  height: auto;
+  width: 3rem;
+}
+.footer .instagram {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: auto;
+  width: 2.5rem;
+}
+.footer .youtube {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: auto;
+  width: 2.5rem;
+}
+.footer .spotify {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: auto;
+  width: 2rem;
+}
 /* Mobile friendly albumSection */
 @media only screen and (max-width: 899px) { 
   html {
@@ -622,9 +631,6 @@ background-position: center;
   }
   .event .info .tag {
     margin-top: 20px;
-  }
-  .event .lineup .overlay {
-    justify-content: space-between;
   }
   .event .overlay a {
     display: block;

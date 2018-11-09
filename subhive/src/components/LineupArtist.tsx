@@ -15,7 +15,7 @@ class LineupArtist extends React.Component<Props> {
         <div style={{ backgroundImage: `url(${require("../img/lineupartists/" + this.props.artistimg)})` }} className="artist" >
           <div className="overlay">
             <span className="name">{this.props.artist}</span>
-            <div>
+            <div className="time">
               <span className="settime">Set time:</span>
               <span className="timeslot">{this.props.settime}</span>
             </div>
