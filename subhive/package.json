@@ -16,7 +16,7 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
-    "react-scripts-ts": "2.16.0",
+    "react-scripts": "^2.1.1",
     "redux": "^4.0.1",
     "request": "^2.79.0",
     "typestyle": "^2.0.1",
@@ -25,17 +25,24 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "watch": "react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
-    "@types/node": "^10.1.2",
-    "@types/react": "^16.3.14",
-    "@types/react-dom": "^16.0.5",
+    "@types/node": "^10.12.3",
+    "@types/react": "^16.7.1",
+    "@types/react-dom": "^16.0.9",
     "gh-pages": "^2.0.1",
-    "typescript": "^2.8.3"
-  }
+    "typescript": "^2.9.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
