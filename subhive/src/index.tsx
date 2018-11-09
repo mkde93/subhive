@@ -19,7 +19,7 @@ ReactDOM.render(
       <div>
         <Menu />
         <div id="wrapper">
-          <Route exact={true} path="/subhive" component={App} />
+          <Route exact={true} path="/" component={App} />
           <Route exact={true} path="/music" component={Music} />
           <Route exact={true} path="/events" component={Events} />
           <Route exact={true} path="/playlist" component={Playlist} />
