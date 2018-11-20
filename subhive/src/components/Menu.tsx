@@ -1,5 +1,4 @@
 import * as React from "react";
-import "../index.css";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 

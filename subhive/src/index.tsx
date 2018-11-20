@@ -1,11 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import App from "./App";
 import { Provider } from "react-redux";
 import { Route, Router } from "react-router";
 import createBrowserHistory from "history/createBrowserHistory";
 import "./pages/css/css-reset.css";
-import "./index.css";
+import "./index.scss";
+import App from "./App";
 import Menu from "./components/Menu";
 import Music from "./pages/Music";
 import Events from "./pages/Events";

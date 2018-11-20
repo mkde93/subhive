@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./css/grid.css";
-import "../index.css";
+import "../index.scss";
 
 export interface Props {
   name: string;

@@ -1,5 +1,4 @@
 import * as React from "react";
-import "../index.css";
 import SpotifyPlaylist from "./SpotifyPlaylist";
 
 export interface Props {
@@ -17,9 +16,11 @@ class SectionSpotify extends React.Component<Props> {
               <h1>Subhive Selects</h1>
               <h3>Spotify Playlist by SUBHIVE</h3>
             </div>
-            <a href={this.props.spotifyUrl} target={"_blank"}>
-              <div className="spotify"><img src={require("../img/icons/Spotify_Icon_White.png")} />Follow</div>
-            </a>
+            <div className="buttons">
+              <a href={this.props.spotifyUrl} target={"_blank"}>
+                <div className="spotify"><img src={require("../img/icons/Spotify_Icon_White.png")} />Follow</div>
+              </a>
+            </div>
           </div>
           <div className="spotifyPlaylist">
             <SpotifyPlaylist

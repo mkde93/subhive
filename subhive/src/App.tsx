@@ -1,5 +1,4 @@
 import * as React from "react";
-import "./App.css";
 import ContentStrings from "./ContentStrings";
 import SectionAlbum from "./components/SectionAlbum";
 import SectionEvent from "./components/SectionEvent";
