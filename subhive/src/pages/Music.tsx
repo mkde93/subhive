@@ -15,7 +15,7 @@ class Music extends React.Component<Props> {
       <div className="container-full music">
         <div className="container-12">
           <div className="header">
-            <div className="title">Music</div>
+            <h1>Music by Subhive</h1>
           </div>
         </div>
       </div>

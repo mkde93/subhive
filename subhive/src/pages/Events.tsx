@@ -15,7 +15,7 @@ class Events extends React.Component<Props> {
       <div className="container-full music">
         <div className="container-12">
           <div className="header">
-            <div className="title">Events</div>
+            <h1>Events by Subhive</h1>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ class Contact extends React.Component<Props> {
       <div className="container-full music">
         <div className="container-12">
           <div className="header">
-            <div className="title">Contact</div>
+            <h1>Contact Subhive</h1>
           </div>
         </div>
       </div>
