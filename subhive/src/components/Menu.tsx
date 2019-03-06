@@ -13,13 +13,16 @@ class Menu extends React.Component {
               <span>Subhive</span>
             </Link>
           </div>
-          <nav>
-            <ul>
-              <li><Button label="music" link="/music" /></li>
-              <li><Button label="events" link="/events" /></li>
-              <li><Button label="contact" link="/contact" /></li>
-            </ul>
-          </nav>
+          <div>
+            <nav>
+              <ul>
+                <li><Button label="music" link="/music" /></li>
+                <li><Button label="events" link="/events" /></li>
+                <li><Button label="contact" link="/contact" /></li>
+              </ul>
+            </nav>
+            <span>Spotify Select</span>
+          </div>
         </div>
       </header>
     );

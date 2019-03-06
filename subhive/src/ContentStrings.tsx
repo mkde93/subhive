@@ -15,7 +15,7 @@ export default {
         },
         artists: {
             variousartists: "Various Artists",
-            origin: "MELURAN, Redemptive ,Kasger, Vidya Vidya, LazyKid, Cuuts"
+            origin: "MELURAN, Redemptive, Kasger, Vidya Vidya, LazyKid, Cuuts"
         },
         type: {
             origin: "Compilation Album"
