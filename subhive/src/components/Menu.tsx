@@ -21,7 +21,6 @@ class Menu extends React.Component {
                 <li><Button label="contact" link="/contact" /></li>
               </ul>
             </nav>
-            <span>Spotify Select</span>
           </div>
         </div>
       </header>

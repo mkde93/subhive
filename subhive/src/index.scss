@@ -32,7 +32,7 @@ h1 {
 }
 h3 {
   font-family: $font;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 /* Menu */
@@ -154,7 +154,7 @@ nav ul li:hover::after {
     }
     h3 {
       margin-top: 5px;
-      color: $grey;
+      color: $white;
     }
     .tracks {
       font-family: $font;
