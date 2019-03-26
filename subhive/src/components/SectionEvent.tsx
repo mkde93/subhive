@@ -37,7 +37,7 @@ class SectionEvent extends React.Component<Props> {
               />
             </div>
           </section> :
-          <section style={{}} className="eventSection">
+          <section className="eventSection">
             <div className="container-16">
               <EventHighlight
                 eventTitle={this.props.eventTitle}

@@ -5,6 +5,7 @@ import SectionEvent from "./components/SectionEvent";
 import SectionAftermovie from "./components/SectionAftermovie";
 import SectionSpotify from "./components/SectionSpotify";
 import Footer from "./components/Footer";
+import SectionInstagram from "./components/SectionInstagram";
 
 
 class App extends React.Component {
@@ -41,6 +42,9 @@ class App extends React.Component {
           movieTitle="SUBHIVE: Safari Expedition - April 28"
           movieUrl="subhive_001.mp4"
           posterUrl="subhive_001.png"
+        />
+        <SectionInstagram
+          backgroundImage="Subhive_Origin_Dark.png"
         />
         <SectionSpotify
           backgroundImage="Subhive_Origin_Dark.png"

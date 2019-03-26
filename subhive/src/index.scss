@@ -194,6 +194,10 @@ nav ul li:hover::after {
   }
 }
 /* Event Section */
+.page-bg { /* Probably not the best fix for the negative margin + behind menu */
+  padding-top: 200px;
+  background-color: $black;
+}
 .eventSection {
   position: relative;
   background-repeat: no-repeat, repeat;
@@ -266,13 +270,19 @@ nav ul li:hover::after {
     box-shadow: 0 0 8px $highlight;
   }
   .lineup {
+    :first-child .artist{
+      margin-left: 0;
+    }
     .wrapper {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      overflow-x: scroll; /* Scrolling if too many artists */
+      overflow-y: hidden;
     }
     h3 {
       color: $dark;
+      font-weight: 600;
     }
     .artist {
       z-index: 1;
@@ -371,6 +381,7 @@ nav ul li:hover::after {
     .time {
       top: 90px;
       opacity: 1;
+      text-shadow: 0 0 8px $black;
     }
     .timeslot {
       margin-top: 5px;
@@ -424,12 +435,19 @@ nav ul li:hover::after {
     color: $white;
   }
   .desc {
-    justify-content: space-between;
     text-align: left;
   }
+  .spotify-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .spotify {
+    display: flex;
     background-color: $spotify;
     color: $white;
+    width: 190px;
+    align-self: flex-start; /* Moving button to topright corner */
     transition: box-shadow .2s;
     transition: padding-left .2s;
     img {
