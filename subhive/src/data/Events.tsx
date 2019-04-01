@@ -11,8 +11,8 @@ export default {
             "melting visuals and flickering lights. Focusing on future bass, " +
             "trap and drum & bass, SUBHIVE is set to shake up the underground " +
             "music scene of Aalborg.",
-        lineup: ["Shogunglow", "Czech Strings", "Meluran", "Kasger", "Lazykid" + "Tazer", "Vidya Vidya"],
-        settimes: ["21.00-22.00", "22.00-23.00", "23.00-00.00", "00.00-01.00", "01.00-02.00", "02.00-03.00"],
+        lineup: ["Shogunglow", "Czech Strings", "MELURAN", "Kasger", "Lazykid", "Tazer", "Vidya Vidya"],
+        settimes: ["21.00-22.00", "22.00-23.00", "23.00-00.00", "00.00-01.00", "01.00-02.00", "01.00-02.00", "02.00-03.00"],
     },
     subhive_2: {
         title: "Subhive - Winter Edition",
@@ -26,7 +26,7 @@ export default {
             "melting visuals and flickering lights. Focusing on future bass, " +
             "trap and drum & bass, SUBHIVE is set to shake up the underground " +
             "music scene of Aalborg.",
-        lineup: ["Whoknows", "Cuuts", "Vidya Vidya", "Redemptive", "Kasger", "Meluran"],
+        lineup: ["Whoknows", "Cuuts", "Vidya Vidya", "Redemptive", "Kasger", "MELURAN"],
         settimes: ["21.00-22.00", "22.00-23.00", "23.00-00.00", "00.00-01.00", "01.00-02.00", "02.00-03.00"],
     },
     subhive_3: {
@@ -41,8 +41,8 @@ export default {
             "melting visuals and flickering lights. Focusing on future bass, " +
             "trap and drum & bass, SUBHIVE is set to shake up the underground " +
             "music scene of Aalborg.",
-        lineup: ["KEVO", "Shio" + " B2B " + "Andreas Northland", "Kasger", "TAZER", "Vidya Vidya"],
-        settimes: ["22.00-23.00", "23.00-00.00", "00.00-01.00", "01.00-02.00", "02.00-03.00"],
+        lineup: ["KEVO", "Shio", "Andreas Northland", "Kasger", "Tazer", "Vidya Vidya"],
+        settimes: ["22.00-23.00", "23.00-00.00", "23.00-00.00", "00.00-01.00", "01.00-02.00", "02.00-03.00"],
     },
     subhive_4: {
         title: "Subhive - Safari Expedition",
@@ -56,7 +56,7 @@ export default {
             "melting visuals and flickering lights. Focusing on future bass, " +
             "trap and drum & bass, SUBHIVE is set to shake up the underground " +
             "music scene of Aalborg.",
-        lineup: ["SUBHIVE Warmup Session", "Czech Strings", "Runge", "CELO", "Meluran", "O.V."],
+        lineup: ["SUBHIVE Warmup Session", "Czech Strings", "Runge", "CELO", "MELURAN", "O.V."],
         settimes: ["21.00-22.00", "22.00-23.00", "23.00-00.00", "00.00-01.00", "01.00-02.00", "02.00-03.00"],
     },
     subvibe_1: {
@@ -70,7 +70,7 @@ export default {
         desc: "SUBHIVE presents SubVibe. A Few small summer gatherings " +
             "for SUBHIVE fans. Bring your own beer and enjoy some chillout " +
             "bass music in the sun ",
-        lineup: ["Kasger", "Meluran", "TAZER", "Haszan & Overload"],
+        lineup: ["Kasger", "MELURAN", "Tazer", "Haszan & Overload"],
         settimes: ["13.00-15.00", "15.00-17.00", "17.00-19.00", "19.00-21.00"],
     },
     subhive_5: {
@@ -85,7 +85,7 @@ export default {
             "melting visuals and flickering lights. Focusing on future bass, " +
             "trap and drum & bass, SUBHIVE is set to shake up the underground " +
             "music scene of Aalborg.",
-        lineup: ["Sundr", "Vivien Oldy", "TAZER", "Lasu", "Kasger", "Lazykid"],
+        lineup: ["Sundr", "Vivien Oldy", "Tazer", "Lasu", "Kasger", "Lazykid"],
         settimes: ["21.00-22.00", "22.00-23.00", "23.00-00.00", "00.00-01.00", "01.00-02.00", "02.00-03.00"],
     },
     subhive_6: {
@@ -100,8 +100,8 @@ export default {
             "melting visuals and flickering lights. Focusing on future bass, " +
             "trap and drum & bass, SUBHIVE is set to shake up the underground " +
             "music scene of Aalborg.",
-        lineup: ["SUBHIVE Jam Session", "O.V.", "SHIO", "BOBASTIC" + " B2B " + "DJ 0 APE", "Captive", "Meluran"],
-        settimes: ["21.00-22.00", "22.00-23.00", "23.00-00.00", "00.00-01.00", "01.00-02.00", "02.00-03.00"],
+        lineup: ["SUBHIVE Jam Session", "O.V.", "Shio", "BOBASTIC", "DJ 0 APE", "Captive", "Meluran"],
+        settimes: ["21.00-22.00", "22.00-23.00", "23.00-00.00", "00.00-01.00", "00.00-01.00", "01.00-02.00", "02.00-03.00"],
     },
     subfryd_1: {
         title: "Subhive1000 - DnB Edition",
@@ -116,7 +116,7 @@ export default {
             "events on 1000Fryd, we strive to deliver a more intimate and intense " +
             "experience than ever before! This night we will be playing Drum and Bass " +
             "all night long",
-        lineup: ["Kasger", "Meluran", "TAZER"],
+        lineup: ["Tazer", "Kasger", "MELURAN"],
         settimes: ["21.00-23.00", "23.00-01.00", "01.00-03.00"],
     },
 }

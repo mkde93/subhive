@@ -6,14 +6,16 @@ export default {
         twitter: "https://twitter.com/meluranmusic",
         instagram: "https://www.instagram.com/meluranmusic/",
         subhiveartist: true,
+        img: "MELURAN.png",
     },
     KASGER: {
-        name: "MELURAN",
+        name: "Kasger",
         facebook: "https://www.facebook.com/Kasger",
         soundcloud: "https://soundcloud.com/kaspergerlif",
         twitter: "https://twitter.com/Kasger",
         instagram: "https://www.instagram.com/kasger",
         subhiveartist: true,
+        img: "KASGER.png",
     },
     TAZER: {
         name: "Tazer",
@@ -22,6 +24,7 @@ export default {
         twitter: "NONE",
         instagram: "https://www.instagram.com/iamlazykid/",
         subhiveartist: true,
+        img: "MELURAN.png",
     },
     OV: {
         name: "O.V.",
@@ -30,6 +33,7 @@ export default {
         twitter: "https://twitter.com/meluranmusic",
         instagram: "https://www.instagram.com/o.v.music/",
         subhiveartist: true,
+        img: "MELURAN.png",
     },
     VIDYAVIDYA: {
         name: "Vidya Vidya",
@@ -38,6 +42,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: true,
+        img: "MELURAN.png",
     },
     RUNGE: {
         name: "Runge",
@@ -46,6 +51,7 @@ export default {
         twitter: "https://twitter.com/rungemusic",
         instagram: "https://www.instagram.com/rungemusic/",
         subhiveartist: true,
+        img: "MELURAN.png",
     },
     CELO: {
         name: "CELO",
@@ -54,6 +60,7 @@ export default {
         twitter: "https://twitter.com/celodnb",
         instagram: "https://www.instagram.com/celodnb/",
         subhiveartist: true,
+        img: "MELURAN.png",
     },
     SUNDR: {
         name: "Sundr",
@@ -62,6 +69,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     VIVIENOLDY: {
         name: "Vivien Oldy",
@@ -70,6 +78,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     HASZANOVERLOAD: {
         name: "Haszan & Overload",
@@ -78,6 +87,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     REDEMPTIVE: {
         name: "Redemptive",
@@ -86,6 +96,7 @@ export default {
         twitter: "https://twitter.com/RedemptiveMusic",
         instagram: "https://www.instagram.com/rdmptv/",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     BOBASTIC: {
         name: "BOBASTIC",
@@ -94,6 +105,7 @@ export default {
         twitter: "NONE",
         instagram: "https://www.instagram.com/bo_nicolaisen/",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     DJ0APE: {
         name: "DJ 0 APE",
@@ -102,14 +114,16 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     SHIO: {
-        name: "SHIO",
+        name: "shiO",
         facebook: "https://www.facebook.com/ShioShio123/",
         soundcloud: "https://soundcloud.com/shio_shio",
         twitter: "NONE",
         instagram: "https://www.instagram.com/shio_413/",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     ANDREASNORTHLAND: {
         name: "Andreas Northland",
@@ -118,6 +132,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     KEVO: {
         name: "KEVO",
@@ -126,6 +141,7 @@ export default {
         twitter: "NONE",
         instagram: "https://www.instagram.com/k_e_v_o69/",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     LAZYKID: {
         name: "Lazykid",
@@ -134,6 +150,7 @@ export default {
         twitter: "NONE",
         instagram: "https://www.instagram.com/iamlazykid/",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     SHOGUNGLOW: {
         name: "Shogunglow",
@@ -142,6 +159,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     CZECHSTRINGS: {
         name: "Czech Strings",
@@ -150,6 +168,7 @@ export default {
         twitter: "https://twitter.com/czechstrings",
         instagram: "https://www.instagram.com/czechstrings/",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     CAPTIVE: {
         name: "CAPTIVE",
@@ -158,6 +177,7 @@ export default {
         twitter: "https://twitter.com/meluranmusic",
         instagram: "https://www.instagram.com/meluranmusic/",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     WHOKNOWS: {
         name: "Whoknows",
@@ -166,6 +186,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
+        img: "MELURAN.png",
     },
     CUUTS: {
         name: "Cuuts",
@@ -174,5 +195,6 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: true,
+        img: "MELURAN.png",
     },
 }

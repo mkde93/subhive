@@ -10,6 +10,7 @@ import Menu from "./components/Menu";
 import Music from "./pages/Music";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
+import EventDetails from "./pages/EventDetails";
 
 const history = createBrowserHistory();
 ReactDOM.render(
@@ -21,7 +22,9 @@ ReactDOM.render(
           <Route exact={true} path="/" component={App} />
           <Route exact={true} path="/music" component={Music} />
           <Route exact={true} path="/events" component={Events} />
+          <Route exact={true} path="/events/:id" component={EventDetails} />
           <Route exact={true} path="/contact" component={Contact} />
+
         </div>
       </div>
     </Router>

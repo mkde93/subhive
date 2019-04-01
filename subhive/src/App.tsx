@@ -6,8 +6,6 @@ import SectionAftermovie from "./components/SectionAftermovie";
 import SectionSpotify from "./components/SectionSpotify";
 import Footer from "./components/Footer";
 import SectionInstagram from "./components/SectionInstagram";
-import DataFunctions from "./util/DataFunctions";
-
 
 class App extends React.Component {
   render() {

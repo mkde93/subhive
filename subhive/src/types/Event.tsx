@@ -1,7 +1,7 @@
 import EventArtist from "./EventArtist";
 
 export default class Event {
-  constructor(title: string, date: string, location: string, eventlink: string, aftermovie: string, desc: string, artists: EventArtist[]) {
+  constructor(title: string, date: string, location: string, eventlink: string, aftermovie: string, desc: string, artists: EventArtist[], poster: string, bgimg: string) {
     this.title = title;
     this.date = date;
     this.location = location;
@@ -9,6 +9,8 @@ export default class Event {
     this.aftermovie = aftermovie;
     this.desc = desc;
     this.artists = artists;
+    this.poster = poster;
+    this.bgimg = bgimg;
   }
   title: string;
   date: string;
@@ -17,4 +19,6 @@ export default class Event {
   aftermovie: string;
   desc: string;
   artists: EventArtist[];
+  poster: string;
+  bgimg: string;
 }

@@ -10,10 +10,11 @@ export default class DataFunctions {
     public static getArtists(): Artist[] {
         const artists: Artist[] = [];
         const artistData = Object.values(Artists);
-        artistData.forEach(a => {
-            const newArtist = new Artist(a.name, a.facebook, a.soundcloud, a.twitter, a.instagram, a.subhiveartist);
+        artistData.forEach(artist => {
+            const newArtist = new Artist(artist.name, artist.facebook, artist.soundcloud, artist.twitter, artist.instagram, artist.subhiveartist, artist.img);
             artists.push(newArtist);
         });
+
         return artists;
     }
 
@@ -29,19 +30,26 @@ export default class DataFunctions {
 
     public static filterArtists(artists: string[]): Artist[] {
         const allArtists: Artist[] = this.getArtists();
-        const albumArtists: Artist[] = [];
+        const filteredArtists: Artist[] = [];
         artists.forEach(a => {
-            const foundArtist: Artist = allArtists.filter(artist => artist.name = a)[0];
-            albumArtists.push(new Artist(foundArtist.name, foundArtist.facebook, foundArtist.soundcloud, foundArtist.twitter, foundArtist.instagram, foundArtist.subhiveartist));
+            let newArtist;
+            let filtered: Artist[] = allArtists.filter(artist => artist.name.toLowerCase() === a.toLowerCase());
+            if (filtered.length === 0) {
+                //TODO: Add dummy data
+                newArtist = new Artist(a, "NONE", "NONE", "NONE", "NONE", false, "MELURAN.png");
+            } else {
+                newArtist = new Artist(filtered[0].name, filtered[0].facebook, filtered[0].soundcloud, filtered[0].twitter, filtered[0].instagram, filtered[0].subhiveartist, filtered[0].img);
+            }
+            filteredArtists.push(newArtist);
         });
-        return albumArtists;
+        return filteredArtists;
     }
 
     public static filterEventArtists(artists: string[], settimes: string[]): EventArtist[] {
         const eventArtists: EventArtist[] = [];
         const filteredArtists: Artist[] = this.filterArtists(artists);
         artists.forEach((a, i) => {
-            const eventArtist: EventArtist = new EventArtist(filteredArtists.filter(fa => fa.name = a)[0], settimes[i]);
+            const eventArtist: EventArtist = new EventArtist(filteredArtists.filter(fa => fa.name.toLowerCase() === a.toLowerCase())[0], settimes[i]);
             eventArtists.push(eventArtist);
         })
         return eventArtists;
@@ -51,9 +59,22 @@ export default class DataFunctions {
         const events: Event[] = [];
         const eventsData = Object.values(Events)
         eventsData.forEach(e => {
-            const event = new Event(e.title, e.date, e.location, e.eventlink, e.aftermovie, e.desc, this.filterEventArtists(e.lineup, e.settimes));
+            const event = new Event(e.title, e.date, e.location, e.eventlink, e.aftermovie, e.desc, this.filterEventArtists(e.lineup, e.settimes), e.poster, e.bgimg);
             events.push(event);
         });
+
+        events.sort(function (a, b) {
+            const aReleasedate = DataFunctions.toDate(a.date);
+            const bReleasedate = DataFunctions.toDate(b.date);
+            return aReleasedate > bReleasedate ? -1 : aReleasedate < bReleasedate ? 1 : 0;
+          })
+        return events;
+    }
+    
+    public static getEventsExceptNewest(): Event[] {
+        const events: Event[] = this.getEvents();
+        events.shift();
+        console.log(events);
         return events;
     }
 
