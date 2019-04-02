@@ -206,8 +206,10 @@ nav ul li:hover::after {
 }
 /* Event Section */
 .page-bg { /* Probably not the best fix for the negative margin + behind menu */
-  padding-top: 200px;
   background-color: $black;
+}
+.padding-top {
+  padding-top: 200px;
 }
 .eventSection {
   position: relative;
@@ -290,6 +292,7 @@ nav ul li:hover::after {
       flex-wrap: nowrap;
       overflow-x: scroll; /* Scrolling if too many artists */
       overflow-y: hidden;
+      max-width: 800px;
     }
     h3 {
       color: $dark;

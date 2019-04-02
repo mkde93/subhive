@@ -5,6 +5,7 @@ import SectionEvent from "../components/SectionEvent";
 import Event from "../types/Event";
 import DataFunctions from "../util/DataFunctions";
 import EventTile from "../components/EventTile";
+import Footer from "../components/Footer";
 
 export interface Props {
 }
@@ -22,8 +23,8 @@ class Events extends React.Component<Props, State> {
   }
   render() {
     return (
-      <div className="page-bg"> {/* Not happy about this negative height fix */}
-        <SectionEvent />
+      <div className="page-bg">
+        <SectionEvent frontpage={false} />
         <div className="container-16">
           <h2>Past Events</h2>
           <div className="grid">
@@ -35,6 +36,7 @@ class Events extends React.Component<Props, State> {
             ))}
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

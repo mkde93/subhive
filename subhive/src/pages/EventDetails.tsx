@@ -4,6 +4,7 @@ import "../index.scss";
 import Event from "../types/Event";
 import DataFunctions from "../util/DataFunctions";
 import EventHighlight from "../components/EventHighlight";
+import Footer from "../components/Footer";
 
 export interface Props {
 }
@@ -25,7 +26,7 @@ class EventDetails extends React.Component<Props, State> {
     const allEvents = DataFunctions.getEvents();
     const searchKey = window.location.pathname.split("/")[2];
     let foundEvent: Event = new Event("Event Not Found", new Date().toString(), "Event Not Found",
-      "Event Not Found", "Event Not Found", "Event Not Found", [], "Event Not Found", "Event Not Found");
+      "Event Not Found", "Event Not Found", "Event Not Found", [], "Event Not Found", "Event Not Found", "Event Not Found", "Event Not Found");
     allEvents.forEach(a => {
       const key = a.title.replace(/\s/g, "") + a.date.replace(/\./g, "-")
       if (key === searchKey) {
@@ -37,14 +38,15 @@ class EventDetails extends React.Component<Props, State> {
 
   render() {
     return (
-      <div className="page-bg"> {/* Not happy about this negative height fix */}
-        <section style={{ backgroundImage: `url(${require("../img/eventposters/" + "Subhive_5_bg.png")})` }} className="eventSection">
+      <div className="page-bg">
+        <section style={{ backgroundImage: `url(${require("../img/eventposters/" + this.state.event.bgimg)})` }} className="eventSection padding-top">
           <div className="container-16">
             <EventHighlight
               event={this.state.event}
             />
           </div>
         </section>
+        <Footer />
       </div>
     );
   }

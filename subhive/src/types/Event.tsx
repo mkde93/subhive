@@ -1,7 +1,7 @@
 import EventArtist from "./EventArtist";
 
 export default class Event {
-  constructor(title: string, date: string, location: string, eventlink: string, aftermovie: string, desc: string, artists: EventArtist[], poster: string, bgimg: string) {
+  constructor(title: string, date: string, location: string, eventlink: string, aftermovie: string, desc: string, artists: EventArtist[], poster: string, bgimg: string, titlecolor: string, textcolor: string) {
     this.title = title;
     this.date = date;
     this.location = location;
@@ -11,6 +11,8 @@ export default class Event {
     this.artists = artists;
     this.poster = poster;
     this.bgimg = bgimg;
+    this.titlecolor = titlecolor;
+    this.textcolor = textcolor;
   }
   title: string;
   date: string;
@@ -21,4 +23,6 @@ export default class Event {
   artists: EventArtist[];
   poster: string;
   bgimg: string;
+  titlecolor: string;
+  textcolor: string;
 }

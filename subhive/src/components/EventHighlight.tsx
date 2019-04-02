@@ -12,7 +12,6 @@ export interface State {
 }
 
 
-
 class EventHighlight extends React.Component<Props, State> {
   componentWillMount() {
     this.hasEventBeenHeld();
@@ -46,8 +45,8 @@ class EventHighlight extends React.Component<Props, State> {
         <div>
           <div className="info">
             <span className="tag">{this.state.hasEventOccured ? ContentStrings.events.common.upcoming : ContentStrings.events.common.past}</span>
-            <h1>{this.props.event.title}</h1>
-            <h3>{this.props.event.date} - {this.props.event.location}</h3>
+            <h1 style={{ color: this.props.event.titlecolor }}>{this.props.event.title}</h1>
+            <h3 style={{ color: this.props.event.textcolor }}>{this.props.event.date} - {this.props.event.location}</h3>
             <div className="buttons">
               {this.props.event.aftermovie !== "false" ?
                 <a href={this.props.event.aftermovie} target={"_blank"}>
@@ -59,10 +58,10 @@ class EventHighlight extends React.Component<Props, State> {
               </a>
             </div>
             <div className="description">
-              <p>{this.props.event.desc}</p>
+              <p style={{ color: this.props.event.textcolor }}>{this.props.event.desc}</p>
             </div>
             <div className="lineup">
-              <h3>Lineup</h3>
+              <h3 style={{ color: this.props.event.titlecolor }}>Lineup</h3>
               <div className="wrapper">
                 {this.props.event.artists.map((x, i) => (
                   <LineupArtist

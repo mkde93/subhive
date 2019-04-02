@@ -4,6 +4,7 @@ import DataFunctions from "../util/DataFunctions";
 import EventHighlight from "./EventHighlight";
 
 export interface Props {
+  frontpage: boolean;
 }
 
 export interface State {
@@ -21,13 +22,22 @@ class SectionEvent extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <section style={{ backgroundImage: `url(${require("../img/eventposters/" + "Subhive_5_bg.png")})` }} className="eventSection">
-          <div className="container-16">
-            <EventHighlight
-              event={this.state.event}
-            />
-          </div>
-        </section>
+        {this.props.frontpage !== true ?
+          <section style={{ backgroundImage: `url(${require("../img/eventposters/" + this.state.event.bgimg)})` }} className="eventSection padding-top">
+            <div className="container-16">
+              <EventHighlight
+                event={this.state.event}
+              />
+            </div>
+          </section> :
+          <section style={{ backgroundImage: `url(${require("../img/eventposters/" + this.state.event.bgimg)})` }} className="eventSection">
+            <div className="container-16">
+              <EventHighlight
+                event={this.state.event}
+              />
+            </div>
+          </section>
+        }
       </div>
     );
   }

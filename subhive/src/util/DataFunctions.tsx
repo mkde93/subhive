@@ -59,7 +59,7 @@ export default class DataFunctions {
         const events: Event[] = [];
         const eventsData = Object.values(Events)
         eventsData.forEach(e => {
-            const event = new Event(e.title, e.date, e.location, e.eventlink, e.aftermovie, e.desc, this.filterEventArtists(e.lineup, e.settimes), e.poster, e.bgimg);
+            const event = new Event(e.title, e.date, e.location, e.eventlink, e.aftermovie, e.desc, this.filterEventArtists(e.lineup, e.settimes), e.poster, e.bgimg, e.titlecolor, e.textcolor);
             events.push(event);
         });
 
@@ -67,10 +67,10 @@ export default class DataFunctions {
             const aReleasedate = DataFunctions.toDate(a.date);
             const bReleasedate = DataFunctions.toDate(b.date);
             return aReleasedate > bReleasedate ? -1 : aReleasedate < bReleasedate ? 1 : 0;
-          })
+        })
         return events;
     }
-    
+
     public static getEventsExceptNewest(): Event[] {
         const events: Event[] = this.getEvents();
         events.shift();
@@ -81,5 +81,5 @@ export default class DataFunctions {
     public static toDate(dateStr: string) {
         const parts: string[] = dateStr.split(".")
         return new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0]));
-      }
+    }
 }
