@@ -18,6 +18,9 @@ $highlight: #3AC7D2; /* highlight */
 html {
   font-size: 16px !important; /* Overwriting css clear - need better fix */
 }
+.remove-decoration {
+  text-decoration: none;
+}
 #wrapper {
   display: flex;
   flex-direction: column;
@@ -29,6 +32,14 @@ h1 {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .2rem;
+}
+h2 {
+  font-family: $font;
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $white;
+  padding: 2rem 0;
 }
 h3 {
   font-family: $font;
@@ -205,7 +216,7 @@ nav ul li:hover::after {
   background-position: center;
   background-color: $white;
 }
-.event {
+.event-highlight {
   display: flex;
   flex-direction: row;
   padding-bottom: 40px;
@@ -441,6 +452,7 @@ nav ul li:hover::after {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .spotify {
     display: flex;
@@ -471,6 +483,44 @@ nav ul li:hover::after {
     position: absolute;
     top: 0;
     width: 100%;
+  }
+}
+/* Event Page */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  .event-grid {
+    width: 250px;
+    margin: 8px;
+    img {
+      height: auto;
+      width: 250px;
+    }
+    .event {
+      display : flex;
+      flex-direction: column;
+      height: 130px;
+      justify-content: space-between;
+      padding: 10px 0;
+      .title {
+        color: $white;
+        font-family: $font;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+      }
+      .date {
+        color: $grey;
+        font-family: $font;
+        font-size: 1.2rem;
+      }
+      .location {
+        margin-top: 5px;
+        color: $grey;
+        font-family: $font;
+        font-size: 1.2rem;
+      }
+    }
   }
 }
 /* Footer */
@@ -544,6 +594,37 @@ nav ul li:hover::after {
     width: 2.2rem;
   }
 }
+@media only screen and (min-width:1200px) and (max-width:1599px) {
+  .grid {
+    .event-grid {
+      width: 224px;
+      img {
+        width: 224px;
+      }
+    }
+  }
+}
+@media only screen and (min-width:960px) and (max-width:1199px) {
+  .grid {
+    .event-grid {
+      width: 304px;
+      img {
+        width: 304px;
+      }
+    }
+  }
+}
+@media only screen and (min-width:720px) and (max-width:959px) {
+  .grid {
+    .event-grid {
+      width: 344px;
+      img {
+        width: 344px;
+      }
+    }
+  }
+}
+    
 @media only screen and (max-width: 899px) {
   html {
     font-size: 12px !important; /* overwriting css clear - needs better fix */
@@ -576,7 +657,10 @@ nav ul li:hover::after {
       }
     }
   }
-  .event {
+  .page-bg {
+    padding-top: 120px;
+  }
+  .event-highlight {
     flex-direction: column;
     padding: 30px 0;
     h1 {
@@ -625,6 +709,23 @@ nav ul li:hover::after {
   .spotifySection {
     .spotifyplaylist {
       padding-top: 100%;
+    }
+  }
+  .grid {
+    .event-grid {
+      width: 100%;
+      margin-top: 20px;
+      img {
+        width: 100%;
+      }
+      .event {
+        height: auto;
+        .title, .date, .location {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+      }
+
     }
   }
 }

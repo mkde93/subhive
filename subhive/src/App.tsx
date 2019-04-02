@@ -11,17 +11,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <SectionAlbum/>
-        <SectionEvent/>
+        <SectionAlbum />
+        <SectionEvent />
         <SectionAftermovie
           backgroundImage="subhive_001_bg.png"
           movieTitle="SUBHIVE: Safari Expedition - April 28"
           movieUrl="subhive_001.mp4"
           posterUrl="subhive_001.png"
         />
-        <SectionInstagram
+        {/*<SectionInstagram
           backgroundImage="Subhive_Origin_Dark.png"
-        />
+        />*/}
         <SectionSpotify
           backgroundImage="Subhive_Origin_Dark.png"
           spotifyUrl={ContentStrings.spotifyPlaylist.playlistUrl}

@@ -10,13 +10,16 @@ class EventTile extends React.Component<Props> {
 
   render() {
     return (
-      <div>
-        <Link to={"/events/" + this.props.event.title.replace(/\s/g, "") + this.props.event.date.replace(/\./g, "-")}>
-          <div className="eventgrid">
+      <div className="event-grid">
+        <Link className="remove-decoration" to={"/events/" + this.props.event.title.replace(/\s/g, "") + this.props.event.date.replace(/\./g, "-")}>
+          <div>
             <img src={require("../img/eventposters/" + this.props.event.poster)} />
             <div className="event">
-              <span className="title">{this.props.event.title}</span>
-              <span className="date">{this.props.event.date}</span>
+              <p className="title">{this.props.event.title}</p>
+              <div>
+                <p className="date">{this.props.event.date}</p>
+                <p className="location">{this.props.event.location}</p>
+              </div>
             </div>
           </div>
         </Link>

@@ -24,14 +24,16 @@ class Events extends React.Component<Props, State> {
     return (
       <div className="page-bg"> {/* Not happy about this negative height fix */}
         <SectionEvent />
-
-        <div className="more-events"> {/* Not happy about this negative height fix */}
-          {this.state.events.map((x, i) => (
-            <EventTile
-              key={i}
-              event={x}
-            />
-          ))}
+        <div className="container-16">
+          <h2>Past Events</h2>
+          <div className="grid">
+            {this.state.events.map((x, i) => (
+              <EventTile
+                key={i}
+                event={x}
+              />
+            ))}
+          </div>
         </div>
       </div>
     );

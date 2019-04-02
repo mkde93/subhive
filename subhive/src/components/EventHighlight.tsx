@@ -39,7 +39,7 @@ class EventHighlight extends React.Component<Props, State> {
 
   render() {
     return (
-      <div className="event">
+      <div className="event-highlight">
         <div className="poster">
           <img src={require("../img/eventposters/" + this.props.event.poster)} alt={this.props.event.title + " Cover"} />
         </div>
