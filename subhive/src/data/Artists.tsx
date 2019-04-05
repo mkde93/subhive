@@ -24,7 +24,7 @@ export default {
         twitter: "NONE",
         instagram: "https://www.instagram.com/iamlazykid/",
         subhiveartist: true,
-        img: "MELURAN.png",
+        img: "TAZER.png",
     },
     OV: {
         name: "O.V.",
@@ -33,7 +33,7 @@ export default {
         twitter: "https://twitter.com/meluranmusic",
         instagram: "https://www.instagram.com/o.v.music/",
         subhiveartist: true,
-        img: "MELURAN.png",
+        img: "OV.png",
     },
     VIDYAVIDYA: {
         name: "Vidya Vidya",
@@ -42,7 +42,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: true,
-        img: "MELURAN.png",
+        img: "VidyaVidya.png",
     },
     RUNGE: {
         name: "Runge",
@@ -51,7 +51,7 @@ export default {
         twitter: "https://twitter.com/rungemusic",
         instagram: "https://www.instagram.com/rungemusic/",
         subhiveartist: true,
-        img: "MELURAN.png",
+        img: "Runge.png",
     },
     CELO: {
         name: "CELO",
@@ -60,7 +60,7 @@ export default {
         twitter: "https://twitter.com/celodnb",
         instagram: "https://www.instagram.com/celodnb/",
         subhiveartist: true,
-        img: "MELURAN.png",
+        img: "CELO.png",
     },
     SUNDR: {
         name: "Sundr",
@@ -69,7 +69,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "Sundr.png",
     },
     VIVIENOLDY: {
         name: "Vivien Oldy",
@@ -78,7 +78,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "VivienOldy.png",
     },
     HASZANOVERLOAD: {
         name: "Haszan & Overload",
@@ -87,7 +87,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "Haszan_Overload.png",
     },
     REDEMPTIVE: {
         name: "Redemptive",
@@ -96,7 +96,7 @@ export default {
         twitter: "https://twitter.com/RedemptiveMusic",
         instagram: "https://www.instagram.com/rdmptv/",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "Redemptive.png",
     },
     BOBASTIC: {
         name: "BOBASTIC",
@@ -105,7 +105,7 @@ export default {
         twitter: "NONE",
         instagram: "https://www.instagram.com/bo_nicolaisen/",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "Bobastic.png",
     },
     DJ0APE: {
         name: "DJ 0 APE",
@@ -114,7 +114,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "Dj0Ape.png",
     },
     SHIO: {
         name: "shiO",
@@ -123,7 +123,7 @@ export default {
         twitter: "NONE",
         instagram: "https://www.instagram.com/shio_413/",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "SHIO.png",
     },
     ANDREASNORTHLAND: {
         name: "Andreas Northland",
@@ -132,7 +132,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "AndreasNorthland.png",
     },
     KEVO: {
         name: "KEVO",
@@ -141,7 +141,7 @@ export default {
         twitter: "NONE",
         instagram: "https://www.instagram.com/k_e_v_o69/",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "Kevo.png",
     },
     LAZYKID: {
         name: "Lazykid",
@@ -150,7 +150,7 @@ export default {
         twitter: "NONE",
         instagram: "https://www.instagram.com/iamlazykid/",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "LazyKid.png",
     },
     SHOGUNGLOW: {
         name: "Shogunglow",
@@ -159,7 +159,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "Shogunglow.png",
     },
     CZECHSTRINGS: {
         name: "Czech Strings",
@@ -168,7 +168,7 @@ export default {
         twitter: "https://twitter.com/czechstrings",
         instagram: "https://www.instagram.com/czechstrings/",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "CzechStrings.png",
     },
     CAPTIVE: {
         name: "CAPTIVE",
@@ -177,7 +177,7 @@ export default {
         twitter: "https://twitter.com/meluranmusic",
         instagram: "https://www.instagram.com/meluranmusic/",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "CAPTIVE.png",
     },
     WHOKNOWS: {
         name: "Whoknows",
@@ -186,7 +186,7 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
-        img: "MELURAN.png",
+        img: "Whoknows.png",
     },
     CUUTS: {
         name: "Cuuts",
@@ -195,6 +195,6 @@ export default {
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: true,
-        img: "MELURAN.png",
+        img: "Cuuts.png",
     },
 }

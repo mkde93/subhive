@@ -270,7 +270,6 @@ nav ul li:hover::after {
     box-shadow: 0 0 8px $dark;
   }
   .eventlink {
-    margin-left: 20px; /* space between first and second */
     background-color: $highlight;
     color: $white;
     transition: box-shadow .2s;
@@ -634,6 +633,9 @@ nav ul li:hover::after {
   }
   .albumSection {
     height: auto;
+  }
+  .padding-top {
+    padding-top: 0;
   }
   .buttons {
     margin-top: 20px;

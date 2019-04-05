@@ -36,7 +36,7 @@ export default class DataFunctions {
             let filtered: Artist[] = allArtists.filter(artist => artist.name.toLowerCase() === a.toLowerCase());
             if (filtered.length === 0) {
                 //TODO: Add dummy data
-                newArtist = new Artist(a, "NONE", "NONE", "NONE", "NONE", false, "MELURAN.png");
+                newArtist = new Artist(a, "NONE", "NONE", "NONE", "NONE", false, "temp.png");
             } else {
                 newArtist = new Artist(filtered[0].name, filtered[0].facebook, filtered[0].soundcloud, filtered[0].twitter, filtered[0].instagram, filtered[0].subhiveartist, filtered[0].img);
             }
