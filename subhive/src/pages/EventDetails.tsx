@@ -16,7 +16,6 @@ export interface State {
 class EventDetails extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.getEventFromUrl();
     this.state = {
       event: this.getEventFromUrl(),
     };
