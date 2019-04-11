@@ -1,6 +1,9 @@
 export default {
     MELURAN: {
         name: "MELURAN",
+        location: "Aalborg, Denmark",
+        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
+            "trap, future bass, and DnB.",
         facebook: "https://www.facebook.com/meluranmusic/",
         soundcloud: "https://soundcloud.com/meluran",
         twitter: "https://twitter.com/meluranmusic",
@@ -10,6 +13,9 @@ export default {
     },
     KASGER: {
         name: "Kasger",
+        location: "Aalborg, Denmark",
+        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
+            "trap, future bass, and DnB.",
         facebook: "https://www.facebook.com/Kasger",
         soundcloud: "https://soundcloud.com/kaspergerlif",
         twitter: "https://twitter.com/Kasger",
@@ -19,6 +25,9 @@ export default {
     },
     TAZER: {
         name: "Tazer",
+        location: "Aalborg, Denmark",
+        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
+            "trap, future bass, and DnB.",
         facebook: "https://www.facebook.com/lazykidmusic",
         soundcloud: "https://soundcloud.com/lazykidmusicc",
         twitter: "NONE",
@@ -28,6 +37,9 @@ export default {
     },
     OV: {
         name: "O.V.",
+        location: "Aalborg, Denmark",
+        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
+            "trap, future bass, and DnB.",
         facebook: "https://www.facebook.com/SUBHIVE/",
         soundcloud: "https://soundcloud.com/ov_music",
         twitter: "https://twitter.com/meluranmusic",
@@ -37,6 +49,9 @@ export default {
     },
     VIDYAVIDYA: {
         name: "Vidya Vidya",
+        location: "Aalborg, Denmark",
+        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
+            "trap, future bass, and DnB.",
         facebook: "https://www.facebook.com/vidyavidyamusic/",
         soundcloud: "https://soundcloud.com/vidyavidya",
         twitter: "NONE",
@@ -46,6 +61,9 @@ export default {
     },
     RUNGE: {
         name: "Runge",
+        location: "Aalborg, Denmark",
+        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
+            "trap, future bass, and DnB.",
         facebook: "https://www.facebook.com/RungeMusic/",
         soundcloud: "https://soundcloud.com/runge-music",
         twitter: "https://twitter.com/rungemusic",
@@ -55,6 +73,9 @@ export default {
     },
     CELO: {
         name: "CELO",
+        location: "Aalborg, Denmark",
+        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
+            "trap, future bass, and DnB.",
         facebook: "https://www.facebook.com/celodnb/",
         soundcloud: "https://soundcloud.com/celodnb",
         twitter: "https://twitter.com/celodnb",
@@ -62,8 +83,22 @@ export default {
         subhiveartist: true,
         img: "CELO.png",
     },
+    CUUTS: {
+        name: "Cuuts",
+        location: "Aalborg, Denmark",
+        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
+            "trap, future bass, and DnB.",
+        facebook: "NONE",
+        soundcloud: "https://soundcloud.com/cuuts",
+        twitter: "NONE",
+        instagram: "NONE",
+        subhiveartist: true,
+        img: "Cuuts.png",
+    },
     SUNDR: {
         name: "Sundr",
+        location: "NONE",
+        bio: "NONE",
         facebook: "https://www.facebook.com/vjSundr/",
         soundcloud: "NONE",
         twitter: "NONE",
@@ -73,6 +108,8 @@ export default {
     },
     VIVIENOLDY: {
         name: "Vivien Oldy",
+        location: "NONE",
+        bio: "NONE",
         facebook: "https://www.facebook.com/vivien.oldy/",
         soundcloud: "https://soundcloud.com/vivienoldy",
         twitter: "NONE",
@@ -82,6 +119,8 @@ export default {
     },
     HASZANOVERLOAD: {
         name: "Haszan & Overload",
+        location: "NONE",
+        bio: "NONE",
         facebook: "https://www.facebook.com/haszanoverload/",
         soundcloud: "https://soundcloud.com/haszanoverload",
         twitter: "NONE",
@@ -91,6 +130,8 @@ export default {
     },
     REDEMPTIVE: {
         name: "Redemptive",
+        location: "NONE",
+        bio: "NONE",
         facebook: "https://www.facebook.com/RedemptiveMusic",
         soundcloud: "https://soundcloud.com/redemptive",
         twitter: "https://twitter.com/RedemptiveMusic",
@@ -100,6 +141,8 @@ export default {
     },
     BOBASTIC: {
         name: "BOBASTIC",
+        location: "NONE",
+        bio: "NONE",
         facebook: "NONE",
         soundcloud: "https://soundcloud.com/bo-nicolaisen",
         twitter: "NONE",
@@ -109,6 +152,8 @@ export default {
     },
     DJ0APE: {
         name: "DJ 0 APE",
+        location: "NONE",
+        bio: "NONE",
         facebook: "NONE",
         soundcloud: "NONE",
         twitter: "NONE",
@@ -117,7 +162,9 @@ export default {
         img: "Dj0Ape.png",
     },
     SHIO: {
-        name: "shiO",
+        name: "shio",
+        location: "NONE",
+        bio: "NONE",
         facebook: "https://www.facebook.com/ShioShio123/",
         soundcloud: "https://soundcloud.com/shio_shio",
         twitter: "NONE",
@@ -127,6 +174,8 @@ export default {
     },
     ANDREASNORTHLAND: {
         name: "Andreas Northland",
+        location: "NONE",
+        bio: "NONE",
         facebook: "NONE",
         soundcloud: "NONE",
         twitter: "NONE",
@@ -136,6 +185,8 @@ export default {
     },
     KEVO: {
         name: "KEVO",
+        location: "NONE",
+        bio: "NONE",
         facebook: "https://www.facebook.com/maur.kevin",
         soundcloud: "https://soundcloud.com/kevo95",
         twitter: "NONE",
@@ -145,6 +196,8 @@ export default {
     },
     LAZYKID: {
         name: "Lazykid",
+        location: "NONE",
+        bio: "NONE",
         facebook: "https://www.facebook.com/lazykidmusic",
         soundcloud: "https://soundcloud.com/lazykidmusicc",
         twitter: "NONE",
@@ -154,6 +207,8 @@ export default {
     },
     SHOGUNGLOW: {
         name: "Shogunglow",
+        location: "NONE",
+        bio: "NONE",
         facebook: "NONE",
         soundcloud: "https://soundcloud.com/shogunglow",
         twitter: "NONE",
@@ -163,6 +218,8 @@ export default {
     },
     CZECHSTRINGS: {
         name: "Czech Strings",
+        location: "NONE",
+        bio: "NONE",
         facebook: "https://www.facebook.com/czechstrings",
         soundcloud: "https://soundcloud.com/czechstrings",
         twitter: "https://twitter.com/czechstrings",
@@ -172,6 +229,8 @@ export default {
     },
     CAPTIVE: {
         name: "CAPTIVE",
+        location: "NONE",
+        bio: "NONE",
         facebook: "https://www.facebook.com/captivednbface",
         soundcloud: "https://soundcloud.com/meluran",
         twitter: "https://twitter.com/meluranmusic",
@@ -181,20 +240,13 @@ export default {
     },
     WHOKNOWS: {
         name: "Whoknows",
+        location: "NONE",
+        bio: "NONE",
         facebook: "NONE",
         soundcloud: "https://soundcloud.com/whoevenknowsnow",
         twitter: "NONE",
         instagram: "NONE",
         subhiveartist: false,
         img: "Whoknows.png",
-    },
-    CUUTS: {
-        name: "Cuuts",
-        facebook: "NONE",
-        soundcloud: "https://soundcloud.com/cuuts",
-        twitter: "NONE",
-        instagram: "NONE",
-        subhiveartist: true,
-        img: "Cuuts.png",
     },
 }

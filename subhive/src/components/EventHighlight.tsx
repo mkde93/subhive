@@ -18,7 +18,6 @@ class EventHighlight extends React.Component<Props, State> {
   }
 
   hasEventBeenHeld() {
-    console.log(this.props.event);
     let eventDate: Date = new Date();
     let currentDate: Date = new Date();
     eventDate.setDate(Number(this.props.event.date.split(".")[0]));

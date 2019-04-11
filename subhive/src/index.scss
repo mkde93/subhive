@@ -39,7 +39,7 @@ h2 {
   font-weight: 600;
   text-transform: uppercase;
   color: $white;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 h3 {
   font-family: $font;
@@ -525,6 +525,29 @@ nav ul li:hover::after {
     }
   }
 }
+/* Artist Grid + highlight */
+.artist-display {
+  h3 {
+    color: $grey;
+    padding-bottom: 1rem;
+  }
+}
+.artist-highlight {
+  .info {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    .socials {
+      a {
+        display: inline-block;
+        img {
+          width: auto;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
 /* Footer */
 .footer {
   background-color: $black;
@@ -718,7 +741,7 @@ nav ul li:hover::after {
   }
   .grid {
     .event-grid {
-      width: 100%;
+      width: 90%;
       margin-top: 20px;
       img {
         width: 100%;

@@ -24,7 +24,7 @@ class ArtistDetails extends React.Component<Props, State> {
   getArtistFromUrl(): Artist {
     const allArtists = DataFunctions.getArtists();
     const searchKey = window.location.pathname.split("/")[2];
-    let foundArtist: Artist = new Artist("Artist not found", "https://www.facebook.com", "https://www.soundcloud.com",
+    let foundArtist: Artist = new Artist("Artist not found", "Location not found", "Bio not found", "https://www.facebook.com", "https://www.soundcloud.com",
       "https://www.twitter.com", "https://www.instagram.com", false, "temp.png")
     allArtists.forEach(a => {
       if (a.name.toLocaleLowerCase() === searchKey.toLocaleLowerCase()) {

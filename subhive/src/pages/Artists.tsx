@@ -23,18 +23,19 @@ class Artists extends React.Component<Props, State> {
   }
   render() {
     return (
-      //TODO: Franz style and stuff, maybe add background
       <div className="page-bg">
-        <div className="container-16">
-            <div className="grid padding-top">
-              {this.state.artists.map((x, i) => (
-                x.subhiveartist ?
-                  <ArtistTile
-                    key={i}
-                    artist={x}
-                  /> : null
-              ))}
-            </div>
+        <div className="container-16 padding-top artist-display">
+          <h2>Artists</h2>
+          <h3>The SUBHIVE roster</h3>
+          <div className="grid">
+            {this.state.artists.map((x, i) => (
+              x.subhiveartist ?
+                <ArtistTile
+                  key={i}
+                  artist={x}
+                /> : null
+            ))}
+          </div>
         </div>
         <Footer />
       </div>

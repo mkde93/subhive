@@ -11,7 +11,7 @@ export default class DataFunctions {
         const artists: Artist[] = [];
         const artistData = Object.values(Artists);
         artistData.forEach(artist => {
-            const newArtist = new Artist(artist.name, artist.facebook, artist.soundcloud, artist.twitter, artist.instagram, artist.subhiveartist, artist.img);
+            const newArtist = new Artist(artist.name, artist.location, artist.bio, artist.facebook, artist.soundcloud, artist.twitter, artist.instagram, artist.subhiveartist, artist.img);
             artists.push(newArtist);
         });
 
@@ -36,9 +36,9 @@ export default class DataFunctions {
             let filtered: Artist[] = allArtists.filter(artist => artist.name.toLowerCase() === a.toLowerCase());
             if (filtered.length === 0) {
                 //TODO: Add dummy data
-                newArtist = new Artist(a, "NONE", "NONE", "NONE", "NONE", false, "temp.png");
+                newArtist = new Artist(a, "NONE", "NONE", "NONE", "NONE", "NONE", "NONE", false, "temp.png");
             } else {
-                newArtist = new Artist(filtered[0].name, filtered[0].facebook, filtered[0].soundcloud, filtered[0].twitter, filtered[0].instagram, filtered[0].subhiveartist, filtered[0].img);
+                newArtist = new Artist(filtered[0].name, filtered[0].location, filtered[0].bio, filtered[0].facebook, filtered[0].soundcloud, filtered[0].twitter, filtered[0].instagram, filtered[0].subhiveartist, filtered[0].img);
             }
             filteredArtists.push(newArtist);
         });
@@ -74,7 +74,6 @@ export default class DataFunctions {
     public static getEventsExceptNewest(): Event[] {
         const events: Event[] = this.getEvents();
         events.shift();
-        console.log(events);
         return events;
     }
 
