@@ -1,6 +1,6 @@
 export default {
     origin: {
-        title: "Subhive: Origin",
+        title: "Subhive: Origin1",
         spotifyurl: "https://open.spotify.com/album/6jLSi7RbdkPpq3Sgy4kLYI?si=SgZ002cGQgi9fqf5tKj8WA",
         soundcloudurl: "https://soundcloud.com/subhive/sets/subhive-origin",
         type: "Compilation",
@@ -16,7 +16,7 @@ export default {
         ]
     },
     origin1: {
-        title: "Subhive: Origin",
+        title: "Subhive: Origin2",
         spotifyurl: "https://open.spotify.com/album/6jLSi7RbdkPpq3Sgy4kLYI?si=SgZ002cGQgi9fqf5tKj8WA",
         soundcloudurl: "https://soundcloud.com/subhive/sets/subhive-origin",
         type: "Compilation",
@@ -32,7 +32,7 @@ export default {
         ]
     },
     origin2: {
-        title: "Subhive: Origin",
+        title: "Subhive: Origin3",
         spotifyurl: "https://open.spotify.com/album/6jLSi7RbdkPpq3Sgy4kLYI?si=SgZ002cGQgi9fqf5tKj8WA",
         soundcloudurl: "https://soundcloud.com/subhive/sets/subhive-origin",
         type: "Compilation",

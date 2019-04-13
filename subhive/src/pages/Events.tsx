@@ -30,6 +30,7 @@ class Events extends React.Component<Props, State> {
           <div className="grid">
             {this.state.events.map((x, i) => (
               <EventTile
+                updateEvent={() => { }}
                 key={i}
                 event={x}
               />

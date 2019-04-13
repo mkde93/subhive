@@ -81,4 +81,10 @@ export default class DataFunctions {
         const parts: string[] = dateStr.split(".")
         return new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0]));
     }
+
+    public static getUpcomingEvents(): Event[] {
+        const events: Event[] = this.getEvents();
+        const upcomingEvents: Event[] = events.filter(e => this.toDate(e.date) > new Date());
+        return upcomingEvents;
+    }
 }

@@ -5,12 +5,14 @@ import Event from "../types/Event";
 import DataFunctions from "../util/DataFunctions";
 import EventHighlight from "../components/EventHighlight";
 import Footer from "../components/Footer";
+import EventTile from "../components/EventTile";
 
 export interface Props {
 }
 
 export interface State {
   event: Event;
+  upcomingEvents: Event[];
 }
 
 class EventDetails extends React.Component<Props, State> {
@@ -18,6 +20,7 @@ class EventDetails extends React.Component<Props, State> {
     super(props);
     this.state = {
       event: this.getEventFromUrl(),
+      upcomingEvents: DataFunctions.getUpcomingEvents(),
     };
   }
 
@@ -35,6 +38,15 @@ class EventDetails extends React.Component<Props, State> {
     return foundEvent;
   }
 
+  handleURLUpdate = () => {
+    console.log("url change");
+    this.setState({
+      event: this.getEventFromUrl(),
+    }, () => {
+      console.log(this.state.event);
+    });
+  }
+
   render() {
     return (
       <div className="page-bg">
@@ -43,6 +55,20 @@ class EventDetails extends React.Component<Props, State> {
             <EventHighlight
               event={this.state.event}
             />
+          </div>
+        </section>
+        <section>
+          <div className="container-16">
+            <div className="grid">
+              {this.state.upcomingEvents.map((x, i) => (
+                this.state.event.eventlink !== x.eventlink ?
+                  <EventTile
+                    key={i}
+                    event={x}
+                    updateEvent={this.handleURLUpdate}
+                  /> : null
+              ))}
+            </div>
           </div>
         </section>
         <Footer />
