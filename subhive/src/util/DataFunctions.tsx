@@ -77,6 +77,12 @@ export default class DataFunctions {
         return events;
     }
 
+    public static getAlbumsExceptNewest(): Album[] {
+        const albums: Album[] = this.getAlbums();
+        albums.shift();
+        return albums;
+    }
+
     public static toDate(dateStr: string) {
         const parts: string[] = dateStr.split(".")
         return new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0]));

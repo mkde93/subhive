@@ -26,7 +26,6 @@ class App extends React.Component {
           backgroundImage="Subhive_Origin_Dark.png"
           spotifyUrl={ContentStrings.spotifyPlaylist.playlistUrl}
         />
-        <Footer />
       </div>
     );
   }

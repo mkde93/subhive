@@ -37,7 +37,6 @@ class Artists extends React.Component<Props, State> {
             ))}
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

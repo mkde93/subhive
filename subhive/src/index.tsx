@@ -13,6 +13,8 @@ import Contact from "./pages/Contact";
 import EventDetails from "./pages/EventDetails";
 import Artists from "./pages/Artists";
 import ArtistDetails from "./pages/ArtistDetails";
+import Footer from "./components/Footer";
+import MusicDetails from "./pages/MusicDetails";
 
 const history = createBrowserHistory();
 ReactDOM.render(
@@ -23,13 +25,14 @@ ReactDOM.render(
         <div id="wrapper">
           <Route exact={true} path="/" component={App} />
           <Route exact={true} path="/music" component={Music} />
+          <Route exact={true} path="/music/:id" component={MusicDetails} />
           <Route exact={true} path="/events" component={Events} />
           <Route exact={true} path="/events/:id" component={EventDetails} />
           <Route exact={true} path="/artists" component={Artists} />
           <Route exact={true} path="/artists/:id" component={ArtistDetails} />
           <Route exact={true} path="/contact" component={Contact} />
-
         </div>
+        <Footer />
       </div>
     </Router>
   </Provider>,

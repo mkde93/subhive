@@ -4,8 +4,8 @@ import "../index.scss";
 import Event from "../types/Event";
 import DataFunctions from "../util/DataFunctions";
 import EventHighlight from "../components/EventHighlight";
-import Footer from "../components/Footer";
 import EventTile from "../components/EventTile";
+import { Link } from "react-router-dom";
 
 export interface Props {
 }
@@ -20,8 +20,18 @@ class EventDetails extends React.Component<Props, State> {
     super(props);
     this.state = {
       event: this.getEventFromUrl(),
-      upcomingEvents: DataFunctions.getUpcomingEvents(),
+      upcomingEvents: this.filterOutUpcomingEvents(),
     };
+  }
+
+  componentDidUpdate() {
+    const key = this.state.event.title.replace(/\s/g, "") + this.state.event.date.replace(/\./g, "-")
+    if (key != window.location.pathname.split("/")[2]) {
+      this.setState({
+        event: this.getEventFromUrl(),
+        upcomingEvents: this.filterOutUpcomingEvents(),
+      });
+    }
   }
 
   getEventFromUrl(): Event {
@@ -38,13 +48,11 @@ class EventDetails extends React.Component<Props, State> {
     return foundEvent;
   }
 
-  handleURLUpdate = () => {
-    console.log("url change");
-    this.setState({
-      event: this.getEventFromUrl(),
-    }, () => {
-      console.log(this.state.event);
-    });
+  filterOutUpcomingEvents(): Event[] {
+    let upcomingEvents: Event[] = DataFunctions.getUpcomingEvents();
+    const currentEvent: Event = this.getEventFromUrl();
+    upcomingEvents = upcomingEvents.filter(e => e.eventlink !== currentEvent.eventlink);
+    return upcomingEvents;
   }
 
   render() {
@@ -59,19 +67,22 @@ class EventDetails extends React.Component<Props, State> {
         </section>
         <section>
           <div className="container-16">
-            <div className="grid">
-              {this.state.upcomingEvents.map((x, i) => (
-                this.state.event.eventlink !== x.eventlink ?
-                  <EventTile
-                    key={i}
-                    event={x}
-                    updateEvent={this.handleURLUpdate}
-                  /> : null
-              ))}
-            </div>
+            {this.state.upcomingEvents.length !== 0 ?
+              <div>
+                <h2>Upcoming Events</h2>
+                <div className="grid">
+                  {this.state.upcomingEvents.map((x, i) => (
+                    <Link className="remove-decoration" to={"/events/" + x.title.replace(/\s/g, "") + x.date.replace(/\./g, "-")}>
+                      <EventTile
+                        key={i}
+                        event={x}
+                      />
+                    </Link>
+                  ))}
+                </div>
+              </div> : null}
           </div>
         </section>
-        <Footer />
       </div>
     );
   }

@@ -4,19 +4,13 @@ import { Link } from "react-router-dom";
 
 export interface Props {
   event: Event
-  updateEvent: () => void;
 }
 
 class EventTile extends React.Component<Props> {
-
-  handleClickEvent = () => {
-    this.props.updateEvent();
-  }
-
   render() {
     return (
       <div className="event-grid">
-        <Link className="remove-decoration" to={"/events/" + this.props.event.title.replace(/\s/g, "") + this.props.event.date.replace(/\./g, "-")} onClick={this.handleClickEvent}>
+        <Link className="remove-decoration" to={"/events/" + this.props.event.title.replace(/\s/g, "") + this.props.event.date.replace(/\./g, "-")}>
           <div>
             <img src={require("../img/eventposters/" + this.props.event.poster)} />
             <div className="event">

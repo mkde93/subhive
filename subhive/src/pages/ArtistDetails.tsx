@@ -110,7 +110,6 @@ class ArtistDetails extends React.Component<Props, State> {
               {this.state.events.map((x, i) => (
                 i < 12 ?
                   <EventTile
-                    updateEvent={() => {}}
                     key={i}
                     event={x}
                   /> : null
@@ -118,7 +117,6 @@ class ArtistDetails extends React.Component<Props, State> {
             </div>
           </div>
         </section>
-        <Footer />
       </div>
     );
   }
