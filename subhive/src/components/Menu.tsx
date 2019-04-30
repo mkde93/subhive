@@ -21,6 +21,10 @@ class Menu extends React.Component {
                 <li><Button label="artists" link="/artists" /></li>
                 <li><Button label="contact" link="/contact" /></li>
               </ul>
+              <a target="_blank" href="https://open.spotify.com/user/m4b4uyyjsqiayu25y7ud0zbqy/playlist/3ZODyGLF5RCS5S6WLlQoqr?si=64V7uF5oS1icIuxsMM_HSA" className="menu-spotify">
+                <img src={require("../img/icons/play_white.svg")} />
+                <span>Spotify Playlist</span>
+              </a>
             </nav>
           </div>
         </div>

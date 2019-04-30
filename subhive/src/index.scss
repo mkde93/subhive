@@ -99,6 +99,20 @@ nav ul li::after {
 nav ul li:hover::after {
   opacity: 1;
 }
+nav .menu-spotify {
+  margin-top: 10px;
+  float: right;
+  font-family: $font;
+  font-size: 1rem;
+  color: $white;
+  text-decoration: none;
+  img {
+    height: 10px;
+    width: auto;
+    margin-right: 10px;
+  }
+  text-align: center;
+}
 /* Buttons */
 .buttons {
   display: flex;
