@@ -12,7 +12,7 @@ class ArtistTile extends React.Component<Props> {
     return (
       //TODO: Franz maybe style this i dunno
       <div className="artist-grid">
-        <Link className="remove-decoration" to={"/artists/" + this.props.artist.name}>
+        <Link className="remove-decoration" to={"/artists/" + this.props.artist.name.split(" ").join("")}>
           <div>
             <img src={require("../img/lineupartists/" + this.props.artist.img)} />
             <div className="description">

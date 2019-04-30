@@ -2,7 +2,6 @@ import * as React from "react";
 import "./css/grid.css";
 import "../index.scss";
 import DataFunctions from "../util/DataFunctions";
-import Footer from "../components/Footer";
 import Artist from "../types/Artist";
 import ArtistHighlight from "../components/ArtistHighlight";
 import Album from "../types/Album";
@@ -35,7 +34,7 @@ class ArtistDetails extends React.Component<Props, State> {
     let foundArtist: Artist = new Artist("Artist not found", "Location not found", "Bio not found", "https://www.facebook.com", "https://www.soundcloud.com",
       "https://www.twitter.com", "https://www.instagram.com", false, "temp.png")
     allArtists.forEach(a => {
-      if (a.name.toLocaleLowerCase() === searchKey.toLocaleLowerCase()) {
+      if (a.name.toLocaleLowerCase().split(" ").join("") === searchKey.toLocaleLowerCase().split(" ").join("")) {
         foundArtist = a;
       }
     })
@@ -79,7 +78,6 @@ class ArtistDetails extends React.Component<Props, State> {
         isArtistOnEvent = false;
       }
     })
-    console.log(filteredEvents);
     return filteredEvents;
   }
 
@@ -94,7 +92,7 @@ class ArtistDetails extends React.Component<Props, State> {
           </div>
         </section>
         <section>
-          <div className="container-16">
+          {this.state.releases.length > 0 ? <div className="container-16">
             <h2>Featured on</h2>
             <div className="grid">
               {this.state.releases.map((x, i) => (
@@ -105,7 +103,7 @@ class ArtistDetails extends React.Component<Props, State> {
                   /> : null
               ))}
             </div>
-          </div>
+          </div> : null}
         </section>
         <section>
           <div className="container-16">

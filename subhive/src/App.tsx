@@ -19,9 +19,6 @@ class App extends React.Component {
           movieUrl="subhive_001.mp4"
           posterUrl="subhive_001.png"
         />
-        <SectionInstagram
-          backgroundImage="Subhive_Origin_Dark.png"
-        />
         <SectionSpotify
           backgroundImage="Subhive_Origin_Dark.png"
           spotifyUrl={ContentStrings.spotifyPlaylist.playlistUrl}

@@ -4,6 +4,6 @@ export default {
         instagram: "https://www.instagram.com/subhive_dk/",
         soundcloud: "https://soundcloud.com/subhive/",
         facebook: "https://www.facebook.com/SUBHIVE/",
-        youtube: "https://erdetfredag.dk/",
+        youtube: "https://www.youtube.com/channel/UC2nLL0EyGyrzbP7RfTYVORA",
     }
 }

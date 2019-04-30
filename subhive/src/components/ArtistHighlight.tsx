@@ -25,9 +25,9 @@ class ArtistHighlight extends React.Component<Props, State> {
               <p>{this.props.artist.bio}</p>
             </div>
             <div className="socials">
-              <a target="_blank" href={this.props.artist.facebook}><img className="facebook" src={require("../img/icons/facebook.svg")} /></a>
-              <a target="_blank" href={this.props.artist.soundcloud}><img className="soundcloud" src={require("../img/icons/soundcloud.svg")} /></a>
-              <a target="_blank" href={this.props.artist.instagram}><img className="instagram" src={require("../img/icons/instagram.svg")} /></a>
+              {this.props.artist.facebook !== "NONE" ? <a target="_blank" href={this.props.artist.facebook}><img className="facebook" src={require("../img/icons/facebook.svg")} /></a> : null}
+              {this.props.artist.soundcloud !== "NONE" ? <a target="_blank" href={this.props.artist.soundcloud}><img className="soundcloud" src={require("../img/icons/soundcloud.svg")} /></a> : null}
+              {this.props.artist.instagram !== "NONE" ? <a target="_blank" href={this.props.artist.instagram}><img className="instagram" src={require("../img/icons/instagram.svg")} /></a> : null}
             </div>
           </div>
         </div>
