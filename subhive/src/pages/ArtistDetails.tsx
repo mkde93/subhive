@@ -95,17 +95,21 @@ class ArtistDetails extends React.Component<Props, State> {
         </section>
         <section>
           <div className="container-16">
-            {this.state.releases.map((x, i) => (
-              i < 12 ?
-                <AlbumTile
-                  key={i}
-                  album={x}
-                /> : null
-            ))}
+            <h2>Featured on</h2>
+            <div className="grid">
+              {this.state.releases.map((x, i) => (
+                i < 12 ?
+                  <AlbumTile
+                    key={i}
+                    album={x}
+                  /> : null
+              ))}
+            </div>
           </div>
         </section>
         <section>
           <div className="container-16">
+            <h2>Plays or played at</h2>
             <div className="grid">
               {this.state.events.map((x, i) => (
                 i < 12 ?

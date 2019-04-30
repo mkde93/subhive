@@ -35,9 +35,10 @@ h1 {
 }
 h2 {
   font-family: $font;
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
   color: $white;
   padding: 1rem 0;
 }
@@ -205,10 +206,10 @@ nav ul li:hover::after {
   }
 }
 /* Event Section */
-.page-bg { /* Probably not the best fix for the negative margin + behind menu */
+.page-bg {
   background-color: $black;
 }
-.padding-top {
+.padding-top { /* Negative Padding fix */
   padding-top: 200px;
 }
 .eventSection {
@@ -487,11 +488,12 @@ nav ul li:hover::after {
     width: 100%;
   }
 }
-/* Event Page */
+/* Grid */
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  /* Event Grid */
   .event-grid {
     width: 250px;
     margin: 8px;
@@ -502,7 +504,6 @@ nav ul li:hover::after {
     .event {
       display : flex;
       flex-direction: column;
-      height: 130px;
       justify-content: space-between;
       padding: 10px 0;
       .title {
@@ -510,6 +511,7 @@ nav ul li:hover::after {
         font-family: $font;
         font-size: 1.4rem;
         line-height: 1.6rem;
+        margin-bottom: 10px;
       }
       .date {
         color: $grey;
@@ -524,28 +526,84 @@ nav ul li:hover::after {
       }
     }
   }
-}
-/* Artist Grid + highlight */
-.artist-display {
-  h3 {
-    color: $grey;
-    padding-bottom: 1rem;
+  /* Artist Grid */
+  .artist-grid {
+    width: 200px;
+    margin: 8px;
+    img {
+      height: auto;
+      width: 200px;
+    }
+    .description {
+      color: $white;
+      font-family: $font;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+    }
   }
 }
+/* Artist Highlight */
 .artist-highlight {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+  .poster {
+    margin-right: 20px;
+    img {
+      width: auto;
+      height: 400px;
+    }
+  }
   .info {
     display: flex;
     height: 100%;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+    h3 {
+      margin: 10px 0 30px 0;
+    }
+    p {
+      font-size: 1.4rem;
+      font-family: $font;
+    }
     .socials {
+      width: auto;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       a {
-        display: inline-block;
-        img {
+        margin: 0 10px;
+        .facebook {
+          height: 2rem;
           width: auto;
-          height: 30px;
+        }
+        .soundcloud {
+          height: auto;
+          width: 3rem;
+        }
+        .instagram {
+          height: auto;
+          width: 2.2rem;
+        }
+        .youtube {
+          height: auto;
+          width: 2.5rem;
+        }
+        .spotify {
+          height: auto;
+          width: 2.2rem;
         }
       }
     }
+  }
+}
+/* Artist Section */
+.artist-display {
+  h3 {
+    color: $grey;
+    margin-bottom: 20px;
   }
 }
 /* Footer */
@@ -734,6 +792,22 @@ nav ul li:hover::after {
       }
     }
   }
+  .artist-highlight {
+    flex-direction: column;
+    padding-top: 20px;
+    .poster {
+      margin-right: 0;
+      img {
+        width: auto;
+        height: 300px;
+      }
+    }
+    .info {
+      .socials {
+        margin-top: 20px;
+      }
+    }
+  }
   .spotifySection {
     .spotifyplaylist {
       padding-top: 100%;
@@ -753,7 +827,14 @@ nav ul li:hover::after {
           line-height: 2rem;
         }
       }
-
+    }
+    .artist-grid {
+      width: 150px;
+      margin: 8px;
+      img {
+        height: auto;
+        width: 150px;
+      }
     }
   }
 }

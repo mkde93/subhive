@@ -11,11 +11,11 @@ class ArtistTile extends React.Component<Props> {
   render() {
     return (
       //TODO: Franz maybe style this i dunno
-      <div className="event-grid">
+      <div className="artist-grid">
         <Link className="remove-decoration" to={"/artists/" + this.props.artist.name}>
           <div>
             <img src={require("../img/lineupartists/" + this.props.artist.img)} />
-            <div className="event">
+            <div className="description">
               <p className="title">{this.props.artist.name}</p>
             </div>
           </div>

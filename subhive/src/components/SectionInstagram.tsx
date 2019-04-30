@@ -16,7 +16,7 @@ class SectionInstagram extends React.Component<Props> {
             </div>
             <div className="buttons spotify">
               <a href={"#"} target={"_blank"}>
-                <div className="spotify"><img src={require("../img/icons/Spotify_Icon_White.png")} />Follow</div>
+                <div className="spotify"><img src={require("../img/icons/instagram.svg")} />Follow</div>
               </a>
             </div>
           </div>

@@ -13,7 +13,7 @@ class ArtistHighlight extends React.Component<Props, State> {
   render() {
     return (
       //TODO: Franz style this pls and stuff
-      <div className="event-highlight artist-highlight">
+      <div className="artist-highlight">
         <div className="poster">
           <img src={require("../img/lineupartists/" + this.props.artist.img)} alt={this.props.artist.img + " Cover"} />
         </div>
@@ -26,6 +26,8 @@ class ArtistHighlight extends React.Component<Props, State> {
             </div>
             <div className="socials">
               <a target="_blank" href={this.props.artist.facebook}><img className="facebook" src={require("../img/icons/facebook.svg")} /></a>
+              <a target="_blank" href={this.props.artist.soundcloud}><img className="soundcloud" src={require("../img/icons/soundcloud.svg")} /></a>
+              <a target="_blank" href={this.props.artist.instagram}><img className="instagram" src={require("../img/icons/instagram.svg")} /></a>
             </div>
           </div>
         </div>
