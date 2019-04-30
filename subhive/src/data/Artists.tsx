@@ -40,7 +40,7 @@ export default {
         location: "Aalborg, Denmark",
         bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
             "trap, future bass, and DnB.",
-        facebook: "https://www.facebook.com/SUBHIVE/",
+        facebook: "NONE",
         soundcloud: "https://soundcloud.com/ov_music",
         twitter: "https://twitter.com/meluranmusic",
         instagram: "https://www.instagram.com/o.v.music/",

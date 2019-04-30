@@ -17,7 +17,7 @@ class Footer extends React.Component {
             <a target="_blank" href="https://www.instagram.com/subhive_dk/"><img className="instagram" src={require("../img/icons/instagram.svg")} /></a>
           </div>
           <div className="hexagon">
-            <a target="_blank" href=""><img className="youtube" src={require("../img/icons/youtube.svg")} /></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UC2nLL0EyGyrzbP7RfTYVORA"><img className="youtube" src={require("../img/icons/youtube.svg")} /></a>
           </div>
           <div className="hexagon">
             <a target="_blank" href="https://open.spotify.com/user/m4b4uyyjsqiayu25y7ud0zbqy/playlist/3ZODyGLF5RCS5S6WLlQoqr?si=xOHy7f2rR3usC5ne_gRhTg">

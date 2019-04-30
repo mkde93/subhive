@@ -151,7 +151,7 @@ export default {
     },
     subfryd_1: {
         title: "Subhive1000 - DnB Edition",
-        date: "24.04.2019",
+        date: "19.04.2019",
         location: "1000Fryd, Aalborg",
         eventlink: "https://www.facebook.com/events/552362531837723/",
         aftermovie: "false",
