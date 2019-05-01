@@ -8,6 +8,7 @@ import Album from "../types/Album";
 import Event from "../types/Event";
 import EventTile from "../components/EventTile";
 import AlbumTile from "../components/AlbumTile";
+import history from '../history'
 
 export interface Props {
 }
@@ -21,11 +22,19 @@ export interface State {
 class ArtistDetails extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      artist: this.getArtistFromUrl(),
-      releases: this.getReleasesForArtist(),
-      events: this.getEventsForArtist(),
-    };
+  }
+
+  componentWillMount() {
+    if (this.getArtistFromUrl().name !== "Artist not found") {
+      this.setState({
+        artist: this.getArtistFromUrl(),
+        releases: this.getReleasesForArtist(),
+        events: this.getEventsForArtist(),
+      });
+    } else {
+      history.push('/')
+      window.location.reload();
+    }
   }
 
   getArtistFromUrl(): Artist {

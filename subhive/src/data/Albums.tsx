@@ -1,6 +1,6 @@
 export default {
     origin: {
-        title: "Subhive: Origin1",
+        title: "Subhive: Origin",
         spotifyurl: "https://open.spotify.com/album/6jLSi7RbdkPpq3Sgy4kLYI?si=SgZ002cGQgi9fqf5tKj8WA",
         soundcloudurl: "https://soundcloud.com/subhive/sets/subhive-origin",
         type: "Compilation",

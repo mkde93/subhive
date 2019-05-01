@@ -2,12 +2,11 @@ import * as React from "react";
 import "./css/grid.css";
 import "../index.scss";
 import DataFunctions from "../util/DataFunctions";
-import EventHighlight from "../components/EventHighlight";
-import EventTile from "../components/EventTile";
 import { Link } from "react-router-dom";
 import Album from "../types/Album";
 import AlbumHighlight from "../components/AlbumHighlight";
 import AlbumTile from "../components/AlbumTile";
+import history from '../history'
 
 export interface Props {
 }
@@ -24,6 +23,18 @@ class MusicDetails extends React.Component<Props, State> {
       album: this.getAlbumFromUrl(),
       otherAlbums: this.filterOutCurrentAlbum(),
     };
+  }
+
+  componentWillMount() {
+    if (this.getAlbumFromUrl().title !== "Album Not Found") {
+      this.setState({
+      album: this.getAlbumFromUrl(),
+      otherAlbums: this.filterOutCurrentAlbum(),
+      });
+    } else {
+      history.push('/')
+      window.location.reload();
+    }
   }
 
   componentDidUpdate() {

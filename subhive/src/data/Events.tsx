@@ -165,6 +165,6 @@ export default {
             "experience than ever before! This night we will be playing Drum and Bass " +
             "all night long.",
         lineup: ["Tazer", "Kasger", "MELURAN"],
-        settimes: ["21.00-23.00", "23.00-01.00", "01.00-03.00"],
+        settimes: [],
     },
 }

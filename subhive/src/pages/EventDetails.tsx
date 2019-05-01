@@ -6,6 +6,7 @@ import DataFunctions from "../util/DataFunctions";
 import EventHighlight from "../components/EventHighlight";
 import EventTile from "../components/EventTile";
 import { Link } from "react-router-dom";
+import history from '../history'
 
 export interface Props {
 }
@@ -18,10 +19,18 @@ export interface State {
 class EventDetails extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      event: this.getEventFromUrl(),
-      upcomingEvents: this.filterOutUpcomingEvents(),
-    };
+  }
+
+  componentWillMount() {
+    if (this.getEventFromUrl().title !== "Event Not Found") {
+      this.setState({
+        event: this.getEventFromUrl(),
+        upcomingEvents: this.filterOutUpcomingEvents(),
+      });
+    } else {
+      history.push('/')
+      window.location.reload();
+    }
   }
 
   componentDidUpdate() {

@@ -15,7 +15,7 @@ class Menu extends React.Component<Props, State> {
     this.state = {
       burgerActive: false,
     };
-    console.log(this.state.burgerActive);
+
   }
   toggleMenu = () => {
     console.log(this.state.burgerActive);
@@ -24,6 +24,7 @@ class Menu extends React.Component<Props, State> {
       burgerActive: !currentState,
     });
   }
+  
   render() {
     const burgerClass = this.state.burgerActive ? ' open' : '';
     return (
