@@ -53,7 +53,7 @@ class EventHighlight extends React.Component<Props, State> {
                 </a> : null
               }
               <a href={this.props.event.eventlink} target={"_blank"}>
-                <div className="eventlink"><img src={require("../img/icons/Spotify_Icon_White.png")} />Attend event</div>
+                <div className="eventlink"><img src={require("../img/icons/facebook-white.svg")} />Attend event</div>
               </a>
             </div>
             <div className="description">

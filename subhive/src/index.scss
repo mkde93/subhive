@@ -53,7 +53,7 @@ header {
   z-index: 100;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  .container-16 {
+  .menu-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,13 +69,17 @@ header {
     letter-spacing: 0.1rem;
   }
 }
-nav .button {
+/* Desktop Navigation */
+.desktop-nav {
+  display: inline-block;
+}
+.desktop-nav .button {
   font-family: $font;
   font-weight: 600;
   letter-spacing: 0.1rem;
   font-size: 1.4rem;
 }
-nav ul li {
+.desktop-nav ul li {
   position: relative;
   display: inline-block;
   margin-left: 1.8rem;
@@ -86,7 +90,7 @@ nav ul li {
     display: inline-block;
   }
 }
-nav ul li::after {
+.desktop-nav ul li::after {
   content: '';
   position: absolute;
   opacity: 0;
@@ -96,10 +100,10 @@ nav ul li::after {
   bottom: -5px;
   transition: height 0.2s, opacity 0.2s;
 }
-nav ul li:hover::after {
+.desktop-nav ul li:hover::after {
   opacity: 1;
 }
-nav .menu-spotify {
+.desktop-nav .menu-spotify {
   margin-top: 10px;
   float: right;
   font-family: $font;
@@ -112,6 +116,126 @@ nav .menu-spotify {
     margin-right: 10px;
   }
   text-align: center;
+}
+/* Mobile Navigation */
+.burger {
+  position: fixed;
+  display: none;
+  top: 40px;
+  right: 40px;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+  :hover {
+    opacity: .7;
+  }
+  span {
+    background: $white;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+    cursor: pointer;
+  }
+  span:nth-of-type(2) {
+    top: 11px;
+  }
+  span:nth-of-type(3) {
+    top: 22px;
+  }
+}
+.burger.open {
+    .top {
+      -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+      transform: translateY(11px) translateX(0) rotate(45deg);
+      background: #FFF;
+    }
+    .middle {
+      opacity: 0;
+      background: #FFF;
+    }
+    .bottom {
+      -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+      background: #FFF;
+  }
+}
+.mobile-nav {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: visible;
+  -webkit-transition: opacity .35s, visibility .35s, height .35s;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  .mobile-container {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-weight: 800;
+    font-size: 50px;
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    li {
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+      ::after {
+        content: '';
+        position: absolute;
+        opacity: 0;
+        background-color: $white;
+        height: 4px;
+        width: 100%;
+        bottom: -5px;
+        transition: height 0.2s, opacity 0.2s;
+      }
+      a {
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $white;
+        font-family: $font;
+
+      }
+    }
+  }
+  .menu-spotify {
+    font-family: $font;
+    font-size: 1.5rem;
+    color: $white;
+    font-weight: bold;
+    text-decoration: none;
+    img {
+      height: 15px;
+      width: auto;
+      margin-right: 10px;
+    }
+  }
+}
+.mobile-nav.open {
+  opacity: .9;
+  visibility: visible;
+  height: 100%;
+}
+.mobile-nav ul li:hover::after {
+  opacity: 1;
 }
 /* Buttons */
 .buttons {
@@ -710,6 +834,12 @@ nav .menu-spotify {
       }
     }
   }
+  .desktop-nav {
+    display: block;
+  }
+  .mobile-nav {
+    display: none;
+  }
 }
 @media only screen and (min-width:720px) and (max-width:959px) {
   .grid {
@@ -719,6 +849,15 @@ nav .menu-spotify {
         width: 344px;
       }
     }
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  .burger {
+    display: block;
   }
 }
     
@@ -850,5 +989,11 @@ nav .menu-spotify {
         width: 150px;
       }
     }
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .burger {
+    display: block;
   }
 }
