@@ -4,7 +4,6 @@ import "../index.scss";
 import SectionAlbum from "../components/SectionAlbum";
 import Album from "../types/Album";
 import AlbumTile from "../components/AlbumTile";
-import Footer from "../components/Footer";
 import DataFunctions from "../util/DataFunctions";
 
 export interface Props {
@@ -29,7 +28,7 @@ class Music extends React.Component<Props, State> {
           <h2>Releases</h2>
           <div className="grid">
             {this.state.albums.map((x, i) => (
-              <AlbumTile album={x}/>
+              <AlbumTile album={x} />
             ))}
           </div>
         </div>

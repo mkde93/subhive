@@ -1,9 +1,7 @@
 import * as React from "react";
 import "./css/grid.css";
 import "../index.scss";
-import SectionEvent from "../components/SectionEvent";
 import DataFunctions from "../util/DataFunctions";
-import Footer from "../components/Footer";
 import Artist from "../types/Artist";
 import ArtistTile from "../components/ArtistTile";
 

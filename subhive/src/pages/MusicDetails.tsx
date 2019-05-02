@@ -28,8 +28,8 @@ class MusicDetails extends React.Component<Props, State> {
   componentWillMount() {
     if (this.getAlbumFromUrl().title !== "Album Not Found") {
       this.setState({
-      album: this.getAlbumFromUrl(),
-      otherAlbums: this.filterOutCurrentAlbum(),
+        album: this.getAlbumFromUrl(),
+        otherAlbums: this.filterOutCurrentAlbum(),
       });
     } else {
       history.push('/')
@@ -43,7 +43,7 @@ class MusicDetails extends React.Component<Props, State> {
       this.setState({
         album: this.getAlbumFromUrl(),
         otherAlbums: this.filterOutCurrentAlbum(),
-      });    
+      });
     }
   }
 
@@ -71,7 +71,7 @@ class MusicDetails extends React.Component<Props, State> {
   render() {
     return (
       <div className="page-bg">
-        <section style={{ backgroundImage: `url(${require("../img/" + this.state.album.bgimg)})` }} className="eventSection padding-top">
+        <section style={{ backgroundImage: `url(${require("../img/" + this.state.album.bgimg)})` }} className="eventSection">
           <div className="container-16">
             <AlbumHighlight
               album={this.state.album}

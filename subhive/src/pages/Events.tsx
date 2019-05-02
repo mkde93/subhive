@@ -5,7 +5,6 @@ import SectionEvent from "../components/SectionEvent";
 import Event from "../types/Event";
 import DataFunctions from "../util/DataFunctions";
 import EventTile from "../components/EventTile";
-import Footer from "../components/Footer";
 
 export interface Props {
 }

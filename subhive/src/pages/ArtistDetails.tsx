@@ -41,7 +41,7 @@ class ArtistDetails extends React.Component<Props, State> {
     const allArtists = DataFunctions.getArtists();
     const searchKey = window.location.pathname.split("/")[2];
     let foundArtist: Artist = new Artist("Artist not found", "Location not found", "Bio not found", "https://www.facebook.com", "https://www.soundcloud.com",
-      "https://www.twitter.com", "https://www.instagram.com", false, "temp.png")
+      "https://www.twitter.com", "https://www.instagram.com", false, "temp.png", "temp.png")
     allArtists.forEach(a => {
       if (a.name.toLocaleLowerCase().split(" ").join("") === searchKey.toLocaleLowerCase().split(" ").join("")) {
         foundArtist = a;
@@ -93,7 +93,7 @@ class ArtistDetails extends React.Component<Props, State> {
   render() {
     return (
       <div className="page-bg">
-        <section className="eventSection padding-top">
+        <section className="eventSection padding-top" style={{ backgroundImage: `url(${require("../img/lineupartists/artist-bg/" + this.state.artist.bgimg)})` }}>
           <div className="container-16">
             <ArtistHighlight
               artist={this.state.artist}

@@ -47,7 +47,7 @@ export default {
             "melting visuals and flickering lights. Focusing on future bass, " +
             "trap and drum & bass, SUBHIVE is set to shake up the underground " +
             "music scene of Aalborg.",
-        lineup: ["KEVO", "Shio", "Andreas Northland", "Kasger", "Tazer", "Vidya Vidya"],
+        lineup: ["KEVO", "Shio", "Andreas Northland", "Kasger", "George Garcia", "Vidya Vidya"],
         settimes: ["22.00-23.00", "23.00-00.00", "23.00-00.00", "00.00-01.00", "01.00-02.00", "02.00-03.00"],
     },
     subhive_4: {
@@ -80,7 +80,7 @@ export default {
         desc: "SUBHIVE presents SubVibe. A Few small summer gatherings " +
             "for SUBHIVE fans. Bring your own beer and enjoy some chillout " +
             "bass music in the sun ",
-        lineup: ["Kasger", "MELURAN", "Tazer", "Haszan & Overload"],
+        lineup: ["Kasger", "MELURAN", "George Garcia", "Haszan & Overload"],
         settimes: [],
     },
     subvibe_2: {
@@ -96,7 +96,7 @@ export default {
         desc: "SUBHIVE presents SubVibe. A Few small summer gatherings " +
             "for SUBHIVE fans. Bring your own beer and enjoy some chillout " +
             "bass music in the sun ",
-        lineup: ["Kasger", "MELURAN", "O.V.", "Tazer", "Mambo Poa"],
+        lineup: ["Kasger", "MELURAN", "O.V.", "George Garcia", "Mambo Poa"],
         settimes: [],
     },
     subvibe_3: {
@@ -112,7 +112,7 @@ export default {
         desc: "SUBHIVE presents SubVibe. A Few small summer gatherings " +
             "for SUBHIVE fans. Bring your own beer and enjoy some chillout " +
             "bass music in the sun ",
-        lineup: ["Kasger", "MELURAN", "Tazer", "O.V."],
+        lineup: ["Kasger", "MELURAN", "George Garcia", "O.V."],
         settimes: [],
     },
     subhive_5: {
@@ -129,7 +129,7 @@ export default {
             "melting visuals and flickering lights. Focusing on future bass, " +
             "trap and drum & bass, SUBHIVE is set to shake up the underground " +
             "music scene of Aalborg.",
-        lineup: ["Sundr", "Vivien Oldy", "Tazer", "Lasu", "Kasger", "Lazykid"],
+        lineup: ["Sundr", "Vivien Oldy", "George Garcia", "Lasu", "Kasger", "Lazykid"],
         settimes: ["21.00-22.00", "22.00-23.00", "23.00-00.00", "00.00-01.00", "01.00-02.00", "02.00-03.00"],
     },
     subhive_6: {
@@ -164,7 +164,7 @@ export default {
             "events on 1000Fryd, we strive to deliver a more intimate and intense " +
             "experience than ever before! This night we will be playing Drum and Bass " +
             "all night long.",
-        lineup: ["Tazer", "Kasger", "MELURAN"],
+        lineup: ["George Garcia", "Kasger", "MELURAN"],
         settimes: [],
     },
 }

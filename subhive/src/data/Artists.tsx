@@ -10,42 +10,47 @@ export default {
         instagram: "https://www.instagram.com/meluranmusic/",
         subhiveartist: true,
         img: "MELURAN.png",
+        bgimg: "MELURAN_bg.png",
     },
     KASGER: {
         name: "Kasger",
         location: "Aalborg, Denmark",
-        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
-            "trap, future bass, and DnB.",
+        bio: "Rolling bass and euphoric melodies will be blasting when Kasger takes the stage. " +
+            "With features on NCS, Liquicity and High Tea, Kasger is the perfect act to " +
+            "throw a party with both old and new dancefloor drum and bass!",
         facebook: "https://www.facebook.com/Kasger",
         soundcloud: "https://soundcloud.com/kaspergerlif",
         twitter: "https://twitter.com/Kasger",
         instagram: "https://www.instagram.com/kasger",
         subhiveartist: true,
         img: "KASGER.png",
+        bgimg: "Kasger_bg.png",
     },
-    TAZER: {
-        name: "Tazer",
+    GEORGEGARCIA: {
+        name: "George Garcia",
         location: "Aalborg, Denmark",
         bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
             "trap, future bass, and DnB.",
-        facebook: "https://www.facebook.com/lazykidmusic",
-        soundcloud: "https://soundcloud.com/lazykidmusicc",
+        facebook: "https://www.facebook.com/georgegarciaDK/",
+        soundcloud: "https://soundcloud.com/georgegarciadk",
         twitter: "NONE",
-        instagram: "https://www.instagram.com/iamlazykid/",
+        instagram: "https://www.instagram.com/georgegarciadk",
         subhiveartist: true,
         img: "TAZER.png",
+        bgimg: "GeorgeGarcia_bg.png",
     },
     OV: {
         name: "O.V.",
         location: "Aalborg, Denmark",
         bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
             "trap, future bass, and DnB.",
-        facebook: "NONE",
+        facebook: "https://www.facebook.com/O.V.Sound/",
         soundcloud: "https://soundcloud.com/ov_music",
-        twitter: "https://twitter.com/meluranmusic",
+        twitter: "NONE",
         instagram: "https://www.instagram.com/o.v.music/",
         subhiveartist: true,
         img: "OV.png",
+        bgimg: "OV_bg.png",
     },
     VIDYAVIDYA: {
         name: "Vidya Vidya",
@@ -58,6 +63,7 @@ export default {
         instagram: "NONE",
         subhiveartist: true,
         img: "VidyaVidya.png",
+        bgimg: "VidyaVidya_bg.png",
     },
     RUNGE: {
         name: "Runge",
@@ -70,6 +76,7 @@ export default {
         instagram: "https://www.instagram.com/rungemusic/",
         subhiveartist: true,
         img: "Runge.png",
+        bgimg: "Runge_bg.png",
     },
     CELO: {
         name: "CELO",
@@ -82,6 +89,7 @@ export default {
         instagram: "https://www.instagram.com/celodnb/",
         subhiveartist: true,
         img: "CELO.png",
+        bgimg: "CELO_bg.png",
     },
     CUUTS: {
         name: "Cuuts",
@@ -94,6 +102,7 @@ export default {
         instagram: "NONE",
         subhiveartist: true,
         img: "Cuuts.png",
+        bgimg: "Cuuts_bg.png",
     },
     SUNDR: {
         name: "Sundr",
@@ -105,6 +114,7 @@ export default {
         instagram: "NONE",
         subhiveartist: false,
         img: "Sundr.png",
+        bgimg: "NONE",
     },
     VIVIENOLDY: {
         name: "Vivien Oldy",
@@ -116,6 +126,7 @@ export default {
         instagram: "NONE",
         subhiveartist: false,
         img: "VivienOldy.png",
+        bgimg: "NONE",
     },
     HASZANOVERLOAD: {
         name: "Haszan & Overload",
@@ -127,17 +138,23 @@ export default {
         instagram: "NONE",
         subhiveartist: false,
         img: "Haszan_Overload.png",
+        bgimg: "NONE",
     },
     REDEMPTIVE: {
         name: "Redemptive",
-        location: "NONE",
-        bio: "NONE",
+        location: "Copenhagen, Denmark",
+        bio: "If I can make someone else's day better through music, " +
+            "then my day automatically gets better. I believe in spreading good " +
+            "vibrations be it as a person or through art and that's one of the reasons I love music. " +
+            "It has so much power. This is something I learned very fast as a kid when I saw DJ's " +
+            "at big electronic music events, who created this huge wave of positive energy among thousands of people.",
         facebook: "https://www.facebook.com/RedemptiveMusic",
         soundcloud: "https://soundcloud.com/redemptive",
         twitter: "https://twitter.com/RedemptiveMusic",
         instagram: "https://www.instagram.com/rdmptv/",
-        subhiveartist: false,
+        subhiveartist: true,
         img: "Redemptive.png",
+        bgimg: "temp_bg.png",
     },
     BOBASTIC: {
         name: "BOBASTIC",
@@ -149,6 +166,7 @@ export default {
         instagram: "https://www.instagram.com/bo_nicolaisen/",
         subhiveartist: false,
         img: "Bobastic.png",
+        bgimg: "NONE",
     },
     DJ0APE: {
         name: "DJ 0 APE",
@@ -160,6 +178,7 @@ export default {
         instagram: "NONE",
         subhiveartist: false,
         img: "Dj0Ape.png",
+        bgimg: "NONE",
     },
     SHIO: {
         name: "shio",
@@ -171,6 +190,7 @@ export default {
         instagram: "https://www.instagram.com/shio_413/",
         subhiveartist: false,
         img: "SHIO.png",
+        bgimg: "NONE",
     },
     ANDREASNORTHLAND: {
         name: "Andreas Northland",
@@ -182,6 +202,7 @@ export default {
         instagram: "NONE",
         subhiveartist: false,
         img: "AndreasNorthland.png",
+        bgimg: "NONE",
     },
     KEVO: {
         name: "KEVO",
@@ -193,17 +214,19 @@ export default {
         instagram: "https://www.instagram.com/k_e_v_o69/",
         subhiveartist: false,
         img: "Kevo.png",
+        bgimg: "NONE",
     },
     LAZYKID: {
         name: "Lazykid",
-        location: "NONE",
+        location: "Aalborg, Denmark",
         bio: "NONE",
         facebook: "https://www.facebook.com/lazykidmusic",
         soundcloud: "https://soundcloud.com/lazykidmusicc",
         twitter: "NONE",
         instagram: "https://www.instagram.com/iamlazykid/",
-        subhiveartist: false,
+        subhiveartist: true,
         img: "LazyKid.png",
+        bgimg: "temp_bg.png",
     },
     SHOGUNGLOW: {
         name: "Shogunglow",
@@ -215,6 +238,7 @@ export default {
         instagram: "NONE",
         subhiveartist: false,
         img: "Shogunglow.png",
+        bgimg: "NONE",
     },
     CZECHSTRINGS: {
         name: "Czech Strings",
@@ -226,6 +250,7 @@ export default {
         instagram: "https://www.instagram.com/czechstrings/",
         subhiveartist: false,
         img: "CzechStrings.png",
+        bgimg: "NONE",
     },
     CAPTIVE: {
         name: "CAPTIVE",
@@ -237,6 +262,7 @@ export default {
         instagram: "NONE",
         subhiveartist: false,
         img: "CAPTIVE.png",
+        bgimg: "NONE",
     },
     WHOKNOWS: {
         name: "Whoknows",
@@ -248,5 +274,6 @@ export default {
         instagram: "NONE",
         subhiveartist: false,
         img: "Whoknows.png",
+        bgimg: "NONE",
     },
 }

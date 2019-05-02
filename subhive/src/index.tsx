@@ -19,7 +19,7 @@ import MusicDetails from "./pages/MusicDetails";
 ReactDOM.render(
   <Provider>
     <Router history={history}>
-      <div>
+      <div id="footer-always-bottom">
         <Menu />
         <div id="wrapper">
           <Switch>
@@ -31,7 +31,7 @@ ReactDOM.render(
             <Route exact={true} path="/artists" component={Artists} />
             <Route exact={true} path="/artists/:id" component={ArtistDetails} />
             <Route exact={true} path="/contact" component={Contact} />
-            <Route path="*" component={App}/>
+            <Route path="*" component={App} /> {/* Redirects to frontpage with broken links */}
           </Switch>
         </div>
         <Footer />

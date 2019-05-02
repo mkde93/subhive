@@ -18,13 +18,24 @@ $highlight: #3AC7D2; /* highlight */
 html {
   font-size: 16px !important; /* Overwriting css clear - need better fix */
 }
+html, body, #root {
+  height: 100%; /* 100% viewheight as a minimum */
+}
+#footer-always-bottom {
+  height: 100%; /* 100% viewheight as a minimum */
+  display: flex;
+  flex-direction: column;
+}
+
 .remove-decoration {
   text-decoration: none;
 }
 #wrapper {
   display: flex;
   flex-direction: column;
+  flex: 1 0 auto; /* Prevents browsers from letting this item shrink to smaller than contents default minimum size */
 }
+
 /* Fonts */
 h1 {
   font-family: $font;
@@ -52,7 +63,7 @@ header {
   position: fixed;
   z-index: 100;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   .menu-container {
     display: flex;
     justify-content: space-between;
@@ -67,6 +78,78 @@ header {
     text-transform: uppercase;
     padding-left: 10px;
     letter-spacing: 0.1rem;
+  }
+}
+/* Footer */
+.footer {
+  background-color: $black;
+  flex-shrink: 0; /* Prevents browsers from letting this item shrink to smaller than contents default minimum size */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  .socials {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  span {
+    margin-top: 15px;
+    font-family: $font;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: $white;
+  }
+  .hexagon {
+    text-decoration: none;
+    position: relative;
+    margin: 0 5px;
+  }
+  .hexagon::before {
+    content: '\2B22';
+    font-size: 6rem;
+    color: $white;
+  }
+  .facebook {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 2rem;
+    width: auto;
+  }
+  .soundcloud {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    height: auto;
+    width: 3rem;
+  }
+  .instagram {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: 2.5rem;
+  }
+  .youtube {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: 2.5rem;
+  }
+  .spotify {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: 2.2rem;
   }
 }
 /* Desktop Navigation */
@@ -698,12 +781,19 @@ header {
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 0 0 0;
+    h1 {
+      color: $white;
+    }
     h3 {
       margin: 10px 0 30px 0;
+      color: #b7b7b7;
     }
     p {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-family: $font;
+      color: #b7b7b7;
+      max-width: 700px;
+      line-height: 1.6rem;
     }
     .socials {
       width: auto;
@@ -742,77 +832,6 @@ header {
   h3 {
     color: $grey;
     margin-bottom: 20px;
-  }
-}
-/* Footer */
-.footer {
-  background-color: $black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0;
-  .socials {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-  }
-  span {
-    margin-top: 15px;
-    font-family: $font;
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: $white;
-  }
-  .hexagon {
-    text-decoration: none;
-    position: relative;
-    margin: 0 5px;
-  }
-  .hexagon::before {
-    content: '\2B22';
-    font-size: 6rem;
-    color: $white;
-  }
-  .facebook {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: 2rem;
-    width: auto;
-  }
-  .soundcloud {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-60%);
-    height: auto;
-    width: 3rem;
-  }
-  .instagram {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: auto;
-    width: 2.5rem;
-  }
-  .youtube {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: auto;
-    width: 2.5rem;
-  }
-  .spotify {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: auto;
-    width: 2.2rem;
   }
 }
 @media only screen and (min-width:1200px) and (max-width:1599px) {
