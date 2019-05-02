@@ -1,27 +1,67 @@
 self.__precacheManifest = [
   {
-    "revision": "8af14cbb033086015c533f3245a677c0",
-    "url": "/subhive/static/media/Bobastic.8af14cbb.png"
+    "revision": "6c19420f78ca1771b4ebde54c2997d03",
+    "url": "/subhive/static/media/instagram.6c19420f.svg"
   },
   {
-    "revision": "553328f31fc9b643fa8e",
-    "url": "/subhive/static/css/main.3521e100.chunk.css"
+    "revision": "73364f2966a534142bc3",
+    "url": "/subhive/static/css/main.8db39e71.chunk.css"
   },
   {
-    "revision": "4770aee479ab614af505",
-    "url": "/subhive/static/js/1.4770aee4.chunk.js"
+    "revision": "42b0718193c4d2548484",
+    "url": "/subhive/static/js/1.42b07181.chunk.js"
   },
   {
     "revision": "31567f1d42f27c1f6cae",
     "url": "/subhive/static/js/runtime~main.31567f1d.js"
   },
   {
+    "revision": "8e88ef19649aae0b4b7004ac77c89e6d",
+    "url": "/subhive/static/media/play_white.8e88ef19.svg"
+  },
+  {
     "revision": "cc4e2784f47909e55d940c014cbef882",
     "url": "/subhive/static/media/Spotify_Icon_White.cc4e2784.png"
   },
   {
-    "revision": "8e88ef19649aae0b4b7004ac77c89e6d",
-    "url": "/subhive/static/media/play_white.8e88ef19.svg"
+    "revision": "68b86d6e17675bdb80f019db9099c5dd",
+    "url": "/subhive/static/media/facebook-white.68b86d6e.svg"
+  },
+  {
+    "revision": "f14ad113bdab095d878faec7d660a2dd",
+    "url": "/subhive/static/media/CELO_bg.f14ad113.png"
+  },
+  {
+    "revision": "61424d4f82bb5b9f95fe49adea92d8a3",
+    "url": "/subhive/static/media/Cuuts_bg.61424d4f.png"
+  },
+  {
+    "revision": "64a0587e8d0c6ca643b1aa967c3f586f",
+    "url": "/subhive/static/media/GeorgeGarcia_bg.64a0587e.png"
+  },
+  {
+    "revision": "a987fafe6d85000e36acb01e472d8673",
+    "url": "/subhive/static/media/Kasger_bg.a987fafe.png"
+  },
+  {
+    "revision": "35e4041e9d1522fefb5c36c8199bc2b8",
+    "url": "/subhive/static/media/MELURAN_bg.35e4041e.png"
+  },
+  {
+    "revision": "e6ffa9dec6cb72e3c677f52b4e031726",
+    "url": "/subhive/static/media/OV_bg.e6ffa9de.png"
+  },
+  {
+    "revision": "a670a9ce5ce6efe8b1acb8a954c5fb67",
+    "url": "/subhive/static/media/Runge_bg.a670a9ce.png"
+  },
+  {
+    "revision": "b936a2179a37ee2373a207d3adce26bf",
+    "url": "/subhive/static/media/VidyaVidya_bg.b936a217.png"
+  },
+  {
+    "revision": "3942ddb075df420da8597516f526c7c4",
+    "url": "/subhive/static/media/temp_bg.3942ddb0.png"
   },
   {
     "revision": "2722d92dbfd5ecfb2f6514def5c2ec13",
@@ -96,8 +136,16 @@ self.__precacheManifest = [
     "url": "/subhive/static/media/facebook.b9def311.svg"
   },
   {
-    "revision": "6c19420f78ca1771b4ebde54c2997d03",
-    "url": "/subhive/static/media/instagram.6c19420f.svg"
+    "revision": "f1e65b2813faa93de891f25a61c3ca20",
+    "url": "/subhive/static/media/instagram-white.f1e65b28.svg"
+  },
+  {
+    "revision": "73364f2966a534142bc3",
+    "url": "/subhive/static/js/main.73364f29.chunk.js"
+  },
+  {
+    "revision": "7eac598da50bffe8cf17055ac05f56cb",
+    "url": "/subhive/static/media/soundcloud-white.7eac598d.svg"
   },
   {
     "revision": "e31243e96f4c231af77e920a3ac9cda6",
@@ -116,8 +164,8 @@ self.__precacheManifest = [
     "url": "/subhive/static/media/AndreasNorthland.eee6224b.png"
   },
   {
-    "revision": "553328f31fc9b643fa8e",
-    "url": "/subhive/static/js/main.553328f3.chunk.js"
+    "revision": "8af14cbb033086015c533f3245a677c0",
+    "url": "/subhive/static/media/Bobastic.8af14cbb.png"
   },
   {
     "revision": "9a3c24c40e9c1783e18c07c780ae4140",
@@ -228,7 +276,7 @@ self.__precacheManifest = [
     "url": "/subhive/static/media/subhive_001.c344209b.mp4"
   },
   {
-    "revision": "9f02970f78831892415e3e146eeea5cc",
+    "revision": "9c1add9f1327e16b3223fc5e4fa99624",
     "url": "/subhive/index.html"
   }
 ];
