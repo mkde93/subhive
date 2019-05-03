@@ -17,6 +17,7 @@ $highlight: #3AC7D2; /* highlight */
 }
 html {
   font-size: 16px !important; /* Overwriting css clear - need better fix */
+  background-color: $grey;
 }
 html, body, #root {
   height: 100%; /* 100% viewheight as a minimum */
@@ -204,8 +205,8 @@ header {
 .burger {
   position: fixed;
   display: none;
-  top: 40px;
-  right: 40px;
+  top: 30px;
+  right: 30px;
   height: 27px;
   width: 35px;
   cursor: pointer;
@@ -883,6 +884,12 @@ header {
 @media only screen and (max-width: 899px) {
   html {
     font-size: 12px !important; /* overwriting css clear - needs better fix */
+  }
+  header {
+    .logo {
+      width: auto;
+      height: 50px;
+    }
   }
   .albumSection {
     height: auto;
