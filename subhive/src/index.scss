@@ -512,9 +512,16 @@ header {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      overflow-x: scroll; /* Scrolling if too many artists */
+      overflow-x: auto; /* Scrolling if too many artists */
       overflow-y: hidden;
       max-width: 800px;
+    }
+    .wrapper::-webkit-scrollbar {
+      height: 10px;
+      background-color: white;
+    }
+    .wrapper::-webkit-scrollbar-thumb {
+      background-color: grey;
     }
     h3 {
       color: $dark;
