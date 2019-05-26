@@ -35,7 +35,7 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto; /* Prevents browsers from letting this item shrink to smaller than contents default minimum size */
-  background-color: #111;
+  background-color: $black;
 }
 
 /* Fonts */
