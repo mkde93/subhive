@@ -35,6 +35,7 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto; /* Prevents browsers from letting this item shrink to smaller than contents default minimum size */
+  background-color: $black;
 }
 
 /* Fonts */
@@ -518,10 +519,10 @@ header {
     }
     .wrapper::-webkit-scrollbar {
       height: 10px;
-      background-color: white;
+      background-color: hsla(50, 50, 1, 0.6);
     }
     .wrapper::-webkit-scrollbar-thumb {
-      background-color: grey;
+      background-color:rgba(219, 219, 219, 0.6);
     }
     h3 {
       color: $dark;
