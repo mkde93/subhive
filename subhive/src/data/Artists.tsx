@@ -29,8 +29,7 @@ export default {
     GEORGEGARCIA: {
         name: "George Garcia",
         location: "Aalborg, Denmark",
-        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
-            "trap, future bass, and DnB.",
+        bio: "", //TODO: ADD BIO
         facebook: "https://www.facebook.com/georgegarciaDK/",
         soundcloud: "https://soundcloud.com/georgegarciadk",
         twitter: "NONE",
@@ -42,8 +41,7 @@ export default {
     OV: {
         name: "O.V.",
         location: "Aalborg, Denmark",
-        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
-            "trap, future bass, and DnB.",
+        bio: "", //TODO: ADD BIO
         facebook: "https://www.facebook.com/O.V.Sound/",
         soundcloud: "https://soundcloud.com/ov_music",
         twitter: "NONE",
@@ -55,8 +53,7 @@ export default {
     VIDYAVIDYA: {
         name: "Vidya Vidya",
         location: "Aalborg, Denmark",
-        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
-            "trap, future bass, and DnB.",
+        bio: "", //TODO: ADD BIO
         facebook: "https://www.facebook.com/vidyavidyamusic/",
         soundcloud: "https://soundcloud.com/vidyavidya",
         twitter: "NONE",
@@ -68,8 +65,7 @@ export default {
     RUNGE: {
         name: "Runge",
         location: "Aalborg, Denmark",
-        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
-            "trap, future bass, and DnB.",
+        bio: "", //TODO: ADD BIO
         facebook: "https://www.facebook.com/RungeMusic/",
         soundcloud: "https://soundcloud.com/runge-music",
         twitter: "https://twitter.com/rungemusic",
@@ -81,8 +77,7 @@ export default {
     CELO: {
         name: "CELO",
         location: "Aalborg, Denmark",
-        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
-            "trap, future bass, and DnB.",
+        bio: "", //TODO: ADD BIO
         facebook: "https://www.facebook.com/celodnb/",
         soundcloud: "https://soundcloud.com/celodnb",
         twitter: "https://twitter.com/celodnb",
@@ -94,8 +89,7 @@ export default {
     CUUTS: {
         name: "Cuuts",
         location: "Aalborg, Denmark",
-        bio: "Our own multi-genre artist. Meluran produces a broad mix of music, " +
-            "trap, future bass, and DnB.",
+        bio: "", //TODO: ADD BIO
         facebook: "NONE",
         soundcloud: "https://soundcloud.com/cuuts",
         twitter: "NONE",
@@ -219,7 +213,7 @@ export default {
     LAZYKID: {
         name: "Lazykid",
         location: "Aalborg, Denmark",
-        bio: "NONE",
+        bio: "", //TODO: ADD BIO
         facebook: "https://www.facebook.com/lazykidmusic",
         soundcloud: "https://soundcloud.com/lazykidmusicc",
         twitter: "NONE",

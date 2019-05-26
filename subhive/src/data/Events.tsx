@@ -13,7 +13,7 @@ export default {
             "melting visuals and flickering lights. Focusing on future bass, " +
             "trap and drum & bass, SUBHIVE is set to shake up the underground " +
             "music scene of Aalborg.",
-        lineup: ["Shogunglow", "Czech Strings", "MELURAN", "Kasger", "Lazykid", "Tazer", "Vidya Vidya"],
+        lineup: ["Shogunglow", "Czech Strings", "MELURAN", "Kasger", "Lazykid", "George Garcia", "Vidya Vidya"],
         settimes: ["21.00-22.00", "22.00-23.00", "23.00-00.00", "00.00-01.00", "01.00-02.00", "01.00-02.00", "02.00-03.00"],
     },
     subhive_2: {
@@ -96,7 +96,7 @@ export default {
         desc: "SUBHIVE presents SubVibe. A Few small summer gatherings " +
             "for SUBHIVE fans. Bring your own beer and enjoy some chillout " +
             "bass music in the sun ",
-        lineup: ["Kasger", "MELURAN", "O.V.", "George Garcia", "Mambo Poa"],
+        lineup: ["Kasger", "MELURAN", "O.V.", "George Garcia"],
         settimes: [],
     },
     subvibe_3: {
