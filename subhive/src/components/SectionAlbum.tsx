@@ -34,7 +34,7 @@ class SectionAlbum extends React.Component<Props, State> {
       <div>
         <section style={{ backgroundImage: `url(${require("../img/" + this.state.newestAlbum.bgimg)})` }} className="albumSection">
           <div className="container-16">
-            <AlbumHighlight album={this.state.newestAlbum}/>
+            <AlbumHighlight album={this.state.newestAlbum} />
           </div>
         </section>
       </div>

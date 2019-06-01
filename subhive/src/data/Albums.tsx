@@ -15,4 +15,20 @@ export default {
             "MELURAN", "Redemptive", "Kasger", "Vidya Vidya", "LazyKid", "Cuuts"
         ]
     },
+    ruin: {
+        title: "Subhive: Ruin",
+        spotifyurl: "https://open.spotify.com/album/3ru40x3YnFpJX3Qd1UUFQk?si=sNGJBzfhQiWfZaqHIWQuzg",
+        soundcloudurl: "https://soundcloud.com/subhive/sets/subhive-ruin",
+        type: "Compilation",
+        releasedate: "31.05.2019",
+        bgimg: "Subhive_Origin_Dark.png",
+        cover: "Subhive_002_Cover.jpg",
+        tracks: [
+            "MELURAN - ISSA", "Kasger - Hiyah", "Runge - Good To Me",
+            "Cuuts - Flash", "CELO - Hyper", "O.V. - Soul Swipe"
+        ],
+        artists: [
+            "MELURAN", "Kasger", "Runge", "Cuuts", "O.V.", "CELO"
+        ]
+    },
 }
