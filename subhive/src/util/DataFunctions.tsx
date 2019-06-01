@@ -79,6 +79,11 @@ export default class DataFunctions {
 
     public static getAlbumsExceptNewest(): Album[] {
         const albums: Album[] = this.getAlbums();
+        albums.sort(function (a, b) {
+            const aReleasedate = DataFunctions.toDate(a.releasedate);
+            const bReleasedate = DataFunctions.toDate(b.releasedate);
+            return aReleasedate > bReleasedate ? -1 : aReleasedate < bReleasedate ? 1 : 0;
+        })
         albums.shift();
         return albums;
     }
