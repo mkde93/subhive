@@ -2,7 +2,7 @@
   "name": "mkde",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mkde93.github.io/subhive/",
+  "homepage": "https://subhive.dk/",
   "dependencies": {
     "@material-ui/core": "^1.5.1",
     "@types/react-redux": "^6.0.0",
