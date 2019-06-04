@@ -12,7 +12,9 @@ class EventTile extends React.Component<Props> {
       <div className="event-grid">
         <Link className="remove-decoration" to={"/events/" + this.props.event.title.replace(/\s/g, "") + this.props.event.date.replace(/\./g, "-")}>
           <div>
-            <img src={require("../img/eventposters/" + this.props.event.poster)} />
+            <div className="image-wrapper">
+              <img src={require("../img/eventposters/" + this.props.event.poster)} />
+            </div>
             <div className="event">
               <p className="title">{this.props.event.title}</p>
               <div>

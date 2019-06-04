@@ -25,7 +25,7 @@ class Footer extends React.Component {
             </a>
           </div>
         </div>
-        <span>2018 (c) SUBHIVE</span>
+        <span>2018 © SUBHIVE</span>
       </section>
     );
   }

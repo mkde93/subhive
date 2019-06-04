@@ -10,6 +10,7 @@ $grey: #878787; /* Grey font */
 $soundcloud: #ff8800; /* soundcloud */
 $spotify: #1DB954; /* spotify */
 $highlight: #3AC7D2; /* highlight */
+$facebook: #3C5A99; /* facebook */
 
 
 *, *:before, *:after {
@@ -179,7 +180,7 @@ header {
   content: '';
   position: absolute;
   opacity: 0;
-  background-color: $white;
+  background-color: $highlight;
   height: 2px;
   width: 100%;
   bottom: -5px;
@@ -189,7 +190,7 @@ header {
   opacity: 1;
 }
 .desktop-nav .menu-spotify {
-  margin-top: 10px;
+  margin-top: 15px;
   float: right;
   font-family: $font;
   font-size: 1rem;
@@ -199,8 +200,15 @@ header {
     height: 10px;
     width: auto;
     margin-right: 10px;
+    transition: margin-right .2s;
   }
   text-align: center;
+}
+.desktop-nav .menu-spotify:hover {
+  color: $spotify;
+  img {
+    margin-right: 5px;
+  }
 }
 /* Mobile Navigation */
 .burger {
@@ -395,7 +403,7 @@ header {
       font-family: $font;
       font-size: 1.4rem;
       margin-top: 20px;
-      color: $grey;
+      color: $white;
       font-weight: 400;
       li { /* padding in tracklist */
         padding: 5px 0;
@@ -494,7 +502,7 @@ header {
     box-shadow: 0 0 8px $dark;
   }
   .eventlink {
-    background-color: $highlight;
+    background-color: $facebook;
     color: $white;
     transition: box-shadow .2s;
     transition: padding-left .2s;
@@ -503,7 +511,7 @@ header {
     }
   }
   .eventlink:hover {
-    box-shadow: 0 0 8px $highlight;
+    box-shadow: 0 0 8px $facebook;
   }
   .lineup {
     :first-child .artist{
@@ -730,6 +738,7 @@ header {
     img {
       height: auto;
       width: 250px;
+      transition: transform .4s;
     }
     .event {
       display : flex;
@@ -742,6 +751,7 @@ header {
         font-size: 1.4rem;
         line-height: 1.6rem;
         margin-bottom: 10px;
+        transition: color .2s;
       }
       .date {
         color: $grey;
@@ -760,16 +770,58 @@ header {
   .artist-grid {
     width: 200px;
     margin: 8px;
+    position: relative;
+    text-align: center;
+    .image-wrapper {
+      position: relative;
+    }
     img {
       height: auto;
       width: 200px;
+      transition: transform .4s;
+      z-index: 1;
+    }
+    .gradient { /* Gradient overlay on artist-grid */
+      z-index: 2;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+      opacity: .8;
+      transition: opacity .3s;
+      top: 0;
+      left: 0;
     }
     .description {
       color: $white;
       font-family: $font;
       font-size: 1.4rem;
       line-height: 1.6rem;
+      position: absolute;
+      z-index: 3;
+      bottom: 20px;
+      width: 100%;
     }
+  }
+}
+/* Hover effect on Album and Event Images + Text */
+.image-wrapper { /* Overflow hidden on image container */
+  overflow: hidden;
+}
+.event-grid a:hover {
+  .image-wrapper img {
+    transform: scale(1.1);
+  }
+  .event .title {
+    color: $highlight;
+  }
+}
+.artist-grid a:hover {
+  .image-wrapper img {
+    transform: scale(1.1);
+  }
+  .description .title {
+    color: $highlight;
   }
 }
 /* Artist Highlight */

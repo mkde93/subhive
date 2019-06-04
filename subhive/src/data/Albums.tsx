@@ -5,7 +5,7 @@ export default {
         soundcloudurl: "https://soundcloud.com/subhive/sets/subhive-origin",
         type: "Compilation",
         releasedate: "28.03.2019",
-        bgimg: "Subhive_Origin_Dark.png",
+        bgimg: "SUBHIVE_Origin_BG.jpg",
         cover: "Subhive_001_Cover.jpg",
         tracks: [
             "MELURAN - In Your Eyes", "Redemptive - Aeroscape", "Kasger - Blue Marble",
@@ -21,7 +21,7 @@ export default {
         soundcloudurl: "https://soundcloud.com/subhive/sets/subhive-ruin",
         type: "Compilation",
         releasedate: "31.05.2019",
-        bgimg: "Subhive_Origin_Dark.png",
+        bgimg: "SUBHIVE_Ruin_BG.jpg",
         cover: "Subhive_002_Cover.jpg",
         tracks: [
             "MELURAN - ISSA", "Kasger - Hiyah", "Runge - Good To Me",

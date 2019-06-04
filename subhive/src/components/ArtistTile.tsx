@@ -14,7 +14,10 @@ class ArtistTile extends React.Component<Props> {
       <div className="artist-grid">
         <Link className="remove-decoration" to={"/artists/" + this.props.artist.name.split(" ").join("")}>
           <div>
-            <img src={require("../img/lineupartists/" + this.props.artist.img)} />
+            <div className="image-wrapper">
+              <img src={require("../img/lineupartists/" + this.props.artist.img)} />
+              <div className="gradient"></div>
+            </div>
             <div className="description">
               <p className="title">{this.props.artist.name}</p>
             </div>
