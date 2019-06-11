@@ -7,11 +7,27 @@ import EventArtist from "../types/EventArtist";
 import Event from "../types/Event";
 
 export default class DataFunctions {
+    public static createEventsObjects(data: Object): Event[] {
+        const events: Event[] = [];
+        const eventsData = Object.values(data)
+        eventsData.forEach(e => {
+            const event = new Event(e.title, this.toDateString(e.date), e.location, e.eventlink, e.aftermovie, e.desc, this.filterEventArtists(e.artists.split(","), e.settimes.split(",")), e.poster, e.bgimg, e.titlecolor, e.textcolor);
+            events.push(event);
+        });
+
+        events.sort(function (a, b) {
+            const aReleasedate = DataFunctions.toDate(a.date);
+            const bReleasedate = DataFunctions.toDate(b.date);
+            return aReleasedate > bReleasedate ? -1 : aReleasedate < bReleasedate ? 1 : 0;
+        })
+        return events;
+    }
+
     public static createAlbumObjects(data: Object): Album[] {
         const albums: Album[] = [];
         const albumsData = Object.values(data);
         albumsData.forEach(a => {
-            const newAlbum = new Album(a.title, a.spotifyurl, a.soundcloudurl, a.type, a.releasedate, a.bgimg, a.cover, a.tracks.split(","), this.filterArtists(a.artist.split(",")));
+            const newAlbum = new Album(a.title, a.spotifyurl, a.soundcloudurl, a.type, this.toDateString(a.releasedate), a.bgimg, a.cover, a.tracks.split(","), this.filterArtists(a.artist.split(",")));
             albums.push(newAlbum);
         });
         return albums;
@@ -21,14 +37,10 @@ export default class DataFunctions {
     public static createArtistsData(data: Object): Artist[] {
         const artists: Artist[] = [];
         const artistData = Object.values(data);
-        console.log(artistData);
         artistData.forEach(artist => {
             const newArtist = new Artist(artist.name, artist.location, artist.bio, artist.facebook, artist.soundcloud, artist.twitter, artist.instagram, Boolean(artist.subhiveartist), artist.img, artist.bgimg);
-            console.log(newArtist)
             artists.push(newArtist);
         });
-        console.log(artists);
-
         return artists;
     }
 
@@ -114,8 +126,13 @@ export default class DataFunctions {
     }
 
     public static toDate(dateStr: string) {
-        const parts: string[] = dateStr.split(".")
-        return new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0]));
+        const parts: string[] = dateStr.split("-")
+        return new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0].split("T"[0])));
+    }
+
+    public static toDateString(dateStr: string) {
+        const parts: string[] = dateStr.split("-")
+        return parts[2].split("T")[0] + "." + parts[1] + "." + parts[0];
     }
 
     public static getUpcomingEvents(): Event[] {

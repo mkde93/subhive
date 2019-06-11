@@ -1,7 +1,7 @@
 export default {
     subhive_1: {
         title: "Subhive",
-        date: "22.8.2017",
+        date: "22.08.2017",
         location: "Platform 4, Aalborg",
         eventlink: "https://www.facebook.com/events/332780630494012/",
         aftermovie: "false",

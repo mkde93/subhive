@@ -2,7 +2,7 @@ package dk.subhive.subhivebackend.api.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -33,11 +33,11 @@ public class ArtistsController {
 
     @CrossOrigin
     @RequestMapping(value = "/api/artists/getbyname", method = RequestMethod.GET)
-    public Artist getArtistByName(String artistName) {
+    public List<Artist> getArtistByName(String artistName) {
         List<Artist> allArtists = new ArrayList<>();
         artistRepository.findAll().forEach(artist -> {
             allArtists.add(artist);
         });
-        return allArtists.stream().filter(artist -> artist.getName().equals(artistName)).findFirst().get();   
+        return allArtists.stream().filter(artist -> artist.getName().replaceAll(" ", "").equals(artistName)).collect(Collectors.toList());
      }
 }
