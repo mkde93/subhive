@@ -7,6 +7,31 @@ import EventArtist from "../types/EventArtist";
 import Event from "../types/Event";
 
 export default class DataFunctions {
+    public static createAlbumObjects(data: Object): Album[] {
+        const albums: Album[] = [];
+        const albumsData = Object.values(data);
+        albumsData.forEach(a => {
+            const newAlbum = new Album(a.title, a.spotifyurl, a.soundcloudurl, a.type, a.releasedate, a.bgimg, a.cover, a.tracks.split(","), this.filterArtists(a.artist.split(",")));
+            albums.push(newAlbum);
+        });
+        return albums;
+    }
+
+
+    public static createArtistsData(data: Object): Artist[] {
+        const artists: Artist[] = [];
+        const artistData = Object.values(data);
+        console.log(artistData);
+        artistData.forEach(artist => {
+            const newArtist = new Artist(artist.name, artist.location, artist.bio, artist.facebook, artist.soundcloud, artist.twitter, artist.instagram, Boolean(artist.subhiveartist), artist.img, artist.bgimg);
+            console.log(newArtist)
+            artists.push(newArtist);
+        });
+        console.log(artists);
+
+        return artists;
+    }
+
     public static getArtists(): Artist[] {
         const artists: Artist[] = [];
         const artistData = Object.values(Artists);

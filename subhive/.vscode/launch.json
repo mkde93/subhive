@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BootSubhive",
+            "request": "launch",
+            "mainClass": "dk.subhive.subhivebackend.BootSubhive",
+            "projectName": "subhive-backend"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DemoApplication",
+            "request": "launch",
+            "mainClass": "dk.subhive.subhivebackend.DemoApplication",
+            "projectName": "subhive-backend"
+        }
+    ]
+}

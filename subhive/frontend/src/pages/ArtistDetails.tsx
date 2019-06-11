@@ -8,7 +8,8 @@ import Album from "../types/Album";
 import Event from "../types/Event";
 import EventTile from "../components/EventTile";
 import AlbumTile from "../components/AlbumTile";
-import history from '../history'
+import axios from "axios";
+
 
 export interface Props {
 }
@@ -17,14 +18,35 @@ export interface State {
   artist: Artist;
   releases: Album[];
   events: Event[];
+  loading: boolean;
 }
 
 class ArtistDetails extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
   }
+  
 
   componentWillMount() {
+    this.setState({
+      loading: true,
+    });
+    axios({
+      method: 'get',
+      url: 'http://localhost:8080/api/artists/getbyname',
+      data: {
+        artistName: this.getArtistNameFromUrl(),
+      }
+    })
+      .then((response) => {
+        this.setState({
+          artist: DataFunctions.createArtistsData(response.data)[0],
+          loading: false,
+        });
+      });
+  }
+
+  /*componentWillMount() {
     if (this.getArtistFromUrl().name !== "Artist not found") {
       this.setState({
         artist: this.getArtistFromUrl(),
@@ -35,6 +57,10 @@ class ArtistDetails extends React.Component<Props, State> {
       history.push('/')
       window.location.reload();
     }
+  }*/
+
+  getArtistNameFromUrl(): string {
+    return window.location.pathname.split("/")[2];
   }
 
   getArtistFromUrl(): Artist {

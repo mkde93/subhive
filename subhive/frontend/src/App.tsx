@@ -4,8 +4,6 @@ import SectionAlbum from "./components/SectionAlbum";
 import SectionEvent from "./components/SectionEvent";
 import SectionAftermovie from "./components/SectionAftermovie";
 import SectionSpotify from "./components/SectionSpotify";
-import Footer from "./components/Footer";
-import SectionInstagram from "./components/SectionInstagram";
 
 class App extends React.Component {
   render() {
