@@ -44,7 +44,7 @@ class EventDetails extends React.Component<Props, State> {
   }
 
   componentDidUpdate() {
-    const key = this.state.event.title.replace(/\s/g, "");
+    const key = this.state.event.title.replace(/\s/g, "").replace(/\//g, "") + this.state.event.date.replace(/\./g, "-");
     if (key != window.location.pathname.split("/")[2]) {
       axios.all([this.getArtistApi(), this.getEventsApi()])
       .then(axios.spread((artists, events) => {
