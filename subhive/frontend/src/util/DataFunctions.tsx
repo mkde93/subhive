@@ -1,8 +1,5 @@
 import Artist from "../types/Artist";
-import Artists from "../data/Artists";
 import Album from "../types/Album";
-import Albums from "../data/Albums";
-import Events from "../data/Events";
 import EventArtist from "../types/EventArtist";
 import Event from "../types/Event";
 

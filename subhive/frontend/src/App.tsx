@@ -19,7 +19,7 @@ class App extends React.Component {
           posterUrl="subhive_001.png"
         />
         <SectionSpotify
-          backgroundImage="Subhive_Origin_Dark.png"
+          backgroundImage="https://assets.subhive.dk/imgs/Subhive_Origin_Dark.png"
           spotifyUrl={"https://open.spotify.com/embed/user/m4b4uyyjsqiayu25y7ud0zbqy/playlist/3ZODyGLF5RCS5S6WLlQoqr"}
         />
       </div>

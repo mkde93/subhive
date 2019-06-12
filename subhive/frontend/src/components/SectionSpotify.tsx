@@ -9,7 +9,7 @@ export interface Props {
 class SectionSpotify extends React.Component<Props> {
   render() {
     return (
-      <section style={{ backgroundImage: `url(${require("../img/" + this.props.backgroundImage)})` }} className="spotifySection">
+      <section style={{ backgroundImage: `url(${this.props.backgroundImage})` }} className="spotifySection">
         <div className="width-90">
           <div className="desc spotify-flex">
             <div>
