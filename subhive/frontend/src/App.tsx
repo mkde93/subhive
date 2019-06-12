@@ -1,5 +1,4 @@
 import * as React from "react";
-import ContentStrings from "./ContentStrings";
 import SectionAlbum from "./components/SectionAlbum";
 import SectionEvent from "./components/SectionEvent";
 import SectionAftermovie from "./components/SectionAftermovie";
@@ -21,7 +20,7 @@ class App extends React.Component {
         />
         <SectionSpotify
           backgroundImage="Subhive_Origin_Dark.png"
-          spotifyUrl={ContentStrings.spotifyPlaylist.playlistUrl}
+          spotifyUrl={"https://open.spotify.com/embed/user/m4b4uyyjsqiayu25y7ud0zbqy/playlist/3ZODyGLF5RCS5S6WLlQoqr"}
         />
       </div>
     );

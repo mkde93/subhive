@@ -7,6 +7,8 @@ import EventHighlight from "../components/EventHighlight";
 import EventTile from "../components/EventTile";
 import { Link } from "react-router-dom";
 import history from '../history'
+import axios from "axios";
+import APIs from "../APIs";
 
 export interface Props {
 }
@@ -19,37 +21,60 @@ export interface State {
 class EventDetails extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
+    this.state = {
+      event: new Event("Event Not Found", new Date().toString(), "Event Not Found",
+        "Event Not Found", "Event Not Found", "Event Not Found", [], "Event Not Found", "Event Not Found", "Event Not Found", "Event Not Found"),
+      upcomingEvents: [],
+    };
   }
 
   componentWillMount() {
-    if (this.getEventFromUrl().title !== "Event Not Found") {
-      this.setState({
-        event: this.getEventFromUrl(),
-        upcomingEvents: this.filterOutUpcomingEvents(),
+    axios.all([this.getArtistApi(), this.getEventsApi()])
+      .then(axios.spread((artists, events) => {
+        const allEvents = DataFunctions.createEventsObjects(events.data, DataFunctions.createArtistsObjects(artists.data));
+        this.setState({
+          event: this.getEventFromUrl(allEvents),
+          upcomingEvents: this.filterOutUpcomingEvents(allEvents),
+        });
+      }))
+      .catch((error) => {
+        history.push('/')
+        window.location.reload();
       });
-    } else {
-      history.push('/')
-      window.location.reload();
-    }
   }
 
   componentDidUpdate() {
-    const key = this.state.event.title.replace(/\s/g, "") + this.state.event.date.replace(/\./g, "-")
+    const key = this.state.event.title.replace(/\s/g, "");
     if (key != window.location.pathname.split("/")[2]) {
-      this.setState({
-        event: this.getEventFromUrl(),
-        upcomingEvents: this.filterOutUpcomingEvents(),
+      axios.all([this.getArtistApi(), this.getEventsApi()])
+      .then(axios.spread((artists, events) => {
+        const allEvents = DataFunctions.createEventsObjects(events.data, DataFunctions.createArtistsObjects(artists.data));
+        this.setState({
+          event: this.getEventFromUrl(allEvents),
+          upcomingEvents: this.filterOutUpcomingEvents(allEvents),
+        });
+      }))
+      .catch((error) => {
+        history.push('/')
+        window.location.reload();
       });
     }
   }
 
-  getEventFromUrl(): Event {
-    const allEvents = DataFunctions.getEvents();
+  getArtistApi() {
+    return axios.get(APIs.apis.artistlist);
+  }
+
+  getEventsApi() {
+    return axios.get(APIs.apis.eventlist);
+  }
+
+  getEventFromUrl(data: Event[]): Event {
     const searchKey = window.location.pathname.split("/")[2];
     let foundEvent: Event = new Event("Event Not Found", new Date().toString(), "Event Not Found",
       "Event Not Found", "Event Not Found", "Event Not Found", [], "Event Not Found", "Event Not Found", "Event Not Found", "Event Not Found");
-    allEvents.forEach(a => {
-      const key = a.title.replace(/\s/g, "") + a.date.replace(/\./g, "-")
+    data.forEach(a => {
+      const key = a.title.replace(/\s/g, "").replace(/\//g, "") + a.date.replace(/\./g, "-")
       if (key === searchKey) {
         foundEvent = a;
       }
@@ -57,9 +82,9 @@ class EventDetails extends React.Component<Props, State> {
     return foundEvent;
   }
 
-  filterOutUpcomingEvents(): Event[] {
-    let upcomingEvents: Event[] = DataFunctions.getUpcomingEvents();
-    const currentEvent: Event = this.getEventFromUrl();
+  filterOutUpcomingEvents(data: Event[]): Event[] {
+    let upcomingEvents: Event[] = data.filter(e => DataFunctions.toDate(e.date) > new Date());
+    const currentEvent: Event = this.getEventFromUrl(data);
     upcomingEvents = upcomingEvents.filter(e => e.eventlink !== currentEvent.eventlink);
     return upcomingEvents;
   }
@@ -67,7 +92,7 @@ class EventDetails extends React.Component<Props, State> {
   render() {
     return (
       <div className="page-bg">
-        <section style={{ backgroundImage: `url(${require("../img/eventposters/" + this.state.event.bgimg)})` }} className="eventSection padding-top">
+        <section style={{ backgroundImage: `url(${this.state.event.bgimg})` }} className="eventSection padding-top">
           <div className="container-16">
             <EventHighlight
               event={this.state.event}

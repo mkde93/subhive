@@ -9,7 +9,7 @@ class LineupArtist extends React.Component<Props> {
   render() {
     return (
       <div>
-        <div style={{ backgroundImage: `url(${require("../img/lineupartists/" + this.props.artist.artist.img)})` }} className="artist" >
+        <div style={{ backgroundImage: `url(${this.props.artist.artist.img})` }} className="artist" >
           <div className="overlay">
             <span className="name">{this.props.artist.artist.name}</span>
             {this.props.artist.settime !== undefined && this.props.artist.settime !== "" ?

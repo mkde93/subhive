@@ -2,39 +2,53 @@ import * as React from "react";
 import AlbumHighlight from "./AlbumHighlight";
 import Album from "../types/Album";
 import DataFunctions from "../util/DataFunctions";
+import axios from "axios";
+import APIs from "../APIs";
+import history from '../history'
+import { CircularProgress } from "@material-ui/core";
 
 export interface Props {
 }
 
 export interface State {
-  albums: Album[];
   newestAlbum: Album;
+  loading: boolean;
 }
 
 class SectionAlbum extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      albums: DataFunctions.getAlbums(),
-      newestAlbum: this.findNewestAlbum(DataFunctions.getAlbums()),
+      newestAlbum: new Album("Album Not Found", "Album Not Found", "Event Not Found",
+      "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], []),
+      loading: true,
     };
   }
 
-  findNewestAlbum(allAlbums: Album[]): Album {
-    allAlbums.sort(function (a, b) {
-      const aReleasedate = DataFunctions.toDate(a.releasedate);
-      const bReleasedate = DataFunctions.toDate(b.releasedate);
-      return aReleasedate > bReleasedate ? -1 : aReleasedate < bReleasedate ? 1 : 0;
-    })
-    return allAlbums[0];
+  componentWillMount() {
+    axios.all([this.getArtistApi(), this.getReleasesApi()])
+      .then(axios.spread((artists, releases) => {
+        this.setState({
+          newestAlbum: DataFunctions.createAlbumObjects(releases.data, DataFunctions.createArtistsObjects(artists.data))[0],
+          loading: false,
+        });
+      }));
+  }
+  
+  getArtistApi() {
+    return axios.get(APIs.apis.artistlist);
+  }
+
+  getReleasesApi() {
+    return axios.get(APIs.apis.releaseslist);
   }
 
   render() {
     return (
       <div>
-        <section style={{ backgroundImage: `url(${require("../img/" + this.state.newestAlbum.bgimg)})` }} className="albumSection">
+        <section style={{ backgroundImage: `url(${this.state.newestAlbum.bgimg})` }} className="albumSection">
           <div className="container-16">
-            <AlbumHighlight album={this.state.newestAlbum} />
+            {this.state.loading ? <CircularProgress/> : <AlbumHighlight album={this.state.newestAlbum} />}
           </div>
         </section>
       </div>

@@ -14,7 +14,7 @@ class AlbumTile extends React.Component<Props> {
         <Link className="remove-decoration" to={"/music/" + this.props.album.title.replace(/\s/g, "")}>
           <div>
             <div className="image-wrapper">
-              <img src={require("../img/albumcovers/" + this.props.album.cover)} />
+              <img src={this.props.album.cover} />
             </div>
             <div className="event">
               <p className="title">{this.props.album.title}</p>

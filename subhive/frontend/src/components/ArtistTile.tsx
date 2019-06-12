@@ -15,7 +15,7 @@ class ArtistTile extends React.Component<Props> {
         <Link className="remove-decoration" to={"/artists/" + this.props.artist.name.split(" ").join("")}>
           <div>
             <div className="image-wrapper">
-              <img src={require("../img/lineupartists/" + this.props.artist.img)} />
+              <img src={this.props.artist.img} />
               <div className="gradient"></div>
             </div>
             <div className="description">

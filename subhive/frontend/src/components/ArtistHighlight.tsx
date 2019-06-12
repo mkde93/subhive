@@ -14,7 +14,7 @@ class ArtistHighlight extends React.Component<Props, State> {
     return (
       <div className="artist-highlight">
         <div className="poster">
-          <img src={require("../img/lineupartists/" + this.props.artist.img)} alt={this.props.artist.img + " Cover"} />
+          <img src={this.props.artist.img} alt={this.props.artist.img + " Cover"} />
         </div>
         <div>
           <div className="info">

@@ -1,7 +1,7 @@
 export default {
     subhive_1: {
         title: "Subhive",
-        date: "22.8.2017",
+        date: "22.08.2017",
         location: "Platform 4, Aalborg",
         eventlink: "https://www.facebook.com/events/332780630494012/",
         aftermovie: "false",
@@ -154,6 +154,24 @@ export default {
         date: "19.04.2019",
         location: "1000Fryd, Aalborg",
         eventlink: "https://www.facebook.com/events/552362531837723/",
+        aftermovie: "false",
+        bgimg: "Subfryd_1_bg.png",
+        titlecolor: "#fff",
+        textcolor: "#bababa",
+        poster: "Subfryd_1_Poster.png",
+        desc: "SUBHIVE is a blend between underground bass music, mind " +
+            "melting visuals and flickering lights. With our new line of smaller " +
+            "events on 1000Fryd, we strive to deliver a more intimate and intense " +
+            "experience than ever before! This night we will be playing Drum and Bass " +
+            "all night long.",
+        lineup: ["George Garcia", "Kasger", "MELURAN"],
+        settimes: [],
+    },
+    subfryd_2: {
+        title: "Subhive1000 - DnB Edition",
+        date: "19.04.2019",
+        location: "1000Fryd, Aalborg",
+        eventlink: "https://www.facebook.com/events/297361891145750/",
         aftermovie: "false",
         bgimg: "Subfryd_1_bg.png",
         titlecolor: "#fff",

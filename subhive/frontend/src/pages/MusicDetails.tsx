@@ -7,6 +7,8 @@ import Album from "../types/Album";
 import AlbumHighlight from "../components/AlbumHighlight";
 import AlbumTile from "../components/AlbumTile";
 import history from '../history'
+import axios from "axios";
+import APIs from "../APIs";
 
 export interface Props {
 }
@@ -20,39 +22,58 @@ class MusicDetails extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      album: this.getAlbumFromUrl(),
-      otherAlbums: this.filterOutCurrentAlbum(),
+      album: new Album("Album Not Found", "Album Not Found", "Event Not Found",
+        "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], []),
+      otherAlbums: [],
     };
   }
 
   componentWillMount() {
-    if (this.getAlbumFromUrl().title !== "Album Not Found") {
-      this.setState({
-        album: this.getAlbumFromUrl(),
-        otherAlbums: this.filterOutCurrentAlbum(),
+    axios.all([this.getArtistApi(), this.getReleasesApi()])
+      .then(axios.spread((artists, releases) => {
+        const allReleases = DataFunctions.createAlbumObjects(releases.data, DataFunctions.createArtistsObjects(artists.data));
+        this.setState({
+          album: this.getAlbumFromUrl(allReleases),
+          otherAlbums: this.filterOutCurrentAlbum(allReleases),
+        });
+      }))
+      .catch((error) => {
+        history.push('/')
+        window.location.reload();
       });
-    } else {
-      history.push('/')
-      window.location.reload();
-    }
   }
 
   componentDidUpdate() {
     const key = this.state.album.title.replace(/\s/g, "");
     if (key != window.location.pathname.split("/")[2]) {
-      this.setState({
-        album: this.getAlbumFromUrl(),
-        otherAlbums: this.filterOutCurrentAlbum(),
+      axios.all([this.getArtistApi(), this.getReleasesApi()])
+      .then(axios.spread((artists, releases) => {
+        const allReleases = DataFunctions.createAlbumObjects(releases.data, DataFunctions.createArtistsObjects(artists.data));
+        this.setState({
+          album: this.getAlbumFromUrl(allReleases),
+          otherAlbums: this.filterOutCurrentAlbum(allReleases),
+        });
+      }))
+      .catch((error) => {
+        history.push('/')
+        window.location.reload();
       });
     }
   }
 
-  getAlbumFromUrl(): Album {
-    const allAlbums = DataFunctions.getAlbums();
+  getArtistApi() {
+    return axios.get(APIs.apis.artistlist);
+  }
+
+  getReleasesApi() {
+    return axios.get(APIs.apis.releaseslist);
+  }
+
+  getAlbumFromUrl(data: Album[]): Album {
     const searchKey = window.location.pathname.split("/")[2];
     let foundAlbum: Album = new Album("Album Not Found", "Album Not Found", "Event Not Found",
       "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], []);
-    allAlbums.forEach(a => {
+    data.forEach(a => {
       const key = a.title.replace(/\s/g, "");
       if (key === searchKey) {
         foundAlbum = a;
@@ -61,17 +82,16 @@ class MusicDetails extends React.Component<Props, State> {
     return foundAlbum;
   }
 
-  filterOutCurrentAlbum(): Album[] {
-    let otherAlbums: Album[] = DataFunctions.getAlbums();
-    const currentAlbum: Album = this.getAlbumFromUrl();
-    otherAlbums = otherAlbums.filter(e => e.title !== currentAlbum.title);
+  filterOutCurrentAlbum(data: Album[]): Album[] {
+    const currentAlbum: Album = this.getAlbumFromUrl(data);
+    const otherAlbums = data.filter(e => e.title !== currentAlbum.title);
     return otherAlbums;
   }
 
   render() {
     return (
       <div className="page-bg">
-        <section style={{ backgroundImage: `url(${require("../img/" + this.state.album.bgimg)})` }} className="eventSection">
+        <section style={{ backgroundImage: `url(${this.state.album.bgimg})` }} className="eventSection">
           <div className="container-16">
             <AlbumHighlight
               album={this.state.album}

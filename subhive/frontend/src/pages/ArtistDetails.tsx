@@ -9,6 +9,8 @@ import Event from "../types/Event";
 import EventTile from "../components/EventTile";
 import AlbumTile from "../components/AlbumTile";
 import history from '../history'
+import axios from "axios";
+import APIs from "../APIs";
 
 export interface Props {
 }
@@ -22,42 +24,56 @@ export interface State {
 class ArtistDetails extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
+    this.state = {
+      artist: new Artist("Artist not found", "Location not found", "Bio not found", "https://www.facebook.com", "https://www.soundcloud.com",
+        "https://www.twitter.com", "https://www.instagram.com", false, "temp.png", "temp.png"),
+      events: [],
+      releases: [],
+    };
   }
 
   componentWillMount() {
-    if (this.getArtistFromUrl().name !== "Artist not found") {
-      this.setState({
-        artist: this.getArtistFromUrl(),
-        releases: this.getReleasesForArtist(),
-        events: this.getEventsForArtist(),
+    axios.all([this.getArtistApi(), this.getEventsApi(), this.getReleases()])
+      .then(axios.spread((artists, events, releases) => {
+        DataFunctions.createEventsObjects(events.data, DataFunctions.createArtistsObjects(artists.data));
+        const artist = DataFunctions.getSpecificArtist(DataFunctions.createArtistsObjects(artists.data), this.getArtistNameFromUrl());
+        if (artist.name !== "NONE") {
+          this.setState({
+            artist: artist,
+            releases: this.getReleasesForArtist(DataFunctions.createAlbumObjects(releases.data, DataFunctions.createArtistsObjects(artists.data))),
+            events: this.getEventsForArtist(DataFunctions.createEventsObjects(events.data, DataFunctions.createArtistsObjects(artists.data))),
+          });
+        }
+      }))
+      .catch((error) => {
+        history.push('/')
+        window.location.reload();
       });
-    } else {
-      history.push('/')
-      window.location.reload();
-    }
   }
 
-  getArtistFromUrl(): Artist {
-    const allArtists = DataFunctions.getArtists();
-    const searchKey = window.location.pathname.split("/")[2];
-    let foundArtist: Artist = new Artist("Artist not found", "Location not found", "Bio not found", "https://www.facebook.com", "https://www.soundcloud.com",
-      "https://www.twitter.com", "https://www.instagram.com", false, "temp.png", "temp.png")
-    allArtists.forEach(a => {
-      if (a.name.toLocaleLowerCase().split(" ").join("") === searchKey.toLocaleLowerCase().split(" ").join("")) {
-        foundArtist = a;
-      }
-    })
-    return foundArtist;
+  getArtistNameFromUrl(): String {
+    return window.location.pathname.split("/")[2];
   }
 
-  getReleasesForArtist(): Album[] {
-    const allAlbums = DataFunctions.getAlbums();
-    const artist: Artist = this.getArtistFromUrl();
+  getArtistApi() {
+    return axios.get(APIs.apis.artistlist);
+  }
+
+  getEventsApi() {
+    return axios.get(APIs.apis.eventlist);
+  }
+
+  getReleases() {
+    return axios.get(APIs.apis.releaseslist);
+  }
+
+  getReleasesForArtist(data: Album[]): Album[] {
+    const artist = this.getArtistNameFromUrl();
     let filteredAlbums: Album[] = [];
     let isArtistOnAlbum: boolean = false;
-    allAlbums.forEach(a => {
+    data.forEach(a => {
       a.artists.forEach(b => {
-        if (b.name.toLocaleLowerCase() === artist.name.toLocaleLowerCase()) {
+        if (b.name.toLocaleLowerCase().split(" ").join("") === artist.toLocaleLowerCase().split(" ").join("")) {
           isArtistOnAlbum = true;
         }
       })
@@ -71,14 +87,13 @@ class ArtistDetails extends React.Component<Props, State> {
   }
 
 
-  getEventsForArtist(): Event[] {
-    const allEvents = DataFunctions.getEvents();
-    const artist: Artist = this.getArtistFromUrl();
+  getEventsForArtist(data: Event[]): Event[] {
+    const artist = this.getArtistNameFromUrl();
     let filteredEvents: Event[] = [];
     let isArtistOnEvent: boolean = false;
-    allEvents.forEach(a => {
+    data.forEach(a => {
       a.artists.forEach(b => {
-        if (b.artist.name.toLocaleLowerCase() === artist.name.toLocaleLowerCase()) {
+        if (b.artist.name.toLocaleLowerCase().split(" ").join("") === artist.toLocaleLowerCase().split(" ").join("")) {
           isArtistOnEvent = true;
         }
       })
@@ -93,7 +108,7 @@ class ArtistDetails extends React.Component<Props, State> {
   render() {
     return (
       <div className="page-bg">
-        <section className="eventSection padding-top" style={{ backgroundImage: `url(${require("../img/lineupartists/artist-bg/" + this.state.artist.bgimg)})` }}>
+        <section className="eventSection padding-top" style={{ backgroundImage: `url(${this.state.artist.bgimg})` }}>
           <div className="container-16">
             <ArtistHighlight
               artist={this.state.artist}

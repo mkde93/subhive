@@ -18,7 +18,7 @@ class AlbumHighlight extends React.Component<Props> {
     return (
       <div className="album">
         <div className="cover">
-          <img src={require("../img/albumcovers/" + this.props.album.cover)} alt={this.props.album.title + " Cover"} />
+          <img src={this.props.album.cover} alt={this.props.album.title + " Cover"} />
         </div>
         <div className="info">
           <span>{this.props.album.type}</span>

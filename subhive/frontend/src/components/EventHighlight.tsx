@@ -1,5 +1,4 @@
 import * as React from "react";
-import ContentStrings from "../ContentStrings";
 import LineupArtist from "./LineupArtist";
 import Event from "../types/Event";
 
@@ -16,14 +15,13 @@ class EventHighlight extends React.Component<Props, State> {
   componentWillMount() {
     this.hasEventBeenHeld();
   }
-
+  
   hasEventBeenHeld() {
     let eventDate: Date = new Date();
     let currentDate: Date = new Date();
     eventDate.setDate(Number(this.props.event.date.split(".")[0]));
     eventDate.setMonth(Number(this.props.event.date.split(".")[1]) - 1);
     eventDate.setFullYear(Number(this.props.event.date.split(".")[2]));
-
     if (eventDate < currentDate) {
       this.setState({
         hasEventOccured: false
@@ -39,11 +37,11 @@ class EventHighlight extends React.Component<Props, State> {
     return (
       <div className="event-highlight">
         <div className="poster">
-          <img src={require("../img/eventposters/" + this.props.event.poster)} alt={this.props.event.title + " Cover"} />
+          <img src={this.props.event.poster} alt={this.props.event.title + " Cover"} />
         </div>
         <div>
           <div className="info">
-            <span className="tag">{this.state.hasEventOccured ? ContentStrings.events.common.upcoming : ContentStrings.events.common.past}</span>
+            <span className="tag">{this.state.hasEventOccured ? "Upcoming event" : "Past event"}</span>
             <h1 style={{ color: this.props.event.titlecolor }}>{this.props.event.title}</h1>
             <h3 style={{ color: this.props.event.textcolor }}>{this.props.event.date} - {this.props.event.location}</h3>
             <div className="buttons">
@@ -65,6 +63,7 @@ class EventHighlight extends React.Component<Props, State> {
                 {this.props.event.artists.map((x, i) => (
                   <LineupArtist
                     artist={x}
+                    key={i}
                   />
                 ))}
               </div>
