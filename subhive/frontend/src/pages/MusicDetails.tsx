@@ -23,7 +23,7 @@ class MusicDetails extends React.Component<Props, State> {
     super(props);
     this.state = {
       album: new Album("Album Not Found", "Album Not Found", "Event Not Found",
-        "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], []),
+        "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], [], []),
       otherAlbums: [],
     };
   }
@@ -71,8 +71,8 @@ class MusicDetails extends React.Component<Props, State> {
 
   getAlbumFromUrl(data: Album[]): Album {
     const searchKey = window.location.pathname.split("/")[2];
-    let foundAlbum: Album = new Album("Album Not Found", "Album Not Found", "Event Not Found",
-      "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], []);
+    let foundAlbum: Album = new Album("Album Not Found", "Album Not Found", "Album Not Found",
+      "Album Not Found", new Date().toString(), "Album Not Found", "Album Not Found", [], [], []);
     data.forEach(a => {
       const key = a.title.replace(/\s/g, "");
       if (key === searchKey) {

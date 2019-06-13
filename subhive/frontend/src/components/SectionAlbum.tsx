@@ -20,7 +20,7 @@ class SectionAlbum extends React.Component<Props, State> {
     super(props);
     this.state = {
       newestAlbum: new Album("Album Not Found", "Album Not Found", "Event Not Found",
-      "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], []),
+      "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], [], []),
       loading: true,
     };
   }

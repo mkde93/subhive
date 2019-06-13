@@ -8,7 +8,7 @@ export interface Props {
 class AlbumHighlight extends React.Component<Props> {
   writeArtists(): string {
     if (this.props.album.artists.length > 3) {
-      return "Various Artists"; 
+      return "Various Artists";
     } else {
       return this.props.album.artists.map(a => a.name).join(", ")
     }
@@ -36,7 +36,11 @@ class AlbumHighlight extends React.Component<Props> {
             <ul>
               {this.props.album.tracks !== null ?
                 this.props.album.tracks.map((x, i) => (
-                  <li>{x}</li>
+                  <li>
+                    <a href={this.props.album.soundcloudtracklinks[i]} target={"_blank"}>
+                      <div className="soundcloudtracklink">{x}</div>
+                    </a>
+                  </li>
                 )) : null}
             </ul>
           </div>
