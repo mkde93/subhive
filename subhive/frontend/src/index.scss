@@ -585,6 +585,12 @@ header {
       margin-bottom: 10px;
       transition: top .2s;
     }
+    .readmore {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 5px;
+      background-color: $grey;
+    }
     .time {
       position: absolute;
       opacity: 0;
@@ -606,7 +612,10 @@ header {
       }
     }
     a {
-      position: absolute;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      line-height: 30px;
       left: 10px;
       right: 10px;
       opacity: 0;
@@ -616,7 +625,8 @@ header {
       transition: opacity .2s;
     }
     .social {
-      padding: 10px 15px;
+      width: 100%;
+      height: 30px;
       background-color: $soundcloud;
     }
     .gradient {
