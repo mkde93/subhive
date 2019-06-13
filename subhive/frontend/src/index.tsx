@@ -15,27 +15,30 @@ import Artists from "./pages/Artists";
 import ArtistDetails from "./pages/ArtistDetails";
 import Footer from "./components/Footer";
 import MusicDetails from "./pages/MusicDetails";
+import ScrollToTop from "./components/ScrollToTop";
 
 ReactDOM.render(
   <Provider>
     <Router history={history}>
-      <div id="footer-always-bottom">
-        <Menu />
-        <div id="wrapper">
-          <Switch>
-            <Route exact={true} path="/" component={App} />
-            <Route exact={true} path="/music" component={Music} />
-            <Route exact={true} path="/music/:id" component={MusicDetails} />
-            <Route exact={true} path="/events" component={Events} />
-            <Route exact={true} path="/events/:id" component={EventDetails} />
-            <Route exact={true} path="/artists" component={Artists} />
-            <Route exact={true} path="/artists/:id" component={ArtistDetails} />
-            <Route exact={true} path="/contact" component={Contact} />
-            <Route path="*" component={App} /> {/* Redirects to frontpage with broken links */}
-          </Switch>
+      <ScrollToTop>
+        <div id="footer-always-bottom">
+          <Menu />
+          <div id="wrapper">
+            <Switch>
+              <Route exact={true} path="/" component={App} />
+              <Route exact={true} path="/music" component={Music} />
+              <Route exact={true} path="/music/:id" component={MusicDetails} />
+              <Route exact={true} path="/events" component={Events} />
+              <Route exact={true} path="/events/:id" component={EventDetails} />
+              <Route exact={true} path="/artists" component={Artists} />
+              <Route exact={true} path="/artists/:id" component={ArtistDetails} />
+              <Route exact={true} path="/contact" component={Contact} />
+              <Route path="*" component={App} /> {/* Redirects to frontpage with broken links */}
+            </Switch>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </ScrollToTop>
     </Router>
   </Provider>,
   document.getElementById("root") as HTMLElement
