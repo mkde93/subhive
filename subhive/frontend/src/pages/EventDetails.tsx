@@ -9,13 +9,16 @@ import { Link } from "react-router-dom";
 import history from '../history'
 import axios from "axios";
 import APIs from "../APIs";
+import { CircularProgress } from "@material-ui/core";
 
 export interface Props {
 }
 
 export interface State {
   event: Event;
+  hasEventOccured: boolean;
   upcomingEvents: Event[];
+  loading: boolean;
 }
 
 class EventDetails extends React.Component<Props, State> {
@@ -24,7 +27,9 @@ class EventDetails extends React.Component<Props, State> {
     this.state = {
       event: new Event("Event Not Found", new Date().toString(), "Event Not Found",
         "Event Not Found", "Event Not Found", "Event Not Found", [], "Event Not Found", "Event Not Found", "Event Not Found", "Event Not Found"),
+      hasEventOccured: false,
       upcomingEvents: [],
+      loading: true,
     };
   }
 
@@ -35,6 +40,9 @@ class EventDetails extends React.Component<Props, State> {
         this.setState({
           event: this.getEventFromUrl(allEvents),
           upcomingEvents: this.filterOutUpcomingEvents(allEvents),
+          loading: false,
+        }, () => {
+          this.hasEventBeenHeld();
         });
       }))
       .catch((error) => {
@@ -47,16 +55,37 @@ class EventDetails extends React.Component<Props, State> {
     const key = this.state.event.title.replace(/\s/g, "").replace(/\//g, "") + this.state.event.date.replace(/\./g, "-");
     if (key != window.location.pathname.split("/")[2]) {
       axios.all([this.getArtistApi(), this.getEventsApi()])
-      .then(axios.spread((artists, events) => {
-        const allEvents = DataFunctions.createEventsObjects(events.data, DataFunctions.createArtistsObjects(artists.data));
-        this.setState({
-          event: this.getEventFromUrl(allEvents),
-          upcomingEvents: this.filterOutUpcomingEvents(allEvents),
+        .then(axios.spread((artists, events) => {
+          const allEvents = DataFunctions.createEventsObjects(events.data, DataFunctions.createArtistsObjects(artists.data));
+          this.setState({
+            event: this.getEventFromUrl(allEvents),
+            upcomingEvents: this.filterOutUpcomingEvents(allEvents),
+            loading: false,
+          }, () => {
+            this.hasEventBeenHeld();
+          });
+        }))
+        .catch((error) => {
+          history.push('/')
+          window.location.reload();
         });
-      }))
-      .catch((error) => {
-        history.push('/')
-        window.location.reload();
+    }
+  }
+
+  hasEventBeenHeld() {
+    let eventDate: Date = new Date();
+    let currentDate: Date = new Date();
+    eventDate.setDate(Number(this.state.event.date.split(".")[0]));
+    eventDate.setMonth(Number(this.state.event.date.split(".")[1]) - 1);
+    eventDate.setFullYear(Number(this.state.event.date.split(".")[2]));
+    console.log(eventDate);
+    if (eventDate < currentDate) {
+      this.setState({
+        hasEventOccured: false
+      });
+    } else {
+      this.setState({
+        hasEventOccured: true
       });
     }
   }
@@ -94,9 +123,11 @@ class EventDetails extends React.Component<Props, State> {
       <div className="page-bg">
         <section style={{ backgroundImage: `url(${this.state.event.bgimg})` }} className="eventSection padding-top">
           <div className="container-16">
-            <EventHighlight
-              event={this.state.event}
-            />
+            {this.state.loading ? <CircularProgress /> :
+              <EventHighlight
+                event={this.state.event}
+                hasEventOccured={this.state.hasEventOccured}
+              />}
           </div>
         </section>
         <section>

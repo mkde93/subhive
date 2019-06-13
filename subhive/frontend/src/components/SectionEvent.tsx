@@ -12,6 +12,8 @@ export interface Props {
 
 export interface State {
   event: Event;
+  loading: boolean;
+  hasEventOccured: boolean;
 }
 
 class SectionEvent extends React.Component<Props, State> {
@@ -20,15 +22,19 @@ class SectionEvent extends React.Component<Props, State> {
     this.state = {
       event: new Event("Event Not Found", new Date().toString(), "Event Not Found",
         "Event Not Found", "Event Not Found", "Event Not Found", [], "Event Not Found", "Event Not Found", "Event Not Found", "Event Not Found"),
+      loading: true,
+      hasEventOccured: false,
     };
   }
-
 
   componentWillMount() {
     axios.all([this.getArtistApi(), this.getEventsApi()])
       .then(axios.spread((artists, events) => {
         this.setState({
           event: DataFunctions.createEventsObjects(events.data, DataFunctions.createArtistsObjects(artists.data))[0],
+          loading: false,
+        }, () => {
+          this.hasEventBeenHeld();
         });
       }))
       .catch((error) => {
@@ -45,26 +51,46 @@ class SectionEvent extends React.Component<Props, State> {
   getEventsApi() {
     return axios.get(APIs.apis.eventlist);
   }
+  
+
+  hasEventBeenHeld() {
+    let eventDate: Date = new Date();
+    let currentDate: Date = new Date();
+    eventDate.setDate(Number(this.state.event.date.split(".")[0]));
+    eventDate.setMonth(Number(this.state.event.date.split(".")[1]) - 1);
+    eventDate.setFullYear(Number(this.state.event.date.split(".")[2]));
+    if (eventDate < currentDate) {
+      this.setState({
+        hasEventOccured: false
+      });
+    } else {
+      this.setState({
+        hasEventOccured: true
+      });
+    }
+  }
 
   render() {
     return (
       <div>
         {this.props.frontpage !== true ?
           <section style={{ backgroundImage: `url(${this.state.event.bgimg})` }} className="eventSection padding-top">
-            {this.state.event.title === "Event Not Found" ? <CircularProgress /> :
-              <div className="container-16">
+            <div className="container-16">
+              {this.state.loading ? <CircularProgress /> :
                 <EventHighlight
                   event={this.state.event}
-                />
-              </div>}
+                  hasEventOccured={this.state.hasEventOccured}
+                />}
+            </div>
           </section> :
           <section style={{ backgroundImage: `url(${this.state.event.bgimg})` }} className="eventSection">
-            {this.state.event.title === "Event Not Found" ? <CircularProgress /> :
-              <div className="container-16">
+            <div className="container-16">
+              {this.state.loading ? <CircularProgress /> :
                 <EventHighlight
                   event={this.state.event}
-                />
-              </div>}
+                  hasEventOccured={this.state.hasEventOccured}
+                />}
+            </div>
           </section>
         }
       </div>

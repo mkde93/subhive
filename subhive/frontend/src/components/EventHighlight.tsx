@@ -4,33 +4,19 @@ import Event from "../types/Event";
 
 export interface Props {
   event: Event;
+  hasEventOccured: boolean;
 }
 
 export interface State {
-  hasEventOccured: boolean;
 }
 
 
 class EventHighlight extends React.Component<Props, State> {
-  componentWillMount() {
-    this.hasEventBeenHeld();
-  }
-  
-  hasEventBeenHeld() {
-    let eventDate: Date = new Date();
-    let currentDate: Date = new Date();
-    eventDate.setDate(Number(this.props.event.date.split(".")[0]));
-    eventDate.setMonth(Number(this.props.event.date.split(".")[1]) - 1);
-    eventDate.setFullYear(Number(this.props.event.date.split(".")[2]));
-    if (eventDate < currentDate) {
-      this.setState({
-        hasEventOccured: false
-      });
-    } else {
-      this.setState({
-        hasEventOccured: true
-      });
-    }
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      hasEventOccured: false,  
+    };
   }
 
   render() {
@@ -41,7 +27,7 @@ class EventHighlight extends React.Component<Props, State> {
         </div>
         <div>
           <div className="info">
-            <span className="tag">{this.state.hasEventOccured ? "Upcoming event" : "Past event"}</span>
+            <span className="tag">{this.props.hasEventOccured ? "Upcoming event" : "Past event"}</span>
             <h1 style={{ color: this.props.event.titlecolor }}>{this.props.event.title}</h1>
             <h3 style={{ color: this.props.event.textcolor }}>{this.props.event.date} - {this.props.event.location}</h3>
             <div className="buttons">
