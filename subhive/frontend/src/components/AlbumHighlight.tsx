@@ -18,7 +18,7 @@ class AlbumHighlight extends React.Component<Props> {
     return (
       <div className="album">
         <div className="cover">
-          <img src={this.props.album.cover} alt={this.props.album.title + " Cover"} />
+          <img src={this.props.album.cover} alt={this.props.album.title + " Cover"} style={{ borderImageSource: `linear-gradient(60deg, ${this.props.album.gradient_bl} , ${this.props.album.gradient_tr})` }} />
         </div>
         <div className="info">
           <span>{this.props.album.type}</span>
@@ -37,6 +37,7 @@ class AlbumHighlight extends React.Component<Props> {
               {this.props.album.tracks !== null ?
                 this.props.album.tracks.map((x, i) => (
                   <li>
+                    <img src={require("../img/icons/play_white.svg")} />
                     <a href={this.props.album.soundcloudtracklinks[i]} target={"_blank"}>
                       <div className="soundcloudtracklink">{x}</div>
                     </a>

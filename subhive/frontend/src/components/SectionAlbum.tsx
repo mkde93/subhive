@@ -20,7 +20,7 @@ class SectionAlbum extends React.Component<Props, State> {
     super(props);
     this.state = {
       newestAlbum: new Album("Album Not Found", "Album Not Found", "Event Not Found",
-      "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], [], []),
+        "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], [], [], "", ""),
       loading: true,
     };
   }
@@ -32,9 +32,10 @@ class SectionAlbum extends React.Component<Props, State> {
           newestAlbum: DataFunctions.createAlbumObjects(releases.data, DataFunctions.createArtistsObjects(artists.data))[0],
           loading: false,
         });
+        console.log(releases);
       }));
   }
-  
+
   getArtistApi() {
     return axios.get(APIs.apis.artistlist);
   }
@@ -48,7 +49,7 @@ class SectionAlbum extends React.Component<Props, State> {
       <div>
         <section style={{ backgroundImage: `url(${this.state.newestAlbum.bgimg})` }} className="albumSection">
           <div className="container-16">
-            {this.state.loading ? <CircularProgress/> : <AlbumHighlight album={this.state.newestAlbum} />}
+            {this.state.loading ? <CircularProgress /> : <AlbumHighlight album={this.state.newestAlbum} />}
           </div>
         </section>
       </div>

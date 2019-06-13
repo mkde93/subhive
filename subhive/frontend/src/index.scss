@@ -376,7 +376,6 @@ header {
       width: 400px;
       height: 400px;
       border: 2px solid black;
-      border-image-source: linear-gradient(60deg, #41d6f4, #4262f4);
       border-image-slice: 1;
     }
   }
@@ -403,11 +402,25 @@ header {
       font-family: $font;
       font-size: 1.4rem;
       margin-top: 20px;
-      color: $white;
       font-weight: 400;
       li { /* padding in tracklist */
         padding: 5px 0;
+        display: flex;
+        flex-direction: row;
+        img {
+          width: auto;
+          height: 20px;
+          margin-right: 10px;
+          display: none;
+        }
+        a {
+          text-decoration: none;
+          color: $white;
+        }
       }
+    }
+    .tracks ul li a:hover {
+      color: $highlight;
     }
   }
   .soundcloud {

@@ -67,8 +67,10 @@ export default class DataFunctions {
                 a.field_album_cover[0].value,
                 a.field_tracks[0].value.split(","),
                 this.filterArtists(a.field_artists[0].value.split(","),
-                artists),
-                a.field_soundcloudtracklinks[0].value.split(","));
+                    artists),
+                a.field_soundcloudtracklinks[0].value.split(","),
+                a.field_album_gradient_bottom_left[0].value,
+                a.field_album_gradient_top_right[0].value);
             albums.push(newAlbum);
         });
         return albums;

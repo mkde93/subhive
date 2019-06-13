@@ -23,7 +23,7 @@ class MusicDetails extends React.Component<Props, State> {
     super(props);
     this.state = {
       album: new Album("Album Not Found", "Album Not Found", "Event Not Found",
-        "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], [], []),
+        "Event Not Found", new Date().toString(), "Event Not Found", "Event Not Found", [], [], [], "", ""),
       otherAlbums: [],
     };
   }
@@ -47,17 +47,17 @@ class MusicDetails extends React.Component<Props, State> {
     const key = this.state.album.title.replace(/\s/g, "");
     if (key != window.location.pathname.split("/")[2]) {
       axios.all([this.getArtistApi(), this.getReleasesApi()])
-      .then(axios.spread((artists, releases) => {
-        const allReleases = DataFunctions.createAlbumObjects(releases.data, DataFunctions.createArtistsObjects(artists.data));
-        this.setState({
-          album: this.getAlbumFromUrl(allReleases),
-          otherAlbums: this.filterOutCurrentAlbum(allReleases),
+        .then(axios.spread((artists, releases) => {
+          const allReleases = DataFunctions.createAlbumObjects(releases.data, DataFunctions.createArtistsObjects(artists.data));
+          this.setState({
+            album: this.getAlbumFromUrl(allReleases),
+            otherAlbums: this.filterOutCurrentAlbum(allReleases),
+          });
+        }))
+        .catch((error) => {
+          history.push('/')
+          window.location.reload();
         });
-      }))
-      .catch((error) => {
-        history.push('/')
-        window.location.reload();
-      });
     }
   }
 
@@ -72,7 +72,7 @@ class MusicDetails extends React.Component<Props, State> {
   getAlbumFromUrl(data: Album[]): Album {
     const searchKey = window.location.pathname.split("/")[2];
     let foundAlbum: Album = new Album("Album Not Found", "Album Not Found", "Album Not Found",
-      "Album Not Found", new Date().toString(), "Album Not Found", "Album Not Found", [], [], []);
+      "Album Not Found", new Date().toString(), "Album Not Found", "Album Not Found", [], [], [], "", "");
     data.forEach(a => {
       const key = a.title.replace(/\s/g, "");
       if (key === searchKey) {
