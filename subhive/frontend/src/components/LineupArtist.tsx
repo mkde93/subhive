@@ -1,5 +1,6 @@
 import * as React from "react";
 import EventArtist from "../types/EventArtist";
+import { Link } from "react-router-dom";
 
 export interface Props {
   artist: EventArtist
@@ -17,6 +18,10 @@ class LineupArtist extends React.Component<Props> {
                 <span className="settime">Set time:</span>
                 <span className="timeslot">{this.props.artist.settime}</span>
               </div> : null}
+            {this.props.artist.artist.subhiveartist ?
+              <Link className="remove-decoration" to={"/artists/" + this.props.artist.artist.name.split(" ").join("")}>
+                <span className="readmore">Read more</span>
+              </Link> : null}
             {this.props.artist.artist.soundcloud !== "NONE" ?
               <a href={this.props.artist.artist.soundcloud} target={"_blank"}>
                 <div className="social">Listen</div>
