@@ -96,6 +96,9 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    a {
+      text-decoration: none;
+    }
   }
   span {
     margin-top: 15px;
@@ -108,11 +111,21 @@ header {
     text-decoration: none;
     position: relative;
     margin: 0 5px;
+
   }
   .hexagon::before {
     content: '\2B22';
     font-size: 6rem;
     color: $white;
+    transition: color .2s;
+  }
+  .hexagon:hover {
+    svg { // Hover on socials
+      fill: $white;
+    }
+  }
+  .hexagon:hover::before {
+    color: $highlight;
   }
   .facebook {
     position: absolute;
@@ -121,6 +134,8 @@ header {
     transform: translate(-50%,-50%);
     height: 2rem;
     width: auto;
+    fill: #1a1a1a;
+    transition: fill .2s;
   }
   .soundcloud {
     position: absolute;
@@ -129,6 +144,8 @@ header {
     transform: translate(-50%,-60%);
     height: auto;
     width: 3rem;
+    fill: #1a1a1a;
+    transition: fill .2s;
   }
   .instagram {
     position: absolute;
@@ -137,6 +154,8 @@ header {
     transform: translate(-50%,-50%);
     height: auto;
     width: 2.5rem;
+    fill: #1a1a1a;
+    transition: fill .2s;
   }
   .youtube {
     position: absolute;
@@ -145,6 +164,8 @@ header {
     transform: translate(-50%,-50%);
     height: auto;
     width: 2.5rem;
+    fill: #1a1a1a;
+    transition: fill .2s;
   }
   .spotify {
     position: absolute;
@@ -153,6 +174,8 @@ header {
     transform: translate(-50%,-50%);
     height: auto;
     width: 2.2rem;
+    fill: #1a1a1a;
+    transition: fill .2s;
   }
 }
 /* Desktop Navigation */
@@ -890,23 +913,36 @@ header {
         .facebook {
           height: 2rem;
           width: auto;
+          fill: $white;
+          transition: fill .2s;
         }
         .soundcloud {
           height: auto;
           width: 3rem;
+          fill: $white;
+          transition: fill .2s;
         }
         .instagram {
           height: auto;
           width: 2.2rem;
+          fill: $white;
+          transition: fill .2s;
         }
         .youtube {
           height: auto;
           width: 2.5rem;
+          fill: $white;
+          transition: fill .2s;
         }
         .spotify {
           height: auto;
           width: 2.2rem;
+          fill: $white;
+          transition: fill .2s;
         }
+      }
+      a:hover svg {
+        fill: $highlight;
       }
     }
   }

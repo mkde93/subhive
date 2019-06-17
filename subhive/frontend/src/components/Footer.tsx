@@ -7,23 +7,43 @@ class Footer extends React.Component {
     return (
       <section className="footer">
         <div className="socials">
-          <div className="hexagon">
-            <a target="_blank" href="https://www.facebook.com/SUBHIVE/"><img className="facebook" src={require("../img/icons/facebook.svg")} /></a>
-          </div>
-          <div className="hexagon">
-            <a target="_blank" href="https://soundcloud.com/subhive"><img className="soundcloud" src={require("../img/icons/soundcloud.svg")} /></a>
-          </div>
-          <div className="hexagon">
-            <a target="_blank" href="https://www.instagram.com/subhive_dk/"><img className="instagram" src={require("../img/icons/instagram.svg")} /></a>
-          </div>
-          <div className="hexagon">
-            <a target="_blank" href="https://www.youtube.com/channel/UC2nLL0EyGyrzbP7RfTYVORA"><img className="youtube" src={require("../img/icons/youtube.svg")} /></a>
-          </div>
-          <div className="hexagon">
-            <a target="_blank" href="https://open.spotify.com/user/m4b4uyyjsqiayu25y7ud0zbqy/playlist/3ZODyGLF5RCS5S6WLlQoqr?si=xOHy7f2rR3usC5ne_gRhTg">
-              <img className="spotify" src={require("../img/icons/spotify.svg")} />
-            </a>
-          </div>
+          <a target="_blank" href="https://www.facebook.com/SUBHIVE/">
+            <div className="hexagon">
+              <svg className="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.002 44.395">
+                <path id="Path_10" data-name="Path 10" d="M45.175.009,39.418,0C32.951,0,28.771,4.288,28.771,10.926v5.037H22.982a.905.905,0,0,0-.905.906v7.3a.905.905,0,0,0,.905.905h5.788V43.49a.9.9,0,0,0,.905.905h7.552a.905.905,0,0,0,.905-.905V25.073H44.9a.9.9,0,0,0,.905-.905l0-7.3a.906.906,0,0,0-.906-.906h-6.77v-4.27c0-2.053.489-3.094,3.163-3.094h3.878a.905.905,0,0,0,.9-.905V.914A.906.906,0,0,0,45.175.009Z" transform="translate(-22.077)" />
+              </svg>
+            </div>
+          </a>
+          <a target="_blank" href="https://soundcloud.com/subhive">
+            <div className="hexagon">
+              <svg className="soundcloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 24.999">
+                <path id="Path_11" data-name="Path 11" d="M12.5,97.833h3.125V78.154A8.034,8.034,0,0,0,12.5,79.878ZM6.25,84.52V97.811l.2.022H9.375V84.5H6.452ZM0,91.164a6.7,6.7,0,0,0,3.125,5.689V85.481A6.688,6.688,0,0,0,0,91.164Zm18.75,6.669h3.125V79.022a7.8,7.8,0,0,0-3.125-1.116ZM43.548,84.5H41.791a10.251,10.251,0,0,0,.145-1.666,9.843,9.843,0,0,0-9.678-10A9.5,9.5,0,0,0,25,76.259V97.832H43.548a6.67,6.67,0,0,0,0-13.333Z" transform="translate(0 -72.834)" />
+              </svg>
+            </div>
+          </a>
+          <a target="_blank" href="https://www.instagram.com/subhive_dk/">
+            <div className="hexagon">
+              <svg className="instagram" id="instagram-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                <path id="Path_13" data-name="Path 13" d="M28.961,0H11.038A11.051,11.051,0,0,0,0,11.039V28.961A11.051,11.051,0,0,0,11.038,40H28.961A11.051,11.051,0,0,0,40,28.961V11.039A11.051,11.051,0,0,0,28.961,0Zm7.49,28.961a7.5,7.5,0,0,1-7.49,7.49H11.038a7.5,7.5,0,0,1-7.489-7.49V11.039a7.5,7.5,0,0,1,7.489-7.49H28.961a7.5,7.5,0,0,1,7.49,7.49V28.961Z" />
+                <path id="Path_14" data-name="Path 14" d="M51.275,40.97A10.307,10.307,0,1,0,61.582,51.277,10.319,10.319,0,0,0,51.275,40.97Zm0,17.064a6.758,6.758,0,1,1,6.758-6.758A6.765,6.765,0,0,1,51.275,58.034Z" transform="translate(-31.275 -31.277)" />
+                <path id="Path_15" data-name="Path 15" d="M121.524,28.251a2.6,2.6,0,1,0,1.841.762A2.613,2.613,0,0,0,121.524,28.251Z" transform="translate(-90.784 -21.567)" />
+              </svg>
+            </div>
+          </a>
+          <a target="_blank" href="https://www.youtube.com/channel/UC2nLL0EyGyrzbP7RfTYVORA">
+            <div className="hexagon">
+              <svg className="youtube" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 30.938">
+                <path id="Path_12" data-name="Path 12" d="M43.087,82.981c-1.221-2.171-2.545-2.571-5.243-2.723C35.151,80.076,28.375,80,22.506,80s-12.659.076-15.351.256c-2.692.155-4.019.551-5.251,2.725C.647,85.15,0,88.885,0,95.46v.022c0,6.548.647,10.311,1.9,12.457,1.232,2.171,2.557,2.565,5.248,2.748,2.694.157,9.472.25,15.353.25s12.645-.093,15.342-.248c2.7-.183,4.022-.577,5.243-2.748C44.359,105.8,45,102.033,45,95.486v-.022C45,88.885,44.359,85.15,43.087,82.981ZM16.875,103.906V87.031l14.063,8.438Z" transform="translate(0 -80)" />
+              </svg>
+            </div>
+          </a>
+          <a target="_blank" href="https://open.spotify.com/user/m4b4uyyjsqiayu25y7ud0zbqy/playlist/3ZODyGLF5RCS5S6WLlQoqr?si=xOHy7f2rR3usC5ne_gRhTg">
+            <div className="hexagon">
+              <svg className="spotify" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45">
+                <path id="XMLID_86_" d="M22.491,0A22.5,22.5,0,1,0,45,22.493,22.518,22.518,0,0,0,22.491,0ZM11.077,30.758a27.275,27.275,0,0,1,7.946-1.2A26.78,26.78,0,0,1,31.947,32.88a1.6,1.6,0,0,1,.541,1.073,2.3,2.3,0,0,1-.1,1.343,1.152,1.152,0,0,1-1.564.449,24.548,24.548,0,0,0-19.06-1.938,1.193,1.193,0,0,1-.346.052,1.142,1.142,0,0,1-1.1-.806C10.123,32.395,10.537,30.934,11.077,30.758ZM10.1,22.471A33.931,33.931,0,0,1,34.6,25.078a1.374,1.374,0,0,1,.694.81,1.4,1.4,0,0,1-.1,1.084c-.426.833-.923,1.393-1.238,1.393a1.441,1.441,0,0,1-.654-.161,31.091,31.091,0,0,0-22.47-2.379,1.424,1.424,0,0,1-.372.05A1.4,1.4,0,0,1,9.113,24.84C8.9,24.048,9.384,22.665,10.1,22.471Zm-.251-5.414a1.69,1.69,0,0,1-.4.049,1.652,1.652,0,0,1-1.607-1.252,1.9,1.9,0,0,1,1.2-2.229,41.933,41.933,0,0,1,9.991-1.217,40.9,40.9,0,0,1,18.421,4.325,1.662,1.662,0,0,1,.752,2.233,1.9,1.9,0,0,1-1.493,1.12,1.732,1.732,0,0,1-.726-.164,37.549,37.549,0,0,0-16.952-3.985A38.526,38.526,0,0,0,9.845,17.057Z" />
+              </svg>
+            </div>
+          </a>
         </div>
         <span>2018 © SUBHIVE</span>
       </section>
