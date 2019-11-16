@@ -366,7 +366,7 @@ header {
     text-decoration: none;
     cursor: pointer;
     div {
-      width: 190px;
+      width: 200px;
       height: 44px;
       display: flex;
       align-items: center;
@@ -384,13 +384,13 @@ header {
 /* Album Section */
 .albumSection { /* Background */
   position: relative;
-  height: 85vh;
+  height: 75vh;
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-position: center;
 }
 .album {
-  height: 85vh;
+  height: 75vh;
   display: flex;
   flex-direction: row;
   align-items: center;

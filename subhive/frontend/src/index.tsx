@@ -17,6 +17,7 @@ import Footer from "./components/Footer";
 import MusicDetails from "./pages/MusicDetails";
 import ScrollToTop from "./components/ScrollToTop";
 
+
 ReactDOM.render(
   <Provider>
     <Router history={history}>

@@ -1,8 +1,10 @@
 import * as React from "react";
 import Album from "../types/Album";
+import { Link } from "react-router-dom";
 
 export interface Props {
   album: Album;
+  inFocus: boolean;
 }
 
 class AlbumHighlight extends React.Component<Props> {
@@ -18,11 +20,23 @@ class AlbumHighlight extends React.Component<Props> {
     return (
       <div className="album">
         <div className="cover">
-          <img src={this.props.album.cover} alt={this.props.album.title + " Cover"} style={{ borderImageSource: `linear-gradient(60deg, ${this.props.album.gradient_bl} , ${this.props.album.gradient_tr})` }} />
+          {!this.props.inFocus ?
+            <Link className="remove-decoration" to={"/music/" + this.props.album.title.replace(/[\W_]+/g, "")}>
+              <img src={this.props.album.cover} alt={this.props.album.title + " Cover"} style={{ borderImageSource: `linear-gradient(60deg, ${this.props.album.gradient_bl} , ${this.props.album.gradient_tr})` }} />
+            </Link>
+            :
+            <img src={this.props.album.cover} alt={this.props.album.title + " Cover"} style={{ borderImageSource: `linear-gradient(60deg, ${this.props.album.gradient_bl} , ${this.props.album.gradient_tr})` }} />
+          }
         </div>
         <div className="info">
           <span>{this.props.album.type}</span>
-          <h1>{this.props.album.title}</h1>
+          {!this.props.inFocus ?
+            <Link className="remove-decoration" to={"/music/" + this.props.album.title.replace(/[\W_]+/g, "")}>
+              <h1>{this.props.album.title}</h1>
+            </Link>
+            :
+            <h1>{this.props.album.title}</h1>
+          }
           <h3>By {this.writeArtists()}</h3>
           <div className="buttons">
             <a href={this.props.album.soundcloudurl} target={"_blank"}>
@@ -46,7 +60,7 @@ class AlbumHighlight extends React.Component<Props> {
             </ul>
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 }

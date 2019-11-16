@@ -7,16 +7,10 @@ export interface Props {
   hasEventOccured: boolean;
 }
 
-export interface State {
-}
 
-
-class EventHighlight extends React.Component<Props, State> {
+class EventHighlight extends React.Component<Props> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasEventOccured: false,  
-    };
   }
 
   render() {
@@ -37,7 +31,7 @@ class EventHighlight extends React.Component<Props, State> {
                 </a> : null
               }
               <a href={this.props.event.eventlink} target={"_blank"}>
-                <div className="eventlink"><img src={require("../img/icons/facebook-white.svg")} />Attend event</div>
+                <div className="eventlink"><img src={require("../img/icons/facebook-white.svg")} />{this.props.hasEventOccured ? 'Attend event' : 'Check out event'}</div>
               </a>
             </div>
             <div className="description">

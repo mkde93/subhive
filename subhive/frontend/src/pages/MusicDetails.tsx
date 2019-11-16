@@ -44,7 +44,7 @@ class MusicDetails extends React.Component<Props, State> {
   }
 
   componentDidUpdate() {
-    const key = this.state.album.title.replace(/\s/g, "");
+    const key = this.state.album.title.replace(/[\W_]+/g,"");
     if (key != window.location.pathname.split("/")[2]) {
       axios.all([this.getArtistApi(), this.getReleasesApi()])
         .then(axios.spread((artists, releases) => {
@@ -74,7 +74,7 @@ class MusicDetails extends React.Component<Props, State> {
     let foundAlbum: Album = new Album("Album Not Found", "Album Not Found", "Album Not Found",
       "Album Not Found", new Date().toString(), "Album Not Found", "Album Not Found", [], [], [], "", "");
     data.forEach(a => {
-      const key = a.title.replace(/\s/g, "");
+      const key = a.title.replace(/[\W_]+/g,"");
       if (key === searchKey) {
         foundAlbum = a;
       }
@@ -95,6 +95,7 @@ class MusicDetails extends React.Component<Props, State> {
           <div className="container-16">
             <AlbumHighlight
               album={this.state.album}
+              inFocus={true}
             />
           </div>
         </section>
@@ -105,7 +106,7 @@ class MusicDetails extends React.Component<Props, State> {
                 <h2>Other Releases</h2>
                 <div className="grid">
                   {this.state.otherAlbums.map((x, i) => (
-                    <Link className="remove-decoration" to={"/music/" + x.title.replace(/\s/g, "")}>
+                    <Link className="remove-decoration" to={"/music/" + x.title.replace(/[\W_]+/g,"")}>
                       <AlbumTile
                         key={i}
                         album={x}

@@ -7,13 +7,24 @@ export interface Props {
 
 export interface State {
   burgerActive: boolean;
+  titleText: string;
 }
+
+const puns = [
+  'SUBHIVE',
+  'CLUBHIVE',
+  'SUBVIBE',
+  'SUBSCRIBE',
+  'SUBHIGHFIVE',
+  'SUBLIFE'
+];
 
 class Menu extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
       burgerActive: false,
+      titleText: 'SUBHIVE',
     };
 
   }
@@ -23,7 +34,37 @@ class Menu extends React.Component<Props, State> {
       burgerActive: !currentState,
     });
   }
-  
+
+  shuffleLogoText = () => {
+    let currentPunRemoved = [...puns];
+    currentPunRemoved = currentPunRemoved.filter(s => s !== this.state.titleText);
+    const index = Math.floor(Math.random() * currentPunRemoved.length);
+    let newText = currentPunRemoved[index];
+    let scrambled = newText;
+    this.setNewTitle(newText, scrambled, 1);
+  }
+
+  setCleanTitle = (cleanTitle: string) => {
+    this.setState({
+      titleText: cleanTitle,
+    });
+  }
+
+  setNewTitle = (cleanTitle: string, scrambledTitle: string, time: number) => {
+    const scrambledTitleAgain = scrambledTitle.split('').sort(function () { return 0.5 - Math.random() }).join('');
+    this.setState({
+      titleText: scrambledTitleAgain,
+    }, () => {
+      if (time < 5) {
+        setTimeout(() => {
+          this.setNewTitle(cleanTitle, scrambledTitleAgain, ++time)
+        }, 50)
+      } else {
+        this.setCleanTitle(cleanTitle)
+      };
+    });
+  }
+
   render() {
     const burgerClass = this.state.burgerActive ? ' open' : '';
     return (
@@ -32,7 +73,9 @@ class Menu extends React.Component<Props, State> {
           <div className="logo">
             <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}> {/* Removed decoration from link; Centered Text */}
               <img src={require("../img/SUBHIVE_LOGO_2.png")} alt="Subhive Logo" />
-              <span>Subhive</span>
+              <span
+                onMouseOver={this.shuffleLogoText}
+              >{this.state.titleText}</span>
             </Link>
           </div>
           <div>
