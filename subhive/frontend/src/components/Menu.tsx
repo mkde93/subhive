@@ -11,13 +11,14 @@ export interface State {
 }
 
 const puns = [
-  'SUBHIVE',
   'CLUBHIVE',
   'SUBVIBE',
   'SUBSCRIBE',
   'SUBHIGHFIVE',
   'SUBLIFE'
 ];
+
+let TimeoutReset: NodeJS.Timeout;
 
 class Menu extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -41,26 +42,37 @@ class Menu extends React.Component<Props, State> {
     const index = Math.floor(Math.random() * currentPunRemoved.length);
     let newText = currentPunRemoved[index];
     let scrambled = newText;
-    this.setNewTitle(newText, scrambled, 1);
+    this.setNewTitle(newText, scrambled, 1, false);
   }
 
-  setCleanTitle = (cleanTitle: string) => {
-    this.setState({
-      titleText: cleanTitle,
-    });
+  setCleanTitle = (cleanTitle: string, backToOriginal: boolean) => {
+    if (backToOriginal) {
+      this.setState({
+        titleText: cleanTitle,
+      });
+    } else {
+      this.setState({
+        titleText: cleanTitle,
+      }, () => {
+        clearTimeout(TimeoutReset);
+        TimeoutReset = setTimeout(() => {
+          this.setNewTitle('SUBHIVE', 'SUBHIVE', 1, true);
+        }, 3000)
+      });
+    }
   }
 
-  setNewTitle = (cleanTitle: string, scrambledTitle: string, time: number) => {
+  setNewTitle = (cleanTitle: string, scrambledTitle: string, time: number, backToOriginal: boolean) => {
     const scrambledTitleAgain = scrambledTitle.split('').sort(function () { return 0.5 - Math.random() }).join('');
     this.setState({
       titleText: scrambledTitleAgain,
     }, () => {
       if (time < 5) {
         setTimeout(() => {
-          this.setNewTitle(cleanTitle, scrambledTitleAgain, ++time)
+          this.setNewTitle(cleanTitle, scrambledTitleAgain, ++time, backToOriginal)
         }, 50)
       } else {
-        this.setCleanTitle(cleanTitle)
+        this.setCleanTitle(cleanTitle, backToOriginal)
       };
     });
   }
