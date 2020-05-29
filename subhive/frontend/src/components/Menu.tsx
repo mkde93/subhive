@@ -18,6 +18,7 @@ const puns = [
   'SUBLIFE'
 ];
 
+let scrambleTimes = 1;
 let TimeoutReset: NodeJS.Timeout;
 
 class Menu extends React.Component<Props, State> {
@@ -37,12 +38,16 @@ class Menu extends React.Component<Props, State> {
   }
 
   shuffleLogoText = () => {
-    let currentPunRemoved = [...puns];
-    currentPunRemoved = currentPunRemoved.filter(s => s !== this.state.titleText);
-    const index = Math.floor(Math.random() * currentPunRemoved.length);
-    let newText = currentPunRemoved[index];
-    let scrambled = newText;
-    this.setNewTitle(newText, scrambled, 1, false);
+    if (scrambleTimes > 5) {
+      let currentPunRemoved = [...puns];
+      currentPunRemoved = currentPunRemoved.filter(s => s !== this.state.titleText);
+      const index = Math.floor(Math.random() * currentPunRemoved.length);
+      let newText = currentPunRemoved[index];
+      let scrambled = newText;
+      this.setNewTitle(newText, scrambled, 1, false);
+    } else {
+      scrambleTimes = scrambleTimes + 1;
+    }
   }
 
   setCleanTitle = (cleanTitle: string, backToOriginal: boolean) => {
@@ -96,6 +101,7 @@ class Menu extends React.Component<Props, State> {
                 <li><Button label="music" link="/music" /></li>
                 <li><Button label="events" link="/events" /></li>
                 <li><Button label="artists" link="/artists" /></li>
+                <li><Button label="live" link="/live" /></li>
                 {/*<li><Button label="contact" link="/contact" /></li>*/}
               </ul>
               <a target="_blank" href="https://open.spotify.com/user/m4b4uyyjsqiayu25y7ud0zbqy/playlist/3ZODyGLF5RCS5S6WLlQoqr?si=64V7uF5oS1icIuxsMM_HSA" className="menu-spotify">

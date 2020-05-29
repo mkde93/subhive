@@ -16,6 +16,7 @@ import ArtistDetails from "./pages/ArtistDetails";
 import Footer from "./components/Footer";
 import MusicDetails from "./pages/MusicDetails";
 import ScrollToTop from "./components/ScrollToTop";
+import Live from "./pages/Live";
 
 
 ReactDOM.render(
@@ -34,6 +35,7 @@ ReactDOM.render(
               <Route exact={true} path="/artists" component={Artists} />
               <Route exact={true} path="/artists/:id" component={ArtistDetails} />
               <Route exact={true} path="/contact" component={Contact} />
+              <Route exact={true} path="/live" component={Live} />
               <Route path="*" component={App} /> {/* Redirects to frontpage with broken links */}
             </Switch>
           </div>
