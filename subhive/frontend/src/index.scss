@@ -463,6 +463,14 @@ header {
     .tracks ul li a:hover {
       color: $highlight;
     }
+    .artists {
+      display: flex;
+      flex-direction: row;
+      .a {
+        text-decoration: none;
+        margin-left: 5px;
+      }
+    }
   }
   .soundcloud {
     background-color: $soundcloud;
@@ -827,6 +835,14 @@ header {
         color: $grey;
         font-family: $font;
         font-size: 1.2rem;
+      }
+      .artists {
+        color: $white;
+        font-family: $font;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        margin-bottom: 10px;
+        transition: color .2s;
       }
     }
   }

@@ -37,7 +37,16 @@ class AlbumHighlight extends React.Component<Props> {
             :
             <h1>{this.props.album.title}</h1>
           }
-          <h3>By {this.writeArtists()}</h3>
+          <div className="artists">
+            <h3>By</h3>
+            {
+              this.props.album.artists.map((a, i) => (
+                <Link className="a" to={"/artists/" + a.name.split(" ").join("")}>
+                  {this.props.album.artists.length === i + 1 ? <h3>{a.name}</h3> : <h3>{a.name + ", "}</h3>}
+                </Link>
+              ))
+            }
+          </div>
           <div className="buttons">
             <a href={this.props.album.soundcloudurl} target={"_blank"}>
               <div className="soundcloud"><img src={require("../img/icons/play_white.svg")} />Soundcloud</div>
